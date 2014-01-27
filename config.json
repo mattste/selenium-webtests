@@ -2,8 +2,8 @@
 	"seleniumServerJar": "bin/selenium-server-standalone-2.39.0.jar",
 	"seleniumServerHubPort": 4444,
 	"proxyServerStartScript": "browsermob-proxy/bin/browsermob-proxy.sh",
+	"proxyServerUrl": "192.168.56.1",
 	"proxyServerPort": 3127,
-	"proxyPort": 3128,
 	"suitesDir": "suites",
 	"browsers": [
 		{

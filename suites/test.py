@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from base import *
+from suitebase import SuiteBase
 
-class BasicSuite(Base):
+class BasicSuite(SuiteBase):
 
 	def test_title(self):
 		self.browser.get("http://www.zbozi.cz")
