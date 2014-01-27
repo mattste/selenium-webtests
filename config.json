@@ -1,0 +1,20 @@
+{
+	"seleniumServerJar": "bin/selenium-server-standalone-2.39.0.jar",
+	"seleniumServerHubPort": 4444,
+	"proxyServerStartScript": "browsermob-proxy/bin/browsermob-proxy.sh",
+	"proxyServerPort": 3127,
+	"proxyPort": 3128,
+	"suitesDir": "suites",
+	"browsers": [
+		{
+			"browserName": "firefox",
+			"version": "ANY",
+			"platform": "ANY"
+		},
+		{
+			"browserName": "internet explorer",
+			"version": "8.0",
+			"platform": "ANY"
+		}
+	]
+}
