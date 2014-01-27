@@ -2,21 +2,23 @@
 # -*- coding: utf-8 -*-
 
 def run_tests():
-	import unittest, browsermobproxy, json, my_globals
+	import unittest, ConfigParser, browsermobproxy, my_globals
 
-	conf = json.load(open("config.json"))
+	config = ConfigParser.RawConfigParser()
+	config.read('conf/config.conf')
 
-	my_globals.proxy_server = browsermobproxy.Server("/home/jk/Desktop/selenium/browsermobproxy/bin/browsermob-proxy", {"port": conf.get("proxyServerPort")})
-	my_globals.proxy_server.start()
-	my_globals.proxy = browsermobproxy.Client("{0}:{1}".format(conf.get("proxyServerUrl"), conf.get("proxyServerPort")))
+	#my_globals.proxy_server = browsermobproxy.Server(config.get("proxy", "startScript"), {"port": config.get("proxy", "port")})
+	#my_globals.proxy_server.start()
+	#my_globals.proxy = browsermobproxy.Client("{0}:{1}".format(config.get("proxy", "address"), config.get("proxy", "port")))
 
 	test_loader = unittest.defaultTestLoader
 	test_runner = unittest.TextTestRunner(verbosity=2)
 	test_suite = unittest.TestSuite()
 
-	for browser in conf.get("browsers"):
+	for item in config.get("browsers", "list").split(","):
+		browser = dict(config.items(item))
 		my_globals.browser = browser
-		test_suite.addTest(test_loader.discover(conf.get("suitesDir")))
+		test_suite.addTest(test_loader.discover(config.get("control", "suitesDir")))
 
 	test_runner.run(test_suite)
 
