@@ -4,43 +4,42 @@
 import unittest
 import browsermobproxy as bmp
 from conf import settings
+from conf.settings import my_globals
 
-class TestRunner:
+# globals
+proxy_server = None
+suite = None
+test_runner = None
 
-	def __init__(self):
+def run_tests():
+	global proxy_server, suite, test_runner
 
-		# start proxy
-		self.proxy_server = None
-		settings.proxy = self.start_proxy()
+	System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
 
-		# create test suite
-		self.suite = self.create_suite()
+	# start proxy
+	proxy_server = bmp.Server(settings.PROXY_START_SCRIPT, {"port": settings.PROXY_PORT})
+	proxy_server.start()
+	my_globals["proxy"] = bmp.Client("{0}:{1}".format(settings.PROXY_ADDRESS, settings.PROXY_PORT))
 
-		# run tests
-		self.run_tests()
+	# create suite and run
+	suite = create_suite()
+	test_runner.run(suite)
 
-		# stop the proxy
-		self.stop_proxy()
+	# stop proxy
+	proxy_server.stop()
 
-	def start_proxy(self):
-		self.proxy_server = bmp.Server(settings.PROXY_START_SCRIPT, {"port": settings.PROXY_PORT})
-		self.proxy_server.start()
-		return bmp.Client("{0}:{1}".format(settings.PROXY_ADDRESS, settings.PROXY_PORT))
+def create_suite():
+	global test_runner
 
-	def stop_proxy(self):
-		self.proxy_server.stop()
+	test_runner = unittest.TextTestRunner(verbosity=2)
+	suite = unittest.TestSuite()
+	loader = unittest.defaultTestLoader
 
-	def create_suite(self):
-		self.test_runner = unittest.TextTestRunner(verbosity=2)
-		suite = unittest.TestSuite()
-		loader = unittest.defaultTestLoader
-		for item in settings.BROWSERS:
-			settings.tmp_browser_info = item
-			suite.addTest(loader.discover(settings.SUITES_DIR))
-		return suite
+	for item in settings.BROWSERS:
+		my_globals["browser_info"] = item
+		suite.addTest(loader.discover(settings.SUITES_DIR))
 
-	def run_tests(self):
-		self.test_runner.run(self.suite)
+	return suite
 
 if __name__ == "__main__":
-	TestRunner()
+	run_tests()

@@ -31,13 +31,16 @@ PROXY_PORT = 3128
 # default list of browsers on which the tests should be run
 BROWSERS = [
 	{
-		"browserName": "firefox",
+		"browserName": "chrome",
 		"version": "ANY",
-		"platform": "ANY"
-	},
-	{
-		"browserName": "internet explorer",
-		"version": "8.0",
-		"platform": "ANY"
+		"platfom": "ANY",
+		"driver": "c:\chromedriver.exe"
 	}
 ]
+
+# GLOBALS
+# ugly way to store some global variables
+my_globals = {
+	"proxy": None,
+	"browser_info": None
+}
