@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 
-import unittest, my_globals
+from conf import settings
+from unittest import TestCase
 from selenium import webdriver
-from selenium.webdriver.common.proxy import *
 from selenium.webdriver.common.keys import Keys
 
-class SuiteBase(unittest.TestCase):
+class SuiteBase(TestCase):
 
 	def __init__(self, *args, **kwargs):
-		self.browser_capabilities = my_globals.browser
+		self.browser_capabilities = settings.tmp_browser_info
 		super(SuiteBase, self).__init__(*args, **kwargs)
 
 	def setUp(self):
-		self.proxy = my_globals.proxy
+		self.proxy = settings.proxy
 		self.browser = webdriver.Remote("http://localhost:4444/wd/hub", self.browser_capabilities, proxy=self.proxy.selenium_proxy())
 
 	def tearDown(self):
