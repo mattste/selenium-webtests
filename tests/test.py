@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from lib.suitebase import SuiteBase
+from src.suitebase import SuiteBase
 
 class BasicSuite(SuiteBase):
 
