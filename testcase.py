@@ -2,18 +2,18 @@
 
 import unittest
 import settings
-import run_tests
+from run_tests import proxy, desired_browser
 from browser import Browser
 from selenium.webdriver.common.keys import Keys
 
 class TestCase(unittest.TestCase):
 
 	def __init__(self, *args, **kwargs):
-		self.browser_capabilities = run_tests.desired_browser
+		self.browser_capabilities = desired_browser
 		super(TestCase, self).__init__(*args, **kwargs)
 
 	def setUp(self):
-		self.proxy = run_tests.proxy
+		self.proxy = proxy
 		self.browser = Browser(
 			"http://{0}:{1}/wd/hub".format(settings.IP, settings.SELENIUM_SERVER_PORT),
 			self.browser_capabilities,

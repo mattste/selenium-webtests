@@ -2,8 +2,8 @@
 
 from testcase import TestCase
 
-class ExampleTest2(TestCase):
+class TestExample(TestCase):
 
 	def test_title(self):
-		self.browser.get("http://www.zbozi.cz")
+		self.browser.get("/")
 		assert u"Zboží.cz" in self.browser.title
