@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
+import settings
+
 from selenium import webdriver
-from conf import settings
 
 class Browser(webdriver.Remote):
 

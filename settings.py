@@ -39,10 +39,3 @@ BROWSERS = [
 		"platfom": "ANY"
 	}
 ]
-
-# GLOBALS
-# ugly way to store some global variables
-my_globals = {
-	"proxy": None,
-	"desired_browser": None
-}

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from src.suitebase import SuiteBase
+from testcase import TestCase
 
-class BasicSuite(SuiteBase):
+class ExampleTest1(TestCase):
 
 	def test_title(self):
 		self.browser.get("/")
