@@ -8,6 +8,19 @@ from selenium.webdriver.common.keys import Keys
 
 class TestCase(unittest.TestCase):
 
+	browsers = [
+		{
+			"browserName": "firefox",
+			"version": "ANY",
+			"platform": "ANY"
+		},
+		{
+			"browserName": "internet explorer",
+			"version": "8.0",
+			"platform": "ANY"
+		},
+	]
+
 	def __init__(self, *args, **kwargs):
 		self.browser_capabilities = desired_browser
 		super(TestCase, self).__init__(*args, **kwargs)
