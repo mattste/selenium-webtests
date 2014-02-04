@@ -15,6 +15,9 @@ class TestCase(unittest.TestCase):
 		self.browser_capabilities = desired_browser
 		super(TestCase, self).__init__(*args, **kwargs)
 
+	def getBrowserCapabilitiesAsString(self):
+		return self.browser_capabilities["browserName"] + "," + self.browser_capabilities["version"] + "," + self.browser_capabilities["platform"]
+
 	def setUp(self):
 		self.browser = Browser(
 			"http://{0}:{1}/wd/hub".format(settings.IP, settings.SELENIUM_SERVER_PORT),

@@ -5,10 +5,11 @@ import sys, os, socket, inspect, re
 import unittest
 import settings
 import testcase
+import testresult
 import browsermobproxy as bmp
 
 proxy_server = None
-test_runner = unittest.TextTestRunner(verbosity=2)
+test_runner = unittest.TextTestRunner(verbosity=2, resultclass=testresult.TestResult)
 test_suite = unittest.TestSuite()
 VALID_MODULE_NAME = re.compile(r'[_a-z]\w*\.py$', re.IGNORECASE)
 
