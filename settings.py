@@ -5,7 +5,7 @@ TESTS_DIR = "tests"
 BASE_URL = "http://zbozi.cz"
 
 # This machine IP
-IP = "localhost"
+IP = "192.168.56.1"
 
 #------------------------------------------------------------------------------
 # SELENIUM
@@ -25,4 +25,22 @@ SELENIUM_SERVER_PORT = 4444
 PROXY_START_SCRIPT = "/home/jk/Git/py-selenium-skeleton/3rdparty/browsermobproxy/bin/browsermob-proxy"
 
 # This machine port number the browsermob-proxy server will be running on
-PROXY_PORT = 8080
+PROXY_PORT = 3128
+
+#------------------------------------------------------------------------------
+# BROWSERS
+#------------------------------------------------------------------------------
+
+# default list of browsers we want to run the tests on
+BROWSERS = [
+		{
+			"browserName": "firefox",
+			"version": "ANY",
+			"platform": "ANY"
+		},
+		{
+			"browserName": "internet explorer",
+			"version": "8.0",
+			"platform": "ANY"
+		},
+	]

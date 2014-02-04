@@ -4,6 +4,14 @@ from testcase import TestCase
 
 class TestExample2(TestCase):
 
+	browsers = [
+		{
+			"browserName": "firefox",
+			"version": "ANY",
+			"platform": "ANY"
+		}
+	]
+
 	def test_title(self):
 		self.browser.get("http://zbozi.cz")
 		assert u"Zboží.cz" in self.browser.title
