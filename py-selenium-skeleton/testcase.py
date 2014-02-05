@@ -11,7 +11,7 @@ desired_browser = None
 class TestCase(unittest.TestCase):
 
 	def __init__(self, *args, **kwargs):
-		self.proxy = proxy.selenium_proxy()
+		self.proxy = proxy
 		self.browser_capabilities = desired_browser
 		super(TestCase, self).__init__(*args, **kwargs)
 
@@ -22,7 +22,7 @@ class TestCase(unittest.TestCase):
 		self.browser = Browser(
 			"http://{0}:{1}/wd/hub".format(settings.IP, settings.SELENIUM_SERVER_PORT),
 			self.browser_capabilities,
-			proxy=self.proxy
+			proxy=self.proxy.selenium_proxy()
 		)
 
 	def tearDown(self):

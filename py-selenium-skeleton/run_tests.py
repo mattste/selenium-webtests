@@ -6,7 +6,7 @@ import unittest
 import settings
 import testcase
 import testresult
-import browsermobproxy as bmp
+from proxy import *
 
 proxy_server = None
 test_runner = unittest.TextTestRunner(verbosity=2, resultclass=testresult.TestResult)
@@ -27,9 +27,9 @@ def is_selenium_grid_hub_running():
 
 def start_proxy():
 	global proxy_server, proxy
-	proxy_server = bmp.Server(settings.PROXY_START_SCRIPT, {"port": settings.PROXY_PORT})
+	proxy_server = browsermobproxy.Server(settings.PROXY_START_SCRIPT, {"port": settings.PROXY_PORT})
 	proxy_server.start()
-	testcase.proxy = bmp.Client("{0}:{1}".format(settings.IP, settings.PROXY_PORT))
+	testcase.proxy = ProxyClient("{0}:{1}".format(settings.IP, settings.PROXY_PORT))
 
 
 def create_test_suite():
