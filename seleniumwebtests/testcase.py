@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import config
 import unittest
+from config import *
 from seleniumwebtests.browser import Browser
 from selenium.webdriver.common.keys import Keys
 

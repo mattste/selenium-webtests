@@ -7,8 +7,8 @@ import socket
 import inspect
 import re
 import unittest
-import config
 import browsermobproxy
+from config import *
 from seleniumwebtests import testcase, testresult
 
 proxy_server = None

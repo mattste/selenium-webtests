@@ -1,5 +1,4 @@
-import config
-
+from config import *
 from selenium import webdriver
 
 class Browser(webdriver.Remote):
