@@ -24,6 +24,7 @@ class TestCase(unittest.TestCase):
 			self.browser_capabilities,
 			proxy=self.proxy.selenium_proxy()
 		)
+		self.browser.set_base_url(self.BASE_URL);
 
 	def tearDown(self):
 		self.browser.close()

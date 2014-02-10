@@ -3,6 +3,9 @@ from selenium import webdriver
 
 class Browser(webdriver.Remote):
 
+	def set_base_url(self, url):
+		self.base_url = url
+
 	def get(self, url):
 		"""
 		Overrides default webdriver.Remote.get method.
@@ -13,6 +16,6 @@ class Browser(webdriver.Remote):
 		:param url: Destination URL
 		"""
 		if not url.startswith("http"):
-			url = config.BASE_URL + url
+			url = self.base_url + url
 		super(Browser, self).get(url)
 
