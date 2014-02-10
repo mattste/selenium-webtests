@@ -1,4 +1,4 @@
-import settings
+import config
 
 from selenium import webdriver
 
@@ -14,6 +14,6 @@ class Browser(webdriver.Remote):
 		:param url: Destination URL
 		"""
 		if not url.startswith("http"):
-			url = settings.BASE_URL + url
+			url = config.BASE_URL + url
 		super(Browser, self).get(url)
 

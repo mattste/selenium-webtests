@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
+import config
 import unittest
-import settings
-from browser import Browser
+from seleniumwebtests.browser import Browser
 from selenium.webdriver.common.keys import Keys
 
 proxy = None
@@ -20,7 +20,7 @@ class TestCase(unittest.TestCase):
 
 	def setUp(self):
 		self.browser = Browser(
-			"http://{0}:{1}/wd/hub".format(settings.IP, settings.SELENIUM_SERVER_PORT),
+			"http://{0}:{1}/wd/hub".format(config.IP, config.SELENIUM_SERVER_PORT),
 			self.browser_capabilities,
 			proxy=self.proxy.selenium_proxy()
 		)

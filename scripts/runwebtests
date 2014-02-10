@@ -1,3 +1,9 @@
 #!/usr/bin/python
 
-print "huml"
+import os
+import sys
+
+sys.path.append(os.getcwd())
+import config
+print sys.path
+ 
