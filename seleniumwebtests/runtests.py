@@ -2,14 +2,13 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import os 
+import os
 import socket
 import inspect
 import re
 import unittest
 import browsermobproxy
-from config import *
-from seleniumwebtests import testcase, testresult
+from seleniumwebtests import testcase, testresult, config
 
 proxy_server = None
 test_runner = unittest.TextTestRunner(verbosity=2, resultclass=testresult.TestResult)
@@ -20,19 +19,19 @@ def is_selenium_grid_hub_running():
 	try:
 		socket_ = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		socket_.settimeout(1)
-		socket_.connect(("localhost", config.SELENIUM_SERVER_PORT))
+		socket_.connect(("localhost", int(config.SELENIUM_SERVER_PORT)))
 		socket_.close()
 		return True
 	except socket.error:
-		print "Selenium Grid Hub does not running. Try execute \"java -jar {0} -role hub\".".format(config.SELENIUM_SERVER_FILE)
+		print "Selenium Grid Hub does not running. Try execute \"java -jar {0} -role hub\".".format(config.SELENIUM_FILE)
 		sys.exit()
 
 
 def start_proxy():
-	global proxy_server, proxy
-	proxy_server = browsermobproxy.Server(config.PROXY_START_SCRIPT, {"port": config.PROXY_PORT})
+	global proxy_server
+	proxy_server = browsermobproxy.Server(config.PROXY_START_SCRIPT, {"port": int(config.PROXY_PORT)})
 	proxy_server.start()
-	testcase.proxy = ProxyClient("{0}:{1}".format(config.IP, config.PROXY_PORT))
+	testcase.proxy = browsermobproxy.Client("{0}:{1}".format(config.IP, config.PROXY_PORT))
 
 
 def create_test_suite():
@@ -52,9 +51,7 @@ def create_test_suite():
 						test_modules.append(obj)
 
 	for m in test_modules:
-		browsers = config.BROWSERS
-		if hasattr(m, "browsers"):
-			browsers = m.browsers
+		browsers = m.browsers
 		for b in browsers:
 			testcase.desired_browser = b
 			tests = loader.loadTestsFromTestCase(m)

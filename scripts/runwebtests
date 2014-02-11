@@ -2,8 +2,8 @@
 
 import os
 import sys
-
 sys.path.append(os.getcwd())
-import config
-print sys.path
- 
+
+from seleniumwebtests import runtests
+
+runtests.main()
