@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-import settings
-from browser import Browser
+from config import *
+from seleniumwebtests.browser import Browser
 from selenium.webdriver.common.keys import Keys
 
 proxy = None
@@ -11,7 +11,7 @@ desired_browser = None
 class TestCase(unittest.TestCase):
 
 	def __init__(self, *args, **kwargs):
-		self.proxy = proxy.selenium_proxy()
+		self.proxy = proxy
 		self.browser_capabilities = desired_browser
 		super(TestCase, self).__init__(*args, **kwargs)
 
@@ -20,10 +20,11 @@ class TestCase(unittest.TestCase):
 
 	def setUp(self):
 		self.browser = Browser(
-			"http://{0}:{1}/wd/hub".format(settings.IP, settings.SELENIUM_SERVER_PORT),
+			"http://{0}:{1}/wd/hub".format(config.IP, config.SELENIUM_SERVER_PORT),
 			self.browser_capabilities,
-			proxy=self.proxy
+			proxy=self.proxy.selenium_proxy()
 		)
+		self.browser.set_base_url(self.BASE_URL);
 
 	def tearDown(self):
 		self.browser.close()

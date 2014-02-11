@@ -1,0 +1,5 @@
+SELENIUM_FILE = '/home/jk/Downloads/selenium/selenium-server-standalone-2.39.0.jar'
+IP = '192.168.56.1'
+PROXY_START_SCRIPT = '/home/jk/Downloads/selenium/browsermob-proxy/bin/browsermob-proxy'
+SELENIUM_SERVER_PORT = '4444'
+PROXY_PORT = '3128'
