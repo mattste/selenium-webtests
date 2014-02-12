@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from seleniumwebtests import testcase
+from selenium.webdriver.common.keys import Keys
 
 class TestExample(testcase.TestCase):
 
@@ -13,6 +14,15 @@ class TestExample(testcase.TestCase):
 		}
 	]
 
-	def test_title(self):
+	def test_proklik(self):
 		self.browser.get("/")
-		assert u"Zboží.cz" in self.browser.title
+		input = self.browser.find_element_by_id("q")
+		input.send_keys("notebooky")
+		input.send_keys(Keys.RETURN)
+		self.browser.find_element_by_css_selector(".itemlink").click()
+		self.proxy.new_har("proklik")
+		self.browser.find_element_by_css_selector(".itemlink").click()
+		print self.proxy.har
+
+
+

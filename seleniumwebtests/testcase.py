@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from selenium.webdriver.common.keys import Keys
-
 from seleniumwebtests import config
 from seleniumwebtests.browser import Browser
 
@@ -27,5 +25,3 @@ class TestCase(unittest.TestCase):
 		)
 		self.browser.set_base_url(self.BASE_URL);
 
-	def tearDown(self):
-		self.browser.close()

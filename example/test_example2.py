@@ -21,3 +21,6 @@ class TestExample2(testcase.TestCase):
 	def test_title(self):
 		self.browser.get("http://zbozi.cz")
 		assert u"Zboží.cz" in self.browser.title
+
+	def tearDown(self):
+		self.browser.close()
