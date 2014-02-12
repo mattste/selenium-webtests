@@ -1,6 +1,11 @@
+# -*- coding: utf-8 -*-
+
 from selenium import webdriver
 
 class Browser(webdriver.Remote):
+	"""
+	Extends selenium Remote webdriver
+	"""
 
 	def set_base_url(self, url):
 		self.base_url = url

@@ -8,6 +8,9 @@ proxy = None
 desired_browser = None
 
 class TestCase(unittest.TestCase):
+	"""
+	Base class for all test cases
+	"""
 
 	def __init__(self, *args, **kwargs):
 		self.proxy = proxy
@@ -15,6 +18,9 @@ class TestCase(unittest.TestCase):
 		super(TestCase, self).__init__(*args, **kwargs)
 
 	def getBrowserCapabilitiesAsString(self):
+		"""
+		Returns browser info as string
+		"""
 		return self.browser_capabilities["browserName"] + "," + self.browser_capabilities["version"] + "," + self.browser_capabilities["platform"]
 
 	def setUp(self):

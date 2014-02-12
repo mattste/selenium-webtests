@@ -1,0 +1,8 @@
+#!/usr/bin/python
+
+def main():  
+    from seleniumwebtests.__main__ import main as seleniumwebtests_main
+    seleniumwebtests_main()
+
+if __name__ == "__main__":
+    main()

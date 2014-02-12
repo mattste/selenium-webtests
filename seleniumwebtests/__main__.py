@@ -16,9 +16,13 @@ from seleniumwebtests import testcase
 proxy_server = None
 test_runner = unittest.TextTestRunner(verbosity=2, resultclass=reporter.Reporter)
 test_suite = unittest.TestSuite()
-VALID_MODULE_NAME = re.compile(r'[_a-z]\w*\.py$', re.IGNORECASE)
+VALID_TESTCASE_FILENAME = re.compile(r'[_a-z]\w*\.py$', re.IGNORECASE)
 
 def is_selenium_grid_hub_running():
+	"""
+	Method to test whether Selenium Grid HUB is running 
+	on localhost port specified in the config file
+	"""
 	try:
 		socket_ = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		socket_.settimeout(1)
@@ -31,35 +35,53 @@ def is_selenium_grid_hub_running():
 
 
 def start_proxy():
-	global proxy_server, proxy
+	"""
+	Starts the browsermob-proxy server and client
+	The client is passed to the testcase so we can use it in our tests
+	"""
+	global proxy_server
 	proxy_server = browsermobproxy.Server(config.PROXY_START_SCRIPT, {"port": int(config.PROXY_PORT)})
 	proxy_server.start()
 	testcase.proxy = browsermobproxy.Client("{0}:{1}".format(config.IP, config.PROXY_PORT))
 
 
 def create_test_suite():
+	"""
+	Method to assembly the test suite
+	"""
 	global desired_browser, test_suite
 	test_modules = []
 	loader = unittest.TestLoader()
+
+	# get all files from current directory
 	files = os.listdir(os.getcwd())
+
 	for f in files:
-		if VALID_MODULE_NAME.match(f):
+		# ignore .pyc and .pyo
+		if VALID_TESTCASE_FILENAME.match(f):
 			module_name = os.path.splitext(f)[0]
+			# import all from the file
 			module = __import__(module_name, globals(), locals(), ['*'])
 			for name, obj in inspect.getmembers(module):
+				# select only classes that inherit from "seleniumwebtests.testcase.TestCase"
 				if inspect.isclass(obj):
 					for parent in obj.__bases__:
 						if parent.__module__ + "." + parent.__name__ == "seleniumwebtests.testcase.TestCase":
 							test_modules.append(obj)
 
+	# create tests for all browser defined in the testcase
 	for m in test_modules:
 		for b in m.BROWSERS:
+			# temporary save the browser parameters so we can instantiate the testcase with them
 			testcase.desired_browser = b
 			tests = loader.loadTestsFromTestCase(m)
 			test_suite.addTests(tests)
 
 
 def main():
+	# include current directory into sys.path 
+	# in order to be able to import files from there
+	sys.path.append(os.getcwd())
 	is_selenium_grid_hub_running()
 	start_proxy()
 	create_test_suite()
@@ -68,4 +90,4 @@ def main():
 
 
 if __name__ == "__main__":
-	sys.exit(main())
+	main()
