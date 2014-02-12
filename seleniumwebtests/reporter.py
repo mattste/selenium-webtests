@@ -2,7 +2,7 @@
 
 import unittest
 
-class TestResult(unittest.runner.TextTestResult):
+class Reporter(unittest.runner.TextTestResult):
 
 	def startTest(self, test):
 		super(unittest.runner.TextTestResult, self).startTest(test)

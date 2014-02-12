@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from config import *
-from seleniumwebtests.browser import Browser
 from selenium.webdriver.common.keys import Keys
+
+from seleniumwebtests import config
+from seleniumwebtests.browser import Browser
 
 proxy = None
 desired_browser = None
