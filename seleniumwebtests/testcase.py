@@ -28,5 +28,7 @@ class TestCase(unittest.TestCase):
 			self.browser_capabilities,
 			proxy=self.proxy.selenium_proxy()
 		)
+
+		# waits 10 sec if the DOM isn't ready immediately after page load (IE8)
 		self.browser.implicitly_wait(10)
 

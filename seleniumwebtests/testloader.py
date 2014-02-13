@@ -9,6 +9,7 @@ from seleniumwebtests import config
 from seleniumwebtests import testcase
 from seleniumwebtests import myglobals
 
+# regexp to ignore .pyc and .pyo files
 VALID_FILE_NAME = re.compile(r'[_a-z]\w*\.py$', re.IGNORECASE)
 
 class TestLoader():
@@ -17,6 +18,9 @@ class TestLoader():
         self._loader = unittest.TestLoader()
 
     def getTestSuite(self):
+        """
+        Returns test suite for test runner
+        """
         test_suite = unittest.TestSuite()
         test_cases = self._getTestCases()
 
@@ -30,6 +34,11 @@ class TestLoader():
         return test_suite
 
     def _getTestCases(self):
+        """
+        Inspect all properties in all files in current directory
+        and tests if its a test case class
+        Return list of test case classes
+        """
         test_cases = []
         files = os.listdir(os.getcwd())
         for f in files:
@@ -43,12 +52,20 @@ class TestLoader():
         return test_cases
 
     def _isTestCaseClass(self, obj):
+        """
+        Tests whether the class inherits from "seleniumwebtests.testcase.TestCase"
+        """
         for parent in obj.__bases__:
             if parent.__module__ + "." + parent.__name__ == "seleniumwebtests.testcase.TestCase":
                 return True
         return False
 
     def _getBrowsers(self, test_case):
+        """
+        Retuns list of browsers to run the test case on
+        If test case does not provide such an information
+        the settigs.BROWSERS is returned
+        """
         if hasattr(test_case, "BROWSERS"):
             return test_case.BROWSERS
         return myglobals.settings.BROWSERS
