@@ -6,12 +6,12 @@ IP = '192.168.56.1'
 # (download at http://code.google.com/p/selenium/downloads/list)
 SELENIUM_FILE = '/home/jk/Downloads/selenium/selenium-server-standalone-2.39.0.jar'
 
-# port to run the selenium server hub on
+# localhost port on which the selenium server hub should be running on
 SELENIUM_SERVER_PORT = '4444'
 
 # path to browsermob-proxy start file
 # (download at http://bmp.lightbody.net/)
 PROXY_START_SCRIPT = '/home/jk/Downloads/selenium/browsermob-proxy/bin/browsermob-proxy'
 
-# port to run the proxy server on
+# localhost port on which the proxy server should be running on
 PROXY_PORT = '3128'

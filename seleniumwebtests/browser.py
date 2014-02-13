@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from selenium import webdriver
-from seleniumwebtests import myglobals
+import seleniumwebtests as swt
 
 class Browser(webdriver.Remote):
 	"""
@@ -18,6 +18,6 @@ class Browser(webdriver.Remote):
 		:param url: Destination URL
 		"""
 		if not url.startswith("http"):
-			url = myglobals.settings.BASE_URL + url
+			url = swt.myglobals.settings.BASE_URL + url
 		super(Browser, self).get(url)
 
