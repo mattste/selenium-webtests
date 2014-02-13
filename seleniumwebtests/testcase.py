@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+
 from seleniumwebtests import config
 from seleniumwebtests.browser import Browser
-
-proxy = None
-desired_browser = None
+from seleniumwebtests import myglobals
 
 class TestCase(unittest.TestCase):
 	"""
@@ -13,8 +12,8 @@ class TestCase(unittest.TestCase):
 	"""
 
 	def __init__(self, *args, **kwargs):
-		self.proxy = proxy
-		self.browser_capabilities = desired_browser
+		self.proxy = myglobals.proxy
+		self.browser_capabilities = myglobals.desired_browser
 		super(TestCase, self).__init__(*args, **kwargs)
 
 	def getBrowserCapabilitiesAsString(self):
@@ -29,5 +28,6 @@ class TestCase(unittest.TestCase):
 			self.browser_capabilities,
 			proxy=self.proxy.selenium_proxy()
 		)
-		self.browser.set_base_url(self.BASE_URL);
+		self.browser.set_base_url("http://zbozi.cz");
+		self.browser.implicitly_wait(10)
 

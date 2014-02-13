@@ -10,9 +10,9 @@ from setuptools import setup
 
 """
 TODO: windows run script
-script = "scripts/runwebtests"
+script = "bin/runwebtests"
 if platform.system() == "Windows":
-    script = "scripts/runwebtests.cmd"
+    script = "bin/runwebtests.cmd"
 """
 
 setup(
@@ -28,5 +28,5 @@ setup(
         'selenium>=2.38.4',
         'browsermob-proxy>=0.6.0',
     ],
-    scripts=["scripts/runwebtests"],
+    scripts=["bin/runwebtests"],
 )
