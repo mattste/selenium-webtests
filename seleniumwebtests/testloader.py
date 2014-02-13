@@ -4,12 +4,12 @@ import os
 import re
 import inspect
 import unittest
-import seleniumwebtests as swt
+from runner import runner
 
 # regexp to ignore .pyc and .pyo files
 VALID_FILE_NAME = re.compile(r'[_a-z]\w*\.py$', re.IGNORECASE)
 
-class TestLoader():
+class TestLoader(object):
 
     def __init__(self):
         self._loader = unittest.TestLoader()
@@ -24,7 +24,7 @@ class TestLoader():
         for tc in test_cases:
             browsers = self._getBrowsers(tc)
             for b in browsers:
-                swt.myglobals.desired_browser = b
+                runner.desired_browser = b
                 tests = self._loader.loadTestsFromTestCase(tc)
                 test_suite.addTests(tests)
 
@@ -65,4 +65,4 @@ class TestLoader():
         """
         if hasattr(test_case, "BROWSERS"):
             return test_case.BROWSERS
-        return swt.myglobals.settings.BROWSERS
+        return runner.settings.BROWSERS

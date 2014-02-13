@@ -1,18 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from seleniumwebtests import testcase
+from seleniumwebtests import *
 from selenium.webdriver.common.keys import Keys
 
 class TestExample(testcase.TestCase):
-
-	BASE_URL = "http://zbozi.cz"
-	BROWSERS = [
-		{
-			"browserName": "firefox",
-			"version": "ANY",
-			"platform": "ANY"
-		}
-	]
 
 	def test_proklik(self):
 		self.browser.get("/")
