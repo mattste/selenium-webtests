@@ -27,7 +27,7 @@ class Runner(object):
 
         self._test_runner = unittest.TextTestRunner(verbosity=2, resultclass=reporter.Reporter)
         self._test_loader = testloader.TestLoader()
-        self._test_runner.run(self._test_loader.getTestSuite())
+        self._test_runner.run(self._test_loader.get_test_suite())
         self.proxy.close()
 
     def _start_selenium_hub(self):

@@ -14,15 +14,15 @@ class TestLoader(object):
     def __init__(self):
         self._loader = unittest.TestLoader()
 
-    def getTestSuite(self):
+    def get_test_suite(self):
         """
         Returns test suite for test runner
         """
         test_suite = unittest.TestSuite()
-        test_cases = self._getTestCases()
+        test_cases = self._get_test_cases()
 
         for tc in test_cases:
-            browsers = self._getBrowsers(tc)
+            browsers = self._get_browsers(tc)
             for b in browsers:
                 runner.desired_browser = b
                 tests = self._loader.loadTestsFromTestCase(tc)
@@ -30,7 +30,7 @@ class TestLoader(object):
 
         return test_suite
 
-    def _getTestCases(self):
+    def _get_test_cases(self):
         """
         Inspect all properties in all files in current directory
         and tests if its a test case class
@@ -44,11 +44,11 @@ class TestLoader(object):
                 module = __import__(file_name, globals(), locals(), ['*'])
                 for name, obj in inspect.getmembers(module):
                     if inspect.isclass(obj):
-                        if self._isTestCaseClass(obj):
+                        if self._is_testcase_class(obj):
                             test_cases.append(obj)
         return test_cases
 
-    def _isTestCaseClass(self, obj):
+    def _is_testcase_class(self, obj):
         """
         Tests whether the class inherits from "seleniumwebtests.testcase.TestCase"
         """
@@ -57,7 +57,7 @@ class TestLoader(object):
                 return True
         return False
 
-    def _getBrowsers(self, test_case):
+    def _get_browsers(self, test_case):
         """
         Retuns list of browsers to run the test case on
         If test case does not provide such an information
