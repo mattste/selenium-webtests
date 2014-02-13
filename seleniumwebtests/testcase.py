@@ -28,6 +28,5 @@ class TestCase(unittest.TestCase):
 			self.browser_capabilities,
 			proxy=self.proxy.selenium_proxy()
 		)
-		self.browser.set_base_url("http://zbozi.cz");
 		self.browser.implicitly_wait(10)
 

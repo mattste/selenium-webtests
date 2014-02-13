@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 
 from selenium import webdriver
+from seleniumwebtests import myglobals
 
 class Browser(webdriver.Remote):
 	"""
 	Extends selenium Remote webdriver
 	"""
-
-	def set_base_url(self, url):
-		self.base_url = url
 
 	def get(self, url):
 		"""
@@ -20,6 +18,6 @@ class Browser(webdriver.Remote):
 		:param url: Destination URL
 		"""
 		if not url.startswith("http"):
-			url = self.base_url + url
+			url = myglobals.settings.BASE_URL + url
 		super(Browser, self).get(url)
 

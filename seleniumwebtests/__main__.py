@@ -35,7 +35,7 @@ def is_selenium_grid_hub_running():
 def start_proxy():
     """
     Starts the browsermob-proxy server and client
-    The client is passed to the testcase so we can use it in our tests
+    The client is saved into global so we can access it in the tests
     """
     global proxy_server
     proxy_server = browsermobproxy.Server(config.PROXY_START_SCRIPT, {"port": int(config.PROXY_PORT)})
@@ -45,14 +45,19 @@ def start_proxy():
 
 def main():
     # include current directory into sys.path
-    # in order to be able to import files from there
     sys.path.append(os.getcwd())
 
+    # save the test settings into globals
     myglobals.settings = __import__("settings")
 
+    # check whether the selenium grid hub is running
     is_selenium_grid_hub_running()
+
     start_proxy()
+
+    # run the tests
     test_runner.run(test_loader.getTestSuite())
+
     proxy_server.stop()
 
 
