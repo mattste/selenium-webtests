@@ -3,6 +3,9 @@
 import unittest
 from browser import Browser
 from runner import runner
+from selenium.webdriver.common.keys import Keys
+
+__all__ = ["Keys", "TestCase"]
 
 class TestCase(unittest.TestCase):
     """
@@ -27,5 +30,4 @@ class TestCase(unittest.TestCase):
             proxy=self.proxy.selenium_proxy()
         )
 
-        # waits 10 sec if the DOM isn't ready immediately after page load (IE8)
         self.browser.implicitly_wait(10)
