@@ -14,17 +14,3 @@ class TestExample(TestCase):
 		self.browser.find_element_by_css_selector(".itemlink").click()
 		print len(self.proxy.har.get("log").get("entries"))
 		assert True
-
-	def test_proklik2(self):
-		self.browser.get("/")
-		input = self.browser.find_element_by_id("q")
-		input.send_keys("notebooky")
-		input.send_keys(Keys.RETURN)
-		self.browser.find_element_by_css_selector(".itemlink").click()
-		self.proxy.new_har("proklik")
-		self.browser.find_element_by_css_selector(".itemlink").click()
-		print len(self.proxy.har.get("log").get("entries"))
-		assert True
-
-
-

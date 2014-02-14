@@ -17,7 +17,7 @@ class TestCase(unittest.TestCase):
         self.browser_capabilities = runner.desired_browser
         super(TestCase, self).__init__(*args, **kwargs)
 
-    def getBrowserCapabilitiesAsString(self):
+    def stringify_browser_capabilities(self):
         """
         Returns browser info as string
         """

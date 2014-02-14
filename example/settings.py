@@ -21,9 +21,9 @@ PROXY_SERVER_PORT = 3128
 BASE_URL = "http://zbozi.cz"
 
 BROWSERS = [
-	{
-		"browserName": "internet explorer",
-		"version": "8.0",
-		"platform": "ANY"
-	}
+    {
+        "browserName": "firefox",
+        "version": "ANY",
+        "platform": "ANY"
+    }
 ]

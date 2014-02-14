@@ -16,8 +16,7 @@ class Runner(object):
         sys.path.append(os.getcwd())
         self._settings = __import__("settings")
 
-        self._proxy_server = self._create_proxy_server()
-        self._proxy_server.start()
+        self._start_proxy_server()
         self._start_selenium_hub()
 
         self._proxy = None
@@ -31,23 +30,27 @@ class Runner(object):
         self._test_runner = unittest.TextTestRunner(verbosity=2, resultclass=reporter.Reporter)
         self._test_loader = testloader.TestLoader()
         self._test_runner.run(self._test_loader.get_test_suite())
-        time.sleep(1)
-        self._proxy_server.stop()
+        self.end()
+
+    def end(self):
+        self._proxy.close()
 
     def _start_selenium_hub(self):
-        if not self._is_listening(self.settings.IP, int(self.settings.SELENIUM_SERVER_PORT)):
-            print "Starting Selenium HUB..."
+        if not self._is_listening(self.settings.IP, self.settings.SELENIUM_SERVER_PORT):
+            print "Selenium HUB seems not running. Trying to start on {0}:{1}...".format(self.settings.IP, self.settings.SELENIUM_SERVER_PORT)
             stdout = open(os.devnull, 'w')
             command = ["java", "-jar", "{0}".format(self.settings.SELENIUM_FILE), "-role", "hub", "-port", "{0}".format(self.settings.SELENIUM_SERVER_PORT)]
             subprocess.Popen(command, stdout=stdout, stderr=subprocess.STDOUT)
             # wait for nodes to register
-            time.sleep(5)
+            time.sleep(10)
 
-    def _create_proxy_server(self):
-        if self._is_listening(self.settings.IP, self.settings.PROXY_SERVER_PORT):
-            raise Exception("Can't start proxy server. Another tests may be running.")
-        print "Starting proxy server..."
-        return browsermobproxy.Server(self.settings.PROXY_START_SCRIPT, {"port": self.settings.PROXY_SERVER_PORT})
+    def _start_proxy_server(self):
+        if not self._is_listening(self.settings.IP, self.settings.PROXY_SERVER_PORT):
+            print "Proxy server seems not running. Trying to start on {0}:{1}...".format(self.settings.IP, self.settings.PROXY_SERVER_PORT)
+            stdout = open(os.devnull, 'w')
+            command = [self.settings.PROXY_START_SCRIPT, "-port={0}".format(self.settings.PROXY_SERVER_PORT)]
+            subprocess.Popen(command, stdout=stdout, stderr=subprocess.STDOUT)
+            time.sleep(10)
 
     def _is_listening(self, url, port):
         try:
@@ -58,10 +61,6 @@ class Runner(object):
             return True
         except socket.error:
             return False
-
-    @property
-    def proxy_server(self):
-        return self._proxy_server
 
     @property
     def proxy(self):

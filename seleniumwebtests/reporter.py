@@ -12,7 +12,7 @@ class Reporter(unittest.runner.TextTestResult):
         if self.showAll:
             self.stream.write(self.getDescription(test))
             self.stream.write(" on ")
-            self.stream.write(test.getBrowserCapabilitiesAsString())
+            self.stream.write(test.stringify_browser_capabilities())
             self.stream.write(" ... ")
             self.stream.flush()
 

@@ -6,7 +6,8 @@ import signal
 from runner import runner
 
 def signal_handler(signal, frame):
-    runner.proxy_server.close()
+    print "Killing..."
+    runner.end()
     sys.exit(0)
 
 def main():
