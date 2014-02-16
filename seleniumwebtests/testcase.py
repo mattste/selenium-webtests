@@ -25,7 +25,7 @@ class TestCase(unittest.TestCase):
 
     def setUp(self):
         self.browser = Browser(
-            "http://{0}:{1}/wd/hub".format(runner.settings.IP, runner.settings.SELENIUM_SERVER_PORT),
+            "http://{0}:{1}/wd/hub".format(runner.config.IP, runner.config.SELENIUM_SERVER_PORT),
             self.browser_capabilities,
             proxy=self.proxy.selenium_proxy()
         )

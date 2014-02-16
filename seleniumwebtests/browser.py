@@ -18,6 +18,6 @@ class Browser(webdriver.Remote):
 		:param url: Destination URL
 		"""
 		if not url.startswith("http"):
-			url = runner.settings.BASE_URL + url
+			url = runner.test_settings.BASE_URL + url
 		super(Browser, self).get(url)
 

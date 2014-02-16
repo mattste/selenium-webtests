@@ -65,4 +65,4 @@ class TestLoader(object):
         """
         if hasattr(test_case, "BROWSERS"):
             return test_case.BROWSERS
-        return runner.settings.BROWSERS
+        return runner.test_settings.BROWSERS
