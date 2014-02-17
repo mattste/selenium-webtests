@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
+import time
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
 from runner import runner
 
 class WebDriver(webdriver.Remote):
@@ -21,3 +23,5 @@ class WebDriver(webdriver.Remote):
             url = runner.test_settings.BASE_URL + url
         super(WebDriver, self).get(url)
 
+    def wait(self, timeout):
+        time.sleep(timeout)

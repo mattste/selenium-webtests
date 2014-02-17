@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import json
-import time
 import unittest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -37,3 +36,7 @@ class TestCase(unittest.TestCase):
         )
 
         self.driver.implicitly_wait(10)
+
+    def tearDown(self):
+        self.driver.quit()
+
