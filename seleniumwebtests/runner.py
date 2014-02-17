@@ -10,6 +10,7 @@ import unittest
 import browsermobproxy
 
 import config
+from proxy import Proxy
 
 class Runner(object):
 
@@ -31,7 +32,7 @@ class Runner(object):
         import reporter
         import testloader
 
-        self._proxy = browsermobproxy.Client("{0}:{1}".format(self.config.IP, self.config.PROXY_SERVER_PORT))
+        self._proxy = Proxy("{0}:{1}".format(self.config.IP, self.config.PROXY_SERVER_PORT))
         self._test_runner = unittest.TextTestRunner(verbosity=2, resultclass=reporter.Reporter)
         self._test_loader = testloader.TestLoader()
         self._test_runner.run(self._test_loader.get_test_suite())
