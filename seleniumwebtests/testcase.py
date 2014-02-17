@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from browser import Browser
+from webdriver import WebDriver
 from runner import runner
 from selenium.webdriver.common.keys import Keys
 
@@ -24,10 +24,10 @@ class TestCase(unittest.TestCase):
         return self.browser_capabilities["browserName"] + "," + self.browser_capabilities["version"] + "," + self.browser_capabilities["platform"]
 
     def setUp(self):
-        self.browser = Browser(
+        self.driver = WebDriver(
             "http://{0}:{1}/wd/hub".format(runner.config.IP, runner.config.SELENIUM_SERVER_PORT),
             self.browser_capabilities,
             proxy=self.proxy.selenium_proxy()
         )
 
-        self.browser.implicitly_wait(10)
+        self.driver.implicitly_wait(10)

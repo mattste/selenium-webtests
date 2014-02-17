@@ -3,7 +3,7 @@
 from selenium import webdriver
 from runner import runner
 
-class Browser(webdriver.Remote):
+class WebDriver(webdriver.Remote):
 	"""
 	Extends selenium Remote webdriver
 	"""
@@ -19,5 +19,5 @@ class Browser(webdriver.Remote):
 		"""
 		if not url.startswith("http"):
 			url = runner.test_settings.BASE_URL + url
-		super(Browser, self).get(url)
+		super(WebDriver, self).get(url)
 
