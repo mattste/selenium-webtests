@@ -11,9 +11,9 @@ def signal_handler(signal, frame):
     sys.exit(0)
 
 def main():
+    signal.signal(signal.SIGINT, signal_handler)
     runner.run()
 
 if __name__ == "__main__":
-    signal.signal(signal.SIGINT, signal_handler)
     main()
 

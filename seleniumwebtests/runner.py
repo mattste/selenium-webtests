@@ -27,6 +27,7 @@ class Runner(object):
 
         self._proxy = None
         self._desired_browser = None
+        self._active_driver = None
 
     def run(self):
         import reporter
@@ -41,6 +42,8 @@ class Runner(object):
 
     def end(self):
         self._proxy.close()
+        if self.active_driver:
+            self.active_driver.quit()
 
     def _start_selenium_hub(self):
         if not self._is_listening(self.config.IP, self.config.SELENIUM_SERVER_PORT):
@@ -85,5 +88,13 @@ class Runner(object):
     @desired_browser.setter
     def desired_browser(self, browser):
         self._desired_browser = browser
+
+    @property
+    def active_driver(self):
+        return self._active_driver
+
+    @active_driver.setter
+    def active_driver(self, driver):
+        self._active_driver = driver
 
 runner = Runner()
