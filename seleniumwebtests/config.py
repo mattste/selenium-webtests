@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# this machine IP
+# This machine IP address
 # Machine has to be accesible on this address from the nodes
-IP = "localhost"
+IP = "192.168.56.1"
 
 # path to the selenium standalone server file (.jar)
 # (download at http://code.google.com/p/selenium/downloads/list)

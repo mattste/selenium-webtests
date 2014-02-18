@@ -1,0 +1,1462 @@
+{
+    "log": {
+        "comment": "",
+        "creator": {
+            "comment": "",
+            "version": "2.0",
+            "name": "BrowserMob Proxy"
+        },
+        "version": "1.2",
+        "entries": [{
+            "comment": "",
+            "serverIPAddress": "77.75.76.29",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:46.805+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [],
+                "url": "http://zbozi.cz/",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }],
+                "headersSize": 284,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 1,
+                "send": 0,
+                "ssl": 0,
+                "connect": 2,
+                "dns": 1,
+                "wait": 1,
+                "blocked": 0
+            },
+            "time": 5,
+            "response": {
+                "comment": "",
+                "status": 302,
+                "cookies": [],
+                "statusText": "Moved Temporarily",
+                "content": {
+                    "comment": "",
+                    "mimeType": "text/html",
+                    "text": "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>nginx/1.2.8</center>\r\n</body>\r\n</html>\r\n",
+                    "size": 160
+                },
+                "headers": [{
+                    "name": "Server",
+                    "value": "nginx/1.2.8"
+                }, {
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:46 GMT"
+                }, {
+                    "name": "Content-Type",
+                    "value": "text/html"
+                }, {
+                    "name": "Content-Length",
+                    "value": "160"
+                }, {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                }, {
+                    "name": "Location",
+                    "value": "http://www.zbozi.cz/"
+                }],
+                "headersSize": 194,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 160
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.76.29",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:46.814+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [],
+                "url": "http://www.zbozi.cz/",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "www.zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }],
+                "headersSize": 288,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 4,
+                "send": 0,
+                "ssl": 0,
+                "connect": 2,
+                "dns": 1,
+                "wait": 354,
+                "blocked": 1
+            },
+            "time": 361,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [{
+                    "comment": "",
+                    "domain": "www.zbozi.cz",
+                    "name": "ZBOZI_USER_ID",
+                    "expires": "2015-02-18T15:43:46.000+0000",
+                    "value": "f4b243a6-6968-4e78-94b5-2823f7c5a54a:9209cd30e6f9dd938baf66d5cbd1e38b",
+                    "path": "/"
+                }, {
+                    "comment": "",
+                    "domain": "www.zbozi.cz",
+                    "name": "zboziqt",
+                    "expires": null,
+                    "value": "2axE57Wvo6BUvWwfJSrx",
+                    "path": "/"
+                }, {
+                    "comment": "",
+                    "domain": "www.zbozi.cz",
+                    "name": "ZBOZI_RETURN_TO_SEARCH",
+                    "expires": null,
+                    "value": "%2F",
+                    "path": "/returnToSearch"
+                }, {
+                    "comment": "",
+                    "domain": "www.zbozi.cz",
+                    "name": "ZBOZI_SHOPRATING",
+                    "expires": "2014-05-20T15:43:46.000+0000",
+                    "value": "PKbHMnPyE-metJNXNlt562KuCWXMZAHUaQOPhhMKAUk=",
+                    "path": "/"
+                }],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "text/html; charset=UTF-8",
+                    "text": " <!DOCTYPE html> <html> <head> <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" /> <link rel=\"shortcut icon\" href=\"/favicon.ico\" /> <link rel=\"search\" type=\"application/opensearchdescription+xml\" title=\"Zbo\u00c5\u00be\u00c3\u00ad.cz\" href=\"http://download.seznam.cz/vyhledavani/opensearch/zbozi-cz.xml\" /> <script type=\"text/javascript\" src=\"/js/all.js?4.14.5-2\"></script> <link rel=\"stylesheet\" href=\"/css/styles.css?4.14.5-2\" type=\"text/css\" media=\"all\" /> <script type=\"text/javascript\"> /* <![CDATA[ */ if(typeof JAK.CONF != \"object\") { JAK.CONF = new Object(); }; JAK.CONF = { HID: \"\", CARD_URL : '/getCard', CARD_ANIMATE_TIME : 500, UTM_HASH: '#utm_source=zbozi.cz&amp;utm_medium=link&amp;utm_campaign=lista', URL_FIRMY_STAT: 'http://stat.firmy.cz' }; if(typeof JAK.DICT != \"object\") { JAK.DICT = new Object(); }; JAK.DICT = { feed_test_ok: 'XML feed byl nalezen a \u00c3\u00basp\u00c4\u009b\u00c5\u00a1n\u00c4\u009b otestov\u00c3\u00a1n.', feed_test_error_500: 'P\u00c5\u0099i validaci XML feedu do\u00c5\u00a1lo k chyb\u00c4\u009b.', feed_test_error_510: 'P\u00c5\u0099i validaci XML feedu do\u00c5\u00a1lo k chyb\u00c4\u009b.', feed_test_error_550: 'Vypr\u00c5\u00a1el \u00c4\u008dasov\u00c3\u00bd limit pro p\u00c5\u0099ipojen\u00c3\u00ad k XML feedu.', feed_test_error_301: 'Je povoleno max. jedno presm\u00c4\u009brov\u00c3\u00a1n\u00c3\u00ad na stejnou dom\u00c3\u00a9nu.', feed_test_error_302: 'Je povoleno max. jedno presm\u00c4\u009brov\u00c3\u00a1n\u00c3\u00ad na stejnou dom\u00c3\u00a9nu.', feed_test_error_401: 'Chybn\u00c4\u009b zadan\u00c3\u00a1 URL adresa XML feedu.', feed_test_error_404: 'Neplatn\u00c3\u00bd XML feed. Viz.: <a href=\"http://napoveda.seznam.cz/cz/zbozi/napoveda-pro-internetove-obchody/specifikace-xml/\" target=\"_blank\">Specifikace XML</a>', rating_description: [ 'P\u00c5\u0099\u00c3\u00ad\u00c5\u00a1ern\u00c3\u00a9', 'Nic moc', 'Dobr\u00c3\u00a9', 'Velmi dobr\u00c3\u00a9', 'V\u00c3\u00bdborn\u00c3\u00a9' ], err_product_ip_limit: 'Z t\u00c3\u00a9to IP adresy ji\u00c5\u00be bylo pro recenzi zahlasov\u00c3\u00a1no.', err_default_error: 'Do\u00c5\u00a1lo k chyb\u00c4\u009b.', newsletter_form_status_200: 'E-mail ##email## byl \u00c3\u00basp\u00c4\u009bsn\u00c4\u009b p\u00c5\u0099ihl\u00c3\u00a1\u00c5\u00a1en do odb\u00c4\u009bru novinek.', newsletter_form_status_400: 'Zadan\u00c3\u00a1 e-mailov\u00c3\u00a1 adresa nem\u00c3\u00a1 spr\u00c3\u00a1vn\u00c3\u00bd form\u00c3\u00a1t.', newsletter_form_status_444: 'Nevyplnili jste \u00c5\u00be\u00c3\u00a1dn\u00c3\u00bd e-mail.' }; (function () { Zbozi.PageData = {}; Zbozi.PageData[\"hid\"] = \"\"; Zbozi.PageData[\"template\"] = \"index\"; })(); /* ]]> */ </script> <script type=\"text/javascript\">/* <![CDATA[ */function catchError(a,b,c) { return true; } window.onerror=catchError;/* ]]> */</script> <script type=\"text/javascript\"> /* <![CDATA[ */ JAK.CLogger.URL = 'http://dot.zbozi.cz'; JAK.CLogger.SID = '2axE57WvwYBUvWOzQEKE'; /* ]]> */ </script> <script type=\"text/javascript\">var adv = {};</script> <title>Zbo\u00c5\u00be\u00c3\u00ad.cz \u00e2\u0080\u0093 srovn\u00c3\u00a1n\u00c3\u00ad cen a porovn\u00c3\u00a1n\u00c3\u00ad zbo\u00c5\u00be\u00c3\u00ad</title> <meta name=\"description\" content=\"Zbo\u00c5\u00be\u00c3\u00ad.cz \u00e2\u0080\u0093 Najdeme v\u00c3\u00a1m nejv\u00c3\u00bdhodn\u00c4\u009bj\u00c5\u00a1\u00c3\u00ad cenu toho, co hled\u00c3\u00a1te. Srovnejte ceny a p\u00c5\u0099e\u00c4\u008dt\u00c4\u009bte si recenze v\u00c3\u00bdrobk\u00c5\u00af. Zbo\u00c5\u00be\u00c3\u00ad.cz \u00e2\u0080\u0093 v\u00c3\u00a1\u00c5\u00a1 partner pro chytr\u00c3\u00bd n\u00c3\u00a1kup.\" /> <script type=\"text/javascript\"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-30427377-1']); _gaq.push(['_setDomainName', 'zbozi.cz']); _gaq.push(['_setAllowAnchor', true]); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; /* upraveny GA skript s podporou trackovani AdWords */ ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); /* doubleclick.net je blokovany adblockem. Pokud doslo k zablokovani, stahneme klasicky GA skript, abychom neprisli o zapocteni navstevy */ (function() { var t = setTimeout(function() { if (typeof window._gat === 'undefined') { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); } }, 2000); })(); </script> </head> <body id=\"homepage\"> <div id=\"page\" class=\"hp\"> <div id=\"contentWrap\"> <div id=\"head\"> <div id=\"line\"> <p id=\"login\"><a href=\"http://login.szn.cz?serviceId=zbozi&amp;loggedURL=http://www.zbozi.cz/\" rel=\"nofollow\" onmousedown=\"return JAK.CLogger.log('login', {})\">P\u00c5\u0099ihl\u00c3\u00a1sit se</a><span class=\"pipe\">|</span><a href=\"http://www.seznam.cz\">Seznam</a></p><div class=\"cleaner\"></div> </div> <div class=\"cleaner\"></div> </div>   <script type=\"text/javascript\"> /* <![CDATA[ */ JAK.CLogger.URL = 'http://dot.zbozi.cz'; JAK.CLogger.SID = '2axE57WvwYBUvWOzQEKE'; JAK.CLogger.logImpress('other', {n:'hp'}); /* ]]> */ </script> <div id=\"page-wrap\"> <div class=\"header-search\"><h1><a href=\"/\" accesskey=\"2\" title=\"Vyhled\u00c3\u00a1v\u00c3\u00a1n\u00c3\u00ad Zbo\u00c5\u00be\u00c3\u00ad\"><img src=\"/img/zbozi-logo.png\" width=\"284\" height=\"54\" alt=\"Zbozi.cz\"/></a></h1><form method=\"get\" action=\"/\" onsubmit=\"Zbozi.Util.editArgCookie({qc:1}); JAK.CLogger.logSubmit(this, 'srch', {q:''});\"><label class=\"blind\">Hledej: </label><input type=\"text\" name=\"q\" id=\"q\" value=\"\" autocomplete=\"off\" class=\"text\" accesskey=\"4\" /><input type=\"submit\" value=\"Vyhledat\" class=\"submit\" /><script type=\"text/javascript\">/* <![CDATA[ */new Zbozi.Common.SuggestGoods('q', '/suggest/zbozi', {count:10, highlight: 1});/* ]]> */</script></form></div> <div class=\"day-offer offer-box\"> <a href=\"/vyrobek/tescoma-cukrarska-zdobici-tuzka-delicia/\" class=\"box-content\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'dnesni-nabidka'}\"> <img src=\"http://images.zbozi.cz/zbozi-images/52f38f5713bef4032c2b0100.jpg\" alt=\"Tescoma DEL\u00c3\u008dCIA\"/> <div class=\"info-box\"> <h2>Tescoma DEL\u00c3\u008dCIA</h2> <p>Cukr\u00c3\u00a1\u00c5\u0099sk\u00c3\u00a1 zdobic\u00c3\u00ad tu\u00c5\u00beka. Vynikaj\u00c3\u00adc\u00c3\u00ad<br>pro dekorov\u00c3\u00a1n\u00c3\u00ad pokrm\u00c5\u00af kr\u00c3\u00a9mem,<br>rozpu\u00c5\u00a1t\u00c4\u009bnou \u00c4\u008dokol\u00c3\u00a1dou i \u00c5\u00a1leha\u00c4\u008dkou.</p> <span class=\"round-button\">od <strong>239</strong> K\u00c4\u008d</span> </div> </a> </div> <ul class=\"category-list\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'kategorie'}\"> <li> <h3><a onmousedown=\"return JAK.CLogger.log('cat',{id:'84', name:'Po\u00c4\u008d\u00c3\u00adta\u00c4\u008de', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 1, '/pocitace/');\" href=\"/pocitace/\" class=\"main-category\">Po\u00c4\u008d\u00c3\u00adta\u00c4\u008de</a></h3> <ul> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'111', name:'Notebooky', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 1, '/pocitace/notebooky/');\" href=\"/pocitace/notebooky/\">Notebooky</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'1008', name:'Tablety', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 1, '/pocitace/tablety/');\" href=\"/pocitace/tablety/\">Tablety</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'129', name:'Software', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 1, '/pocitace/software/');\" href=\"/pocitace/software/\">Software</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'90', name:'PC hry', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 1, '/pocitace/software/hry-pro-pc/');\" href=\"/pocitace/software/hry-pro-pc/\">PC hry</a></li> </ul> </li> <li> <h3><a onmousedown=\"return JAK.CLogger.log('cat',{id:'69', name:'Telefony, navigace', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 2, '/telefony-navigace/');\" href=\"/telefony-navigace/\" class=\"main-category\">Telefony, navigace</a></h3> <ul> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'81', name:'Mobiln\u00c3\u00ad telefony', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 2, '/telefony-navigace/mobilni-telefony/');\" href=\"/telefony-navigace/mobilni-telefony/\">Mobiln\u00c3\u00ad telefony</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'72', name:'GPS', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 2, '/telefony-navigace/gps/');\" href=\"/telefony-navigace/gps/\">GPS</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'83', name:'Vys\u00c3\u00adla\u00c4\u008dky', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 2, '/telefony-navigace/vysilacky/');\" href=\"/telefony-navigace/vysilacky/\">Vys\u00c3\u00adla\u00c4\u008dky</a></li> </ul> </li> <li> <h3><a onmousedown=\"return JAK.CLogger.log('cat',{id:'245', name:'Oble\u00c4\u008den\u00c3\u00ad a m\u00c3\u00b3da', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 3, '/obleceni-a-moda/');\" href=\"/obleceni-a-moda/\" class=\"main-category\">Oble\u00c4\u008den\u00c3\u00ad a m\u00c3\u00b3da</a></h3> <ul> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'367', name:'\u00c5\u00a0perky', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 3, '/obleceni-a-moda/sperky-a-hodinky/sperky/');\" href=\"/obleceni-a-moda/sperky-a-hodinky/sperky/\">\u00c5\u00a0perky</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'362', name:'Hodinky', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 3, '/obleceni-a-moda/sperky-a-hodinky/hodinky/');\" href=\"/obleceni-a-moda/sperky-a-hodinky/hodinky/\">Hodinky</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'246', name:'D\u00c3\u00a1msk\u00c3\u00a9 oble\u00c4\u008den\u00c3\u00ad', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 3, '/obleceni-a-moda/damske-obleceni/');\" href=\"/obleceni-a-moda/damske-obleceni/\">D\u00c3\u00a1msk\u00c3\u00a9 oble\u00c4\u008den\u00c3\u00ad</a></li> </ul> </li> <li> <h3><a onmousedown=\"return JAK.CLogger.log('cat',{id:'461', name:'Sport', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 4, '/sport/');\" href=\"/sport/\" class=\"main-category\">Sport</a></h3> <ul> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'462', name:'Cyklistika', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 4, '/sport/cyklistika/');\" href=\"/sport/cyklistika/\">Cyklistika</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'484', name:'Fitness', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 4, '/sport/fitness/');\" href=\"/sport/fitness/\">Fitness</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'565', name:'Outdoor', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 4, '/sport/outdoorove-vybaveni/');\" href=\"/sport/outdoorove-vybaveni/\">Outdoor</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'626', name:'Snowboardy', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 4, '/sport/zimni-sporty/snowboarding/snowboardy/');\" href=\"/sport/zimni-sporty/snowboarding/snowboardy/\">Snowboardy</a></li> </ul> </li> <li> <h3><a onmousedown=\"return JAK.CLogger.log('cat',{id:'161', name:'Dom\u00c3\u00a1c\u00c3\u00ad spot\u00c5\u0099ebi\u00c4\u008de', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 5, '/domaci-spotrebice/');\" href=\"/domaci-spotrebice/\" class=\"main-category\">Dom\u00c3\u00a1c\u00c3\u00ad spot\u00c5\u0099ebi\u00c4\u008de</a></h3> <ul> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'172', name:'Kuchy\u00c5\u0088sk\u00c3\u00a9 spot\u00c5\u0099ebi\u00c4\u008de', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 5, '/domaci-spotrebice/kuchynske-spotrebice/');\" href=\"/domaci-spotrebice/kuchynske-spotrebice/\">Kuchy\u00c5\u0088sk\u00c3\u00a9 spot\u00c5\u0099ebi\u00c4\u008de</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'226', name:'Pra\u00c4\u008dky', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 5, '/domaci-spotrebice/pracky-a-susicky/pracky/');\" href=\"/domaci-spotrebice/pracky-a-susicky/pracky/\">Pra\u00c4\u008dky</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'215', name:'Lednice', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 5, '/domaci-spotrebice/kuchynske-spotrebice/lednice/');\" href=\"/domaci-spotrebice/kuchynske-spotrebice/lednice/\">Lednice</a></li> </ul> </li> <li> <h3><a onmousedown=\"return JAK.CLogger.log('cat',{id:'443', name:'Auto-moto', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 6, '/auto-moto/');\" href=\"/auto-moto/\" class=\"main-category\">Auto-moto</a></h3> <ul> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'448', name:'Pneumatiky', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 6, '/auto-moto/pneumatiky/');\" href=\"/auto-moto/pneumatiky/\">Pneumatiky</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'22', name:'Autor\u00c3\u00a1dia', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 6, '/auto-moto/auto-hi-fi/autoradia/');\" href=\"/auto-moto/auto-hi-fi/autoradia/\">Autor\u00c3\u00a1dia</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'381', name:'Autoseda\u00c4\u008dky', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 6, '/auto-moto/autosedacky/');\" href=\"/auto-moto/autosedacky/\">Autoseda\u00c4\u008dky</a></li> </ul> </li> <li> <h3><a onmousedown=\"return JAK.CLogger.log('cat',{id:'380', name:'D\u00c4\u009btsk\u00c3\u00a9 zbo\u00c5\u00be\u00c3\u00ad', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 7, '/detske-zbozi/');\" href=\"/detske-zbozi/\" class=\"main-category\">D\u00c4\u009btsk\u00c3\u00a9 zbo\u00c5\u00be\u00c3\u00ad</a></h3> <ul> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'384', name:'Hra\u00c4\u008dky', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 7, '/detske-zbozi/hracky/');\" href=\"/detske-zbozi/hracky/\">Hra\u00c4\u008dky</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'426', name:'Ko\u00c4\u008d\u00c3\u00a1rky', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 7, '/detske-zbozi/kocarky/');\" href=\"/detske-zbozi/kocarky/\">Ko\u00c4\u008d\u00c3\u00a1rky</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'382', name:'Oble\u00c4\u008den\u00c3\u00ad', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 7, '/detske-zbozi/detske-obleceni/');\" href=\"/detske-zbozi/detske-obleceni/\">Oble\u00c4\u008den\u00c3\u00ad</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'436', name:'Pleny', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 7, '/detske-zbozi/pleny/');\" href=\"/detske-zbozi/pleny/\">Pleny</a></li> </ul> </li> <li> <h3><a onmousedown=\"return JAK.CLogger.log('cat',{id:'298', name:'Kosmetika a zdrav\u00c3\u00ad', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 8, '/kosmetika-a-zdravi/');\" href=\"/kosmetika-a-zdravi/\" class=\"main-category\">Kosmetika a zdrav\u00c3\u00ad</a></h3> <ul> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'345', name:'Parf\u00c3\u00a9my', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 8, '/kosmetika-a-zdravi/parfemy/');\" href=\"/kosmetika-a-zdravi/parfemy/\">Parf\u00c3\u00a9my</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'299', name:'Kosmetika', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 8, '/kosmetika-a-zdravi/kosmetika/');\" href=\"/kosmetika-a-zdravi/kosmetika/\">Kosmetika</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'351', name:'L\u00c3\u00a9ky', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 8, '/kosmetika-a-zdravi/zdravi/leky/');\" href=\"/kosmetika-a-zdravi/zdravi/leky/\">L\u00c3\u00a9ky</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'352', name:'\u00c4\u008co\u00c4\u008dky', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 8, '/kosmetika-a-zdravi/zdravi/kontaktni-cocky/');\" href=\"/kosmetika-a-zdravi/zdravi/kontaktni-cocky/\">\u00c4\u008co\u00c4\u008dky</a></li> </ul> </li> <li> <h3><a onmousedown=\"return JAK.CLogger.log('cat',{id:'629', name:'D\u00c5\u00afm, byt a zahrada', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 9, '/dum-byt-a-zahrada/');\" href=\"/dum-byt-a-zahrada/\" class=\"main-category\">D\u00c5\u00afm, byt a zahrada</a></h3> <ul> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'695', name:'N\u00c3\u00a1bytek', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 9, '/dum-byt-a-zahrada/nabytek/');\" href=\"/dum-byt-a-zahrada/nabytek/\">N\u00c3\u00a1bytek</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'680', name:'N\u00c3\u00a1\u00c5\u0099ad\u00c3\u00ad', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 9, '/dum-byt-a-zahrada/dilna/');\" href=\"/dum-byt-a-zahrada/dilna/\">N\u00c3\u00a1\u00c5\u0099ad\u00c3\u00ad</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'719', name:'Zahrada', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 9, '/dum-byt-a-zahrada/zahrada/');\" href=\"/dum-byt-a-zahrada/zahrada/\">Zahrada</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'1304', name:'Stavebniny', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 9, '/stavebniny/');\" href=\"/stavebniny/\">Stavebniny</a></li> </ul> </li> <li> <h3><a onmousedown=\"return JAK.CLogger.log('cat',{id:'1', name:'Foto', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 10, '/foto/');\" href=\"/foto/\" class=\"main-category\">Foto</a></h3> <ul> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'3', name:'Fotoapar\u00c3\u00a1ty', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 10, '/foto/digitalni-fotoaparaty/');\" href=\"/foto/digitalni-fotoaparaty/\">Fotoapar\u00c3\u00a1ty</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'18', name:'Pam\u00c4\u009b\u00c5\u00a5ov\u00c3\u00a9 karty', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 10, '/foto/pametove-karty/');\" href=\"/foto/pametove-karty/\">Pam\u00c4\u009b\u00c5\u00a5ov\u00c3\u00a9 karty</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'5', name:'Zrcadlovky', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 10, '/foto/digitalni-fotoaparaty/digitalni-zrcadlovky/');\" href=\"/foto/digitalni-fotoaparaty/digitalni-zrcadlovky/\">Zrcadlovky</a></li> </ul> </li> <li> <h3><a onmousedown=\"return JAK.CLogger.log('cat',{id:'19', name:'Elektronika', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 11, '/elektronika/');\" href=\"/elektronika/\" class=\"main-category\">Elektronika</a></h3> <ul> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'58', name:'Televizory', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 11, '/elektronika/televizory/');\" href=\"/elektronika/televizory/\">Televizory</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'87', name:'Hern\u00c3\u00ad konzole', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 11, '/elektronika/herni-konzole/');\" href=\"/elektronika/herni-konzole/\">Hern\u00c3\u00ad konzole</a></li> <li><a onmousedown=\"return JAK.CLogger.log('subcat',{id:'1166', name:'\u00c4\u008cte\u00c4\u008dky e-knih', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 11, '/elektronika/elektronicke-ctecky-knih/');\" href=\"/elektronika/elektronicke-ctecky-knih/\">\u00c4\u008cte\u00c4\u008dky e-knih</a></li> </ul> </li> <li> <h3><a onmousedown=\"return JAK.CLogger.log('allcategories',{name:'V\u00c5\u00a1echny kategorie', zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', q:''}, 12, '/elektronika/elektronicke-ctecky-knih/');\" href=\"/kategorie/\" class=\"main-category all-categories\">V\u00c5\u00a1echny kategorie&nbsp;&raquo;</a></h3> </li> <li class=\"cleaner\"></li> </ul> <h2 class=\"desired-goods-header\">Nej\u00c5\u00be\u00c3\u00a1dan\u00c4\u009bj\u00c5\u00a1\u00c3\u00ad zbo\u00c5\u00be\u00c3\u00ad</h2> <div class=\"products-grid\"> <div class=\"product\"> <a href=\"/vyrobek/samsung-i9295-galaxy-s4-active/\" class=\"product-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-produkt'}\"> <div class=\"image\"> <img src=\"http://images.zbozi.cz/zbozi-images/5256c918370355df5c2c0000.jpg\" alt=\"Samsung i9295 Galaxy S4 Active\" /> </div> <span class=\"name\">Samsung i9295 Galaxy S4 Active</span> <span class=\"price\">od <strong>9 600</strong> K\u00c4\u008d</span> </a> <a href=\"/telefony-navigace/mobilni-telefony/\" class=\"category-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-kategorie'}\">Mobiln\u00c3\u00ad telefony</a> </div> <div class=\"product\"> <a href=\"/vyrobek/banana-republic-classic-edt/\" class=\"product-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-produkt'}\"> <div class=\"image\"> <img src=\"http://images.zbozi.cz/zbozi-images/5256864b1d3ea963c6100000.jpg\" alt=\"Banana Republic Classic EDT\" /> </div> <span class=\"name\">Banana Republic Classic EDT</span> <span class=\"price\">od <strong>480</strong> K\u00c4\u008d</span> </a> <a href=\"/kosmetika-a-zdravi/parfemy/\" class=\"category-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-kategorie'}\">Parf\u00c3\u00a9my</a> </div> <div class=\"product\"> <a href=\"/vyrobek/acer-travelmate-p253-e/\" class=\"product-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-produkt'}\"> <div class=\"image\"> <img src=\"http://images.zbozi.cz/zbozi-images/52544bd15b7c46eb82210000.jpg\" alt=\"Acer TravelMate P253-E\" /> </div> <span class=\"name\">Acer TravelMate P253-E</span> <span class=\"price\">od <strong>7 760</strong> K\u00c4\u008d</span> </a> <a href=\"/pocitace/notebooky/\" class=\"category-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-kategorie'}\">Notebooky</a> </div> <div class=\"product\"> <a href=\"/vyrobek/lego-70803-movie-palac-v-oblackove-zemi-cuckoo/\" class=\"product-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-produkt'}\"> <div class=\"image\"> <img src=\"http://images.zbozi.cz/zbozi-images/52d7c5c127ffc6a65b590000.jpg\" alt=\"LEGO 70803 MOVIE Pal\u00c3\u00a1c v Obl\u00c3\u00a1\u00c4\u008dkov\u00c3\u00a9 zemi Cuckoo\" /> </div> <span class=\"name\">LEGO 70803 MOVIE Pal\u00c3\u00a1c v Obl\u00c3\u00a1\u00c4\u008dkov\u00c3\u00a9 zemi Cuckoo</span> <span class=\"price\">od <strong>385</strong> K\u00c4\u008d</span> </a> <a href=\"/detske-zbozi/hracky/stavebnice/stavebnice-lego/\" class=\"category-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-kategorie'}\">Stavebnice Lego</a> </div> <div class=\"product\"> <a href=\"/vyrobek/prestigio-multipad-7-0-ultra-plus/\" class=\"product-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-produkt'}\"> <div class=\"image\"> <img src=\"http://images.zbozi.cz/zbozi-images/5256d7e3902a4ab4e33a0000.jpg\" alt=\"Prestigio MultiPad 7.0 Ultra Plus\" /> </div> <span class=\"name\">Prestigio MultiPad 7.0 Ultra Plus</span> <span class=\"price\">od <strong>1 620</strong> K\u00c4\u008d</span> </a> <a href=\"/pocitace/tablety/\" class=\"category-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-kategorie'}\">Tablety</a> </div> <div class=\"product\"> <a href=\"/vyrobek/nikon-d3200/\" class=\"product-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-produkt'}\"> <div class=\"image\"> <img src=\"http://images.zbozi.cz/zbozi-images/52572b0bb1aba570cb290000.jpg\" alt=\"NIKON D3200\" /> </div> <span class=\"name\">NIKON D3200</span> <span class=\"price\">od <strong>8 698</strong> K\u00c4\u008d</span> </a> <a href=\"/foto/digitalni-fotoaparaty/\" class=\"category-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-kategorie'}\">Digit\u00c3\u00a1ln\u00c3\u00ad fotoapar\u00c3\u00a1ty</a> </div> <div class=\"product\"> <a href=\"/vyrobek/playstation-4-500gb/\" class=\"product-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-produkt'}\"> <div class=\"image\"> <img src=\"http://images.zbozi.cz/zbozi-images/5256a97432beef05161c0000.jpg\" alt=\"Playstation 4 - 500GB\" /> </div> <span class=\"name\">Playstation 4 - 500GB</span> <span class=\"price\">od <strong>10 390</strong> K\u00c4\u008d</span> </a> <a href=\"/elektronika/herni-konzole/\" class=\"category-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-kategorie'}\">Hern\u00c3\u00ad konzole</a> </div> <div class=\"product\"> <a href=\"/vyrobek/miele-cm-6300-cerna/\" class=\"product-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-produkt'}\"> <div class=\"image\"> <img src=\"http://images.zbozi.cz/zbozi-images/527dff3ff8acb7155d250000.jpg\" alt=\"MIELE CM 6300 \u00c4\u008dern\u00c3\u00a1\" /> </div> <span class=\"name\">MIELE CM 6300 \u00c4\u008dern\u00c3\u00a1</span> <span class=\"price\">od <strong>35 900</strong> K\u00c4\u008d</span> </a> <a href=\"/domaci-spotrebice/kuchynske-spotrebice/kavovary-cajovary-espressa/\" class=\"category-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-kategorie'}\">K\u00c3\u00a1vovary, \u00c4\u008dajovary, espressa</a> </div> <div class=\"product\"> <a href=\"/vyrobek/jet-set-addiction-j12238-37/\" class=\"product-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-produkt'}\"> <div class=\"image\"> <img src=\"http://images.zbozi.cz/zbozi-images/525695bf090264049b250000.jpg\" alt=\"JET SET Addiction J12238-37\" /> </div> <span class=\"name\">JET SET Addiction J12238-37</span> <span class=\"price\">od <strong>1 617</strong> K\u00c4\u008d</span> </a> <a href=\"/obleceni-a-moda/sperky-a-hodinky/hodinky/\" class=\"category-link\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'top-kategorie'}\">Hodinky</a> </div> <div class=\"cleaner\"></div> </div> <div class=\"week-offer offer-box\"> <div class=\"box-content\"> <a href=\"/tema/tescoma\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'tematicky-tyden', 'value': ''}\" class=\"info-box\"> <h2>Tescoma</h2> <p>Stala se synonymem pro kuchy\u00c5\u0088sk\u00c3\u00a9 pot\u00c5\u0099eby, podobn\u00c4\u009b jako ve sv\u00c3\u00a9 dob\u00c4\u009b Ba\u00c5\u00a5a pokud jde o boty nebo zna\u00c4\u008dka Lux, kter\u00c3\u00a1 dala jm\u00c3\u00a9no\u00e2\u0080\u00a6 luxov\u00c3\u00a1n\u00c3\u00ad.</p> <span class=\"round-button\">Cel\u00c3\u00a1 nab\u00c3\u00addka&nbsp;&raquo;</span> </a> <div class=\"products\"> <ul> <li> <a href=\"/vyrobek/tescoma-teo-tone-1-25-l/\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'tematicky-tyden'}\"> <img src=\"http://images.zbozi.cz/zbozi-images/52ea46b79a73e9748e0d0000.jpg\" alt=\"Tescoma TEO TONE 1.25 l\"/> <p class=\"name\">Tescoma TEO TONE 1.25 l</p> <p class=\"price\">od <strong>239</strong> K\u00c4\u008d</p> </a> </li> <li> <a href=\"/vyrobek/tescoma-elektricky-mlynek-na-pepr-sul-president/\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'tematicky-tyden'}\"> <img src=\"http://images.zbozi.cz/zbozi-images/52753e9f6a1283427a0f0000.jpg\" alt=\"Tescoma Elektrick\u00c3\u00bd ml\u00c3\u00bdnek na pep\u00c5\u0099/s\u00c5\u00afl PRESIDENT\"/> <p class=\"name\">Tescoma Elektrick\u00c3\u00bd ml\u00c3\u00bdnek na pep\u00c5\u0099/s\u00c5\u00afl PRESIDENT</p> <p class=\"price\">od <strong>479</strong> K\u00c4\u008d</p> </a> </li> <li> <a href=\"/vyrobek/tescoma-azza-blok-na-noze-se-6-nozi/\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'tematicky-tyden'}\"> <img src=\"http://images.zbozi.cz/zbozi-images/52a45833c501e5232c110000.jpg\" alt=\"Tescoma AZZA blok na no\u00c5\u00bee se 6 no\u00c5\u00bei\"/> <p class=\"name\">Tescoma AZZA blok na no\u00c5\u00bee se 6 no\u00c5\u00bei</p> <p class=\"price\">od <strong>1 599</strong> K\u00c4\u008d</p> </a> </li> </ul> </div> </div> </div> <div class=\"favorite-brands\"> <span class=\"label\"><a href=\"/znacky/\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'znacky'}\">Obl\u00c3\u00adben\u00c3\u00a9 zna\u00c4\u008dky:</a></span> <span> <a href=\"/znacky/insportline/\" title=\"inSPORTline\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'znacky'}\"><img src=\"http://images.zbozi.cz/zbozi-images/52a4e519921d4dc793140000\" alt=\"Logo inSPORTline\" /></a> </span> <span> <a href=\"/znacky/sony/\" title=\"SONY\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'znacky'}\"><img src=\"http://images.zbozi.cz/zbozi-images/52d911acb3b509810c420000\" alt=\"Logo SONY\" /></a> </span> <span> <a href=\"/znacky/sencor/\" title=\"SENCOR\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'znacky'}\"><img src=\"http://images.zbozi.cz/zbozi-images/519e329ec158537efd420000\" alt=\"Logo SENCOR\" /></a> </span> <span> <a href=\"/znacky/tescoma/\" title=\"TESCOMA\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'znacky'}\"><img src=\"http://images.zbozi.cz/zbozi-images/51ff8f5da7d2dffc79190000\" alt=\"Logo TESCOMA\" /></a> </span> <span> <a href=\"/znacky/monster-high/\" title=\"Monster High\" data-ga-event=\"{'type': 'mousedown', 'action': 'click-from-hp', 'label': 'znacky'}\"><img src=\"http://images.zbozi.cz/zbozi-images/5273aa054ec5e1c664810000\" alt=\"Logo Monster High\" /></a> </span> </div> </div> </div> <div id=\"foot\"> <h2 class=\"blind\">Tir\u00c3\u00a1\u00c5\u00be</h2> <p>&copy; 1996&ndash;2014 Seznam.cz, a.s.</p> <p> <a href=\"/addPremiseScreen\">P\u00c5\u0099idat obchod</a> &ndash; <a href=\"https://admin.zbozi.cz\">Administrace obchodu</a> &ndash; <a href=\"http://napoveda.seznam.cz/cz/zbozi/vseobecne-obchodni-podminky/\">Obchodn\u00c3\u00ad podm\u00c3\u00adnky</a> &ndash; <a href=\"http://www.zbozi.cz/mobileRedir\">Mobiln\u00c3\u00ad verze</a> &ndash; <a href=\"http://napoveda.seznam.cz/cz/zbozi/faq/\" onmousedown=\"return JAK.CLogger.log('other',{zboziUserId:'cb0c17fe-b5d7-4ec4-a10e-2f70a9956a5a', sessionId:'2axE57WvwYBUvWOzQEKE', n:'help'});\">\u00c4\u008cast\u00c3\u00a9 dotazy</a> &ndash; <a href=\"http://napoveda.seznam.cz/cz/kontaktni-formular.html?service=zbozi\">Kontakt</a> </p> </div> <script type=\"text/javascript\" src=\"http://h.imedia.cz/js/dot-small.js\"></script> <script type=\"text/javascript\"> /* <![CDATA[ */ var dotData = { service: 'zbozi', lsid: '2axE57WvwYBUvWOzQEKE' }; DOT.cfg(dotData); /* ]]> */ </script> <script type=\"text/javascript\"> /* <![CDATA[ */ function vizitkaCounter(){ if(typeof window.pp_gemius_hit != 'undefined') { pp_gemius_event(vizitka_gem_id, vizitka_gem_params); } }; /* ]]> */ </script> <script type=\"text/javascript\"> /* <![CDATA[ */ var gemius = \"\"; var gemius_extraparameters = \"\"; /* homepage */ gemius = \"pyaVfXbRSaR53WDbjFkEUbeOj1iYbEM33S9bwzKETcb.87\"; gemius_extraparameters = ['gA=zbozi.cz/Homepage']; if (gemius) { var pp_gemius_identifier = gemius; var pp_gemius_extraparameters = gemius_extraparameters; } /* inicializace gemiusu */ function gemius_pending(i) { window[i] = window[i] || function () { var x = window[i + '_pdata'] = window[i + '_pdata'] || []; x[x.length] = arguments; }; }; gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event'); (function (d, t) { try { var gt = d.createElement(t), s = d.getElementsByTagName(t)[0]; gt.setAttribute('async', 'async'); gt.setAttribute('defer', 'defer'); gt.src = 'https://gacz.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt, s); } catch (e) {} })(document, 'script'); /* ]]> */ </script> \n\n <div id=\"comparison-bar\" class=\"nodisplay\"> <div class=\"wrap\"> <p class=\"left\"> <span class=\"count\"></span> <a href=\"/porovnani-produktu\" id=\"showProductComparsion\" rel=\"nofollow\" class=\"buttons red\">Zobrazit&nbsp;porovn\u00c3\u00a1n\u00c3\u00ad</a> </p> <p class=\"right\"> <span class=\"cancel\">Zru\u00c5\u00a1it&nbsp;porovn\u00c3\u00a1n\u00c3\u00ad</span> </p> <div class=\"cleaner\"></div> </div> </div> <script type=\"text/javascript\">/* <![CDATA[ */var seznam_retargeting_id = 10011;/* ]]> */</script> <script type=\"text/javascript\" src=\"http://c.imedia.cz/js/retargeting.js\"></script> </div> </body> </html> \n",
+                    "size": 7021
+                },
+                "headers": [{
+                    "name": "Server",
+                    "value": "nginx/1.2.8"
+                }, {
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Content-Type",
+                    "value": "text/html; charset=UTF-8"
+                }, {
+                    "name": "Transfer-Encoding",
+                    "value": "chunked"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Cache-Control",
+                    "value": "no-cache=\"set-cookie\", max-age=0"
+                }, {
+                    "name": "Set-Cookie",
+                    "value": "ZBOZI_USER_ID=f4b243a6-6968-4e78-94b5-2823f7c5a54a:9209cd30e6f9dd938baf66d5cbd1e38b; path=/; expires=Wed, 18-Feb-2015 15:43:46 GMT; httponly"
+                }, {
+                    "name": "Set-Cookie",
+                    "value": "zboziqt=2axE57Wvo6BUvWwfJSrx; path=/; httponly"
+                }, {
+                    "name": "Set-Cookie",
+                    "value": "ZBOZI_RETURN_TO_SEARCH=%2F; path=/returnToSearch; httponly"
+                }, {
+                    "name": "Set-Cookie",
+                    "value": "ZBOZI_SHOPRATING=PKbHMnPyE-metJNXNlt562KuCWXMZAHUaQOPhhMKAUk=; path=/; expires=Tue, 20-May-2014 15:43:46 GMT; httponly"
+                }, {
+                    "name": "Expires",
+                    "value": "Tue, 18 Feb 2014 15:43:46 GMT"
+                }, {
+                    "name": "X-Frame-Options",
+                    "value": "SAMEORIGIN"
+                }, {
+                    "name": "Vary",
+                    "value": "User-Agent,Accept-Encoding"
+                }, {
+                    "name": "Content-Encoding",
+                    "value": "gzip"
+                }],
+                "headersSize": 758,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 7021
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.76.29",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.214+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [{
+                    "comment": "",
+                    "expires": null,
+                    "name": "ZBOZI_USER_ID",
+                    "value": "f4b243a6-6968-4e78-94b5-2823f7c5a54a:9209cd30e6f9dd938baf66d5cbd1e38b"
+                }, {
+                    "comment": "",
+                    "expires": null,
+                    "name": "zboziqt",
+                    "value": "2axE57Wvo6BUvWwfJSrx"
+                }, {
+                    "comment": "",
+                    "expires": null,
+                    "name": "ZBOZI_SHOPRATING",
+                    "value": "PKbHMnPyE-metJNXNlt562KuCWXMZAHUaQOPhhMKAUk="
+                }],
+                "url": "http://www.zbozi.cz/css/styles.css?4.14.5-2",
+                "queryString": [{
+                    "name": "4.14.5-2",
+                    "value": ""
+                }],
+                "headers": [{
+                    "name": "Host",
+                    "value": "www.zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "text/css,*/*;q=0.1"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Referer",
+                    "value": "http://www.zbozi.cz/"
+                }, {
+                    "name": "Cookie",
+                    "value": "ZBOZI_USER_ID=f4b243a6-6968-4e78-94b5-2823f7c5a54a:9209cd30e6f9dd938baf66d5cbd1e38b; zboziqt=2axE57Wvo6BUvWwfJSrx; ZBOZI_SHOPRATING=PKbHMnPyE-metJNXNlt562KuCWXMZAHUaQOPhhMKAUk="
+                }],
+                "headersSize": 483,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 7,
+                "send": 0,
+                "ssl": 0,
+                "connect": 1,
+                "dns": 0,
+                "wait": 3,
+                "blocked": 1
+            },
+            "time": 11,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "text/css",
+                    "text": "html,body{margin:0;padding:0;font-family:\"Arial\",sans-serif}html{font-size:106.5%}body{font-size:76.5%}table{font-size:100%}a{color:#00c}a:hover{color:#c00}img{border:0}.clearfix:before,.clearfix:after{display:table;content:\" \";line-height:0}.clearfix:after{clear:both}.blind{position:absolute;left:-5000px;top:-5000px;width:1px;height:1px;overflow:hidden}.nodisplay{display:none!important}h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,label{margin:0;padding:0}li{list-style-type:none}hr{display:none!important}table{border:0;border-collapse:collapse;font-size:100%}input{outline:0}a{color:#00c;outline:0}a:hover{color:#c00}a.hunderline{text-decoration:none}a.hunderline:hover{text-decoration:underline}a.pblue{color:#33C;text-decoration:none}a.pblue:hover{color:#c00}.active{font-weight:bold;color:#000;text-decoration:none}.cleaner{height:0;clear:both;overflow:hidden;display:block}.error{font-weight:bold;color:red}.itemcount{color:#ccc;font-weight:normal}.faq-link{position:relative;top:-5px;left:5px}.green{color:#008000}.silver{color:#999}.red{color:#c00}.buttons{color:#FFF;text-decoration:none;font-weight:bold;padding:5px 25px;border-radius:5px;cursor:pointer;display:inline-block}.buttons:hover{text-decoration:underline}.buttons.red{color:#FFF;border:1px solid #a93434;border-top-color:#a30a0a;border-bottom-color:#a71111;background-color:#be2828;background-image:-moz-linear-gradient(top,#ca3232,#b21d1d);background-image:-webkit-linear-gradient(top,#ca3232,#b21d1d);background-image:-o-linear-gradient(top,#ca3232,#b21d1d);background-image:linear-gradient(to bottom,#ca3232,#b21d1d);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffca3232',endColorstr='#ffb21d1d',GradientType=0)}.buttons.grey{color:#4a3654;border:1px solid #d0d0d0;border-top-color:#bdbdbd;border-bottom-color:#e2e2e2;background-color:#eee;background-image:-moz-linear-gradient(top,#f6f6f6,#e6e6e6);background-image:-webkit-linear-gradient(top,#f6f6f6,#e6e6e6);background-image:-o-linear-gradient(top,#f6f6f6,#e6e6e6);background-image:linear-gradient(to bottom,#f6f6f6,#e6e6e6);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff6f6f6',endColorstr='#ffe6e6e6',GradientType=0)}.buttons.green{border:1px solid #83c41a;background-color:#94c32c;background-image:-moz-linear-gradient(top,#9dce2c,#8bb82b);background-image:-webkit-linear-gradient(top,#9dce2c,#8bb82b);background-image:-o-linear-gradient(top,#9dce2c,#8bb82b);background-image:linear-gradient(to bottom,#9dce2c,#8bb82b);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9dce2c',endColorstr='#ff8bb82b',GradientType=0)}#page{min-width:1000px;background:#fff}.middle{margin-right:260px}#container{clear:both;padding-top:22px;max-width:1135px;overflow:hidden}#leftColumn{width:165px;overflow:hidden;float:left;clear:left;margin-top:25px}#leftColumn.nomargin{margin-top:0}#leftColumn>*{margin-bottom:1.5em}#content{margin:0 0 0 181px}#content.narrow{min-width:750px}#head{padding-top:8px;position:relative;z-index:5;zoom:1}#head #logo{float:left;margin:24px 0 3px 0;width:164px;height:34px;text-align:left;position:relative;z-index:9}#head #line #tabs{float:left}#head #login{float:right}#head #login .username{font-weight:bold}#head #login .pipe{margin:0 9px;color:#ccc}#head #login .new{color:#f00000}#head #line #tabs li{display:block;float:left}#head #line #tabs a{display:block;margin-right:15px}#head #line #tabs .active a{color:#000!important;cursor:default;text-decoration:none;font-weight:bold}#foot{position:relative;clear:both;border-top:1px solid #e5e5e5;padding:13px 0 13px 13px;margin:1em 0 0;color:#666}#foot p{margin:.3em 0}#foot #seznam-logo{position:absolute;top:-110px;right:36px;width:97px;height:97px;background:url(/img/vysledky-dodava-seznam.png) 0 0 no-repeat}html,body,#page{height:99%}#contentWrap{margin:0 13px 8px;min-height:100%}#container{padding-bottom:60px}#foot{position:relative;margin-top:-60px;clear:both}#breadcrumbs{margin-top:2px}#breadcrumbs a{text-decoration:none}#breadcrumbs a.actual{color:#000}#breadcrumbs a img{vertical-align:top}#search{margin-top:29px}#search{position:relative;margin-left:17px;float:left}#search form{float:left;margin-right:15px}#search input{font-family:Arial,sans-serif}#search input.text{display:block;float:left;width:372px;padding:0 4px;padding-top:4px\\9;height:26px;height:22px\\9;margin-right:2px;vertical-align:top;font-size:123.5%;background:#fff url(/img/search-text-bg.png) 0 0 repeat-x;border:1px solid #c1c1c1;border-color:#848484 #c1c1c1 #e1e1e1 #c1c1c1}#search .submit{font-size:100%;color:#333;height:28px;width:146px;background:#ececec url(/img/search-submit-bg.png) 0 0 repeat-x;border:1px solid #a1a1a1;border-color:#c5c5c5 #7d7d7d #7b7b7b #a1a1a1;float:left}#search .submit:hover{cursor:pointer}#search .submit:active{background:#e5e5e5}#search .link{float:left;margin:.4em 0}#search #categoryName{font-size:123.5%;line-height:26px;padding:0 5px;float:left;background:#fff url(/img/search-text-bg.png) 0 0 repeat-x;border:1px solid #c1c1c1;border-color:#848484 #c1c1c1 #e1e1e1 #c1c1c1;border-right:0;position:relative;z-index:1;margin-right:-1px}#search #switch{margin:4px 0 0 0}#search #switch li{display:block;float:left}#search #switch .active a{font-weight:bold;color:#000!important;text-decoration:none;padding-left:11px;background:url(/img/arrow-red.gif) 0 50% no-repeat}#search #switch a{display:block;margin-right:15px}#search .queryCont{float:left;margin-right:2px;background:#fff url(/img/search-text-bg.png) 0 0 repeat-x;border:1px solid #c1c1c1;border-color:#848484 #c1c1c1 #e1e1e1 #c1c1c1;width:28.5em;padding:0 2px 0 4px;padding-top:4px\\9;height:26px;height:22px\\9;overflow:hidden;position:relative}#search .queryCont .filterCategory{float:left;width:auto;height:auto;font-weight:normal}#search .queryCont .empty{display:none}#search .queryCont .emptyInput{padding-left:0}#search .queryCont .filterCategory .flt{cursor:pointer;font-size:16px;display:block;float:left;padding:3px 4px 0 0;padding-top:0\\9}#search .queryCont .filterCategory .flt.selected{background:#5e81bc}#search .queryCont .filterCategory .flt .inflt{font-size:16px}#search .queryCont .filterCategory .flt.link{margin:0;float:none}#search .queryCont .filterCategory .flt.unlink{cursor:default}#search .queryCont .filterCategory .flt.unlink a{cursor:default;color:#000;text-decoration:none;font-weight:bold}#search .queryCont .delFilter{width:25px;height:21px;float:right;background:url(/img/delete-filter.gif) 0 0 no-repeat;cursor:pointer;position:absolute;top:3px;right:2px}#search .queryCont .text{border:0;border-color:#fff;background:0;font-weight:normal;font-size:123.5%;width:auto;float:left;margin:0;padding:0}#search .queryCont .text:focus{outline:0}#search .queryCont .text::-ms-clear{display:none}@media all and (-webkit-min-device-pixel-ratio:10000),not all and (-webkit-min-device-pixel-ratio:0){#search .queryCont .filterCategory .flt{padding-top:4px}}#addPremise #content .row{margin:1em 0}#addPremise #content .row label{display:inline-block;width:150px;text-align:right}#addPremise #content .row input[type=\"text\"],#addPremise #content .row textarea{width:280px}#addPremise #content textarea{resize:none}#addPremise #content .notes{margin:2em 0;color:#666}#addPremise #content .notes>*{margin-bottom:1em}#addPremise #content .agreement{color:#666;margin-left:150px}#addPremise #content .agreement label{width:auto}#addPremise #content .agreement .error{margin-left:0}#addPremise #content .desc label{line-height:100%;vertical-align:top;padding-top:3px}#addPremise #content .error,#addPremise #content .indicator{margin-left:155px;width:280px;display:block}#addPremise #content .indicator{color:#999}#addPremise #content p{margin:0 0 2.5em}#addPremise #content h3{margin:1.5em 0 2.5em}#addPremise #content h3.saved{color:#008000}#addPremise #content .req{display:inline-block;color:red;line-height:100%;vertical-align:top;padding-top:3px}#categoriesPage .resultsWrap{border:0;width:auto;display:block}#categoriesPage .resultsWrap .item{border-bottom:1px solid #ececec;position:relative;min-height:130px;width:100%;display:inline-block}#categoriesPage .resultsWrap .item:hover{background:0;cursor:default}#categoriesPage .item .text{margin-left:180px;padding:10px}#categoriesPage .item .imgWrap{position:absolute;top:15px;left:10px;float:left}#categoriesPage .item .imgWrap .img{width:160px;height:100px;line-height:100px;text-align:center;overflow:hidden;display:inline-block}#categoriesPage .item .imgWrap img{max-width:160px;max-height:100px;vertical-align:middle}#categoriesPage .item h2{font-size:123.5%;font-weight:bold;line-height:1.2em;padding-bottom:3px}#categoriesPage .item h2 a{text-decoration:underline}#categoriesPage .subcategories li{display:inline}#categoriesPage .subcategories a{color:#66C;white-space:nowrap;text-decoration:none}#categoriesPage .subcategories a:hover{color:#c00}#paging{margin-top:30px;margin-bottom:30px;height:31px;text-align:center}#paging .pad{width:32px;text-align:center}#paging .pad,#paging .prev,#paging .next{display:inline-block;height:31px;background:url(/img/paging.png) right -31px no-repeat}#paging a{line-height:31px;width:32px;margin:0;display:inline-block;background:url(/img/paging.png) 0 0 no-repeat;text-decoration:none}#paging .prev{padding:0;background-position:left -93px}#paging .next{padding:0;background-position:right -62px}#paging .prev a{padding:0 13px 0 25px;width:auto;background-position:right bottom}#paging .next a{padding:0 25px 0 13px;width:auto}#paging .active{line-height:31px;background-position:right -124px;font-weight:bold;color:#FFF}#paging .active a{background-position:left -155px}.cardContainer{height:0;overflow:hidden;clear:both}.cardPlace{padding:0 10px 10px 170px}.cardPlace td{padding:0 4px 6px 0;vertical-align:top}.cardPlace td.label{color:#666;text-align:right;vertical-align:top;white-space:nowrap;margin:0}.cardPlace a{color:#6565cc;text-decoration:none}.cardPlace a:hover{text-decoration:underline}.cardPlace img.logo{float:left;height:70px;width:70px}.cardPlace a.companyLink{color:#080}#productDetail .cardPlace{padding:15px 0 15px 20px;max-width:850px}.sklik-block-title a{color:#999;text-decoration:none}.sklik-block-title a:hover{color:#c00;text-decoration:underline}.sklik-title{display:block;font-size:115.5%}.sklik-url a{color:#008000;text-decoration:none}#sklik{position:relative;width:230px;float:right;margin:9px 0 0 30px;clear:right;overflow:hidden}#sklik.ff{padding-bottom:0}#sklik span{display:block}#sklik .sklik-block-title{display:block;margin:0 0 .5em;font-size:100%}#sklik .creative{margin-bottom:22px}#sklik .sklik-block-title{margin-bottom:12px}#sklik span{display:block}#sklik .sklik-addr{color:#999}#sklikTop{max-width:100%;overflow:hidden;margin:0 auto}#sklikTop .item{width:100%}#sklikTop .itemTop{width:100%}#sklik-b{padding-bottom:10px;zoom:1;position:relative}#sklik-b .limiter{padding-top:0;padding-bottom:0}#sklik-b .sklik-block-title{float:right;margin-right:8px}#sklik-b .creative{padding:8px 12px 10px;position:relative}#sklik-b .sklik-title{font-size:123.5%;font-weight:normal}#sklik-b a:hover{color:#ec0000!important}#sklik-b .sklik-block{clear:both;background:#fff7d5}#sklik-b .sklik-block-title{float:right;font-size:85%;color:#999;margin:5px 5px 0 0}#sklik-b .sklik-block-title a{color:#66c}#sklik-b .creative{margin:0;padding:5px 10px 8px;border-top:1px solid #fff}#sklik-b .sklik-title{font-weight:normal;font-size:123.5%;margin:0 0 1px}#sklik-b .sklik-url{display:block}#sklik-b .sklik-url a{color:#090;text-decoration:none}#sklik-b.noresult .sklik-block{border-top:1px solid #fee2ad;border-bottom:0;padding:1em 0 0}@media all and (min-width:0){#sklik-b .sklik-title{font-size:123.5%}}.stats #container h2{font-size:139.5%;font-weight:normal;margin:0 0 1em}.stats #container h3{font-weight:bold;margin:2em 0 0}.stats #container p{margin:0 0 2.5em}.stats #container p.back{margin:1em 0 .5em}.stats #container form{margin:3em 0}.stats #container form p{margin:0 0 1em}.stats #container label{float:left;display:block;width:150px;text-align:right;margin:0 5px 0 0;font-weight:bold}.stats #container .submit{font-size:146.5%}.stats #container textarea{width:300px;height:100px}.stats #container .error{color:red}.stats #container .statsTop table{width:522px}.stats #container .box{padding-bottom:30px}.stats #container .statsTop h3,.stats #container .kontakt h3{font-weight:bold;margin-bottom:3px}.stats #container .statsTop p{color:#808080;margin-bottom:15px}.stats #container .graph{float:left}.stats #container table{text-align:right}.stats #container table .left{text-align:left;padding-left:0}.stats #container table th{border-bottom:2px solid #dbe0e5;color:#747c84;font-weight:normal;padding:3px 12px 4px}.stats #container table .th{color:#747c84}.stats #container table td{padding:3px 12px 4px;border-bottom:1px solid #dbe0e5}.stats #container table .first td{background:#f6f6f6}.stats #container table .last td{border:0}.stats #container table div{position:relative}.stats #container table .ico{position:absolute;top:2px;left:0}.stats #container table .collocation{margin-left:28px}.stats #container .box .lb_GraphBox{position:relative;width:600px;height:220px;font-size:93%;float:left}.stats #container .box .lb_GraphBox .lb_desc{position:absolute;width:50px;font-size:11px;font-weight:bold;color:#747c84}.stats #container .box .lb_GraphBox .lb_rowDesc{top:5px;left:15px}.stats #container .box .lb_GraphBox .lb_colDesc{bottom:25px;right:-30px}.stats #container .box .lb_GraphBox noscript p{padding:50px 0 0 50px;font-weight:93%;font-weight:bold;color:red}.stars{display:inline-block;position:relative}.stars .starsIn{display:block;overflow:hidden;background-position:top left;background-repeat:no-repeat}.stars .starsAc{display:block;width:0;overflow:hidden;position:absolute;top:0;left:0;text-align:left}.stars.stars10px .starsIn{width:54px;height:10px;background-image:url(/img/rating_stars_10px_in.png)}.stars.stars10px .starsAc{height:10px;background-image:url(/img/rating_stars_10px_ac.png)}.stars.stars15px .starsIn{width:75px;height:15px;background-image:url(/img/starsOut-14px.png)}.stars.stars15px .starsAc{height:15px;background-image:url(/img/starsIn-14px.png)}.stars.stars17px .starsIn{width:90px;height:17px;background-image:url(/img/rating_stars_17px_in.png)}.stars.stars17px .starsAc{height:17px;background-image:url(/img/rating_stars_17px_ac.png)}.stars.stars20px .starsIn{width:90px;height:16px;background-image:url(/img/starsOut-16px.png)}.stars.stars20px .starsAc{height:16px;background-image:url(/img/starsIn-16px.png)}.stars.stars23px .starsIn{width:123px;height:23px;background-image:url(/img/rating_stars_23px_in.png)}.stars.stars23px .starsAc{height:23px;background-image:url(/img/rating_stars_23px_ac.png)}#tabs-menu{height:35px;line-height:35px;position:relative;z-index:3}#tabs-menu li{float:left;font-size:131.5%;margin-right:3px;position:relative;top:1px;z-index:1;background:url(/img/tabs-bg.png) left -72px no-repeat}#tabs-menu li a{border:0;display:inline-block;padding:0 2em;background:url(/img/tabs-bg.png) right -108px no-repeat;color:#33c;text-decoration:none}#tabs-menu li a:hover{color:#c00}#tabs-menu li a .stars{top:1px;margin-left:5px}#tabs-menu li.active{background-position:left top}#tabs-menu li.active a{font-weight:bold;color:#000;background-position:right -36px}.tab-head{height:60px;line-height:60px;display:table;width:100%;border:1px solid #e4e4e4;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.tab-head>*{display:table-cell}.tab-head #errorBox{margin:2em;display:block}#grey-tooltip{z-index:10;color:#fff;font-size:93%}#categoryAggregated{padding-bottom:20px}#categoryAggregated h3{font-size:123.5%;font-weight:bold;color:#999}#categoryAggregated .item{width:115px;min-width:102px;margin:.5em 0;vertical-align:top;position:relative;display:inline-block}#categoryAggregated h2{width:105px;overflow:hidden;font-size:93%;font-weight:normal;line-height:1.2em;text-align:center}#categoryAggregated h2 a{text-decoration:none;color:#333;cursor:pointer;line-height:1.3em}#categoryAggregated h2 a:hover{color:#C00}#categoryAggregated .text{display:inline-block;padding-top:80px}#categoryAggregated .item .img{float:left;position:absolute;top:0;left:0;width:100px;height:75px;line-height:75px;border:1px solid #e1e1e1;text-align:center;overflow:hidden}#categoryAggregated .item .img img{max-width:100px;max-height:75px;vertical-align:middle}#queryCorrector{background:url(/img/butt_qw_mark.png) 0 50% no-repeat;padding:.5em 0 .5em 44px;margin-bottom:1.5em;font-size:123.5%;font-weight:normal}#queryCorrector strong{font-weight:bold}#errorBox{margin-bottom:2em}#errorBox h3{background:#ffdada url(/img/butt_ex_mark_pink.png) 1em 50% no-repeat;padding:1em 1em 1em 60px;margin-bottom:1.5em;font-size:123.5%;font-weight:bold;color:#444;border-radius:4px}#errorBox p{font-size:123.5%;font-weight:bold;color:#999}#errorBox.bazar h3{background:#e4eef6;font-weight:normal;padding:1em}#noresult .text{padding:0 0 12px}#noresult .text h3{font-size:123.5%;font-weight:normal;line-height:1.7}#noresult .text h3 strong{font-weight:bold}#bottomHint{margin-top:3em}#bottomHint .otz{background:url(/img/butt_qw_mark.png) 0 50% no-repeat;padding:.5em 0 .5em 44px;margin-bottom:.5em;font-size:123.5%}#bottomHint .hint{width:auto;padding:5px 0;border:1px solid #fff;width:500px;line-height:1em}#bottomHint .hint:hover{border:1px solid #ececec}#bottomHint .cat-name{text-transform:lowercase}#adFirefox{clear:right;position:relative;width:230px;float:right;margin:0 0 0 30px;padding-bottom:150px}#retry{margin:2em 20px}#retry .error{font-size:123.5%;margin:1em 0}#retry a{margin:0;display:block}#retry form{margin:0}.verify .ok,.verify .ko{border-bottom:1px solid white;color:#FFF;padding:6px;width:460px}.verify .ok{background:#209201}.verify .ko{background:#c90000}.verify .ok h3,.verify .ko h3{margin:0!important;padding:0;font-size:108.5%}.verify .ko p,.verify .ok p{margin:0;padding:0;color:white!important}.verify .ko p a{color:white}#sound{background:transparent url(/img/sound.gif) no-repeat scroll 0 50%;font-weight:bold;padding:0 0 0 15px}#content.verify{margin-left:28px;width:460px}#content.verify p{margin:1em 0}#content.verify h2{font-size:123.5%}#content.verify .row{clear:both;margin:10px 0}#content.verify .helpdesk{margin-top:1em;margin-left:100px}#content.verify h3.ko{font-size:108.5%;color:#FFF;background:#c90000;margin:1em 0}#content.verify .item{text-align:left;margin-left:20%}#content.verify .nolabel .item{margin-left:0}#content.verify .item img{display:block;border:1px solid #c1c1c1}#content.verify .item .img{margin-bottom:10px}#content.verify .item input{width:7em}#content.verify .item .submit{font-weight:bold;font-size:123.5%;width:8em}.superSelect{position:relative}.superSelFocus{background:#fff;padding-right:5px;border:1px solid #dfdfdf;text-decoration:none}.superSelFocus span{display:block;background:url(/img/select-opener.png) right center no-repeat;padding:2px 20px 2px 5px;color:#000}.superSelOptions{position:absolute;background:#fff;border:1px solid #dfdfdf;box-shadow:0 0 4px 0 #ccc;z-index:4}.superSelOption{padding:2px 20px 2px 5px;white-space:nowrap}.superSelect .disabled{color:#aaa;cursor:default!important;background:#FFF!important}.superSelect .optOver{background:#d6d6d6}#hint-cont{position:relative;margin:15px 0 5px 116px;overflow:hidden}#page.hp #hint-cont{width:660px;margin:15px auto 5px}#hint-cont #hint-arrow{display:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/hint/border-arrow.png');background:url(/img/hint/border-arrow.png);_background:0;width:13px;height:31px;position:absolute;top:5px;left:57px;_left:5px;z-index:2}#hint-cont #hint-dog{display:none;margin-top:-2px;float:left;width:55px;height:44px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/hint/hint-pes.png');background:url(/img/hint/hint-pes.png);_background:0}#hint-cont .window-container{margin-left:65px}#hint-cont #hint{padding:10px 18px 9px 18px;background:#fffcec;width:484px}#hint-cont #hint #hint-body{font-size:108.5%;display:block;width:425px}#hint-cont #hint #hint-body a{font-weight:bold}#hint-cont #hint #hint-close{display:block;position:absolute;top:3px;right:3px;width:15px;height:15px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/hint/krizek-modry.png');background:url(/img/hint/krizek-modry.png);_background:0}#hint-cont #hint #hint-form{display:inline}#hint-cont .add-hint{padding:4px 18px 3px 18px!important}#hint-cont #ok-ico{background:url(/img/ikona-ok.png) no-repeat 0 0;width:16px;height:16px;float:left;margin-right:3px;position:relative;top:0;left:-5px}#hint-cont #ko-ico{background:url(/img/ikona-ko.png) no-repeat 0 0;width:16px;height:16px;float:left;margin-right:4px;position:relative;top:4px;left:-2px}@media print{#line,#sklikTop,#sklik,#adFirefox,#priceUserRangeOpener,#foot #seznam-logo,#foot #bing-logo,#bottomHint,#breadcrumbs,#moreParamsButton,#priceUserRangeOpener,#paging,.add,#bigPhotoButton,.productId,#itemDesc>span,#itemDesc .closer{display:none!important}body{border:0;background:0}#container{max-width:auto;position:relative;zoom:1}.middle{margin-right:0}#itemDesc .desc,#itemDesc .desc span{display:inline!important}}@media screen and (color) and (max-width:1280px){#seznam-logo{display:none}}@media screen and (color) and (max-width:1150px){#categoryAggregated .item{width:102px}}.suggest{position:absolute;z-index:999;top:28px;left:0}.suggest .content{border:1px solid #999;background:#fff;overflow:hidden;padding-bottom:3px}.suggest p{position:relative;z-index:99;margin:0;padding:.1em .2em;_height:1px;padding-right:60px;text-align:left}.suggest p.item{font-size:123.5%;font-weight:bold;cursor:pointer;padding:2px 4px 2px 5px;white-space:nowrap}.suggest p.item strong{font-weight:normal}.suggest p.remote{font-weight:bold;border-top:1px solid #888}.suggest p.active{background:#00c;color:#fff!important;font-weight:normal}.suggest p .relevance{display:none}.suggest p .category{float:left;color:#999;padding-right:4px;margin-right:5px}.suggest p.active .category{color:#fff}.sghelp{position:relative;width:auto}.sghelp p{display:inline}.sghelp p .category{float:none;width:auto}.hp .suggest p{padding-right:.2em}#homepage #page-wrap{width:958px;margin:0 auto;padding-bottom:60px}#homepage #page-wrap a{text-decoration:none}#homepage #foot{width:958px;text-align:center;margin-left:auto;margin-right:auto}#homepage .round-button{display:inline-block;height:39px;line-height:39px;color:#000!important;border:1px #cdcdcd solid;padding:0 30px;border-radius:20px;text-align:center;font-size:139.5%;min-width:140px;background-color:#f6f6f6;background-image:-moz-linear-gradient(top,#fff,#ececec);background-image:-webkit-linear-gradient(top,#fff,#ececec);background-image:-o-linear-gradient(top,#fff,#ececec);background-image:linear-gradient(to bottom,#fff,#ececec);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffececec',GradientType=0);filter:progid:DXImageTransform.Microsoft.gradient(enabled = false)}#homepage .round-button:hover{background-color:#f6f6f6;background-image:-moz-linear-gradient(top,#ececec,#fff);background-image:-webkit-linear-gradient(top,#ececec,#fff);background-image:-o-linear-gradient(top,#ececec,#fff);background-image:linear-gradient(to bottom,#ececec,#fff);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffececec',endColorstr='#ffffffff',GradientType=0);filter:progid:DXImageTransform.Microsoft.gradient(enabled = false)}#homepage .round-button:active{background:#ececec}#homepage .header-search{margin:58px 0 53px 0;position:relative}#homepage .header-search *{vertical-align:bottom}#homepage .header-search h1{position:absolute;bottom:-4px;left:68px}@media(max-width:910px){#homepage .header-search h1{bottom:46px}}#homepage .header-search input[type=text]{margin-left:357px;border-color:#848484 #fff #e0e0e0 #c1c1c1;border-width:1px 0 1px 1px;border-style:solid;height:34px;padding:6px 10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:370px;font-size:123.5%;-webkit-box-shadow:1px 2px 1px #d4d4d4 inset;-moz-box-shadow:1px 2px 1px #d4d4d4 inset;box-shadow:1px 2px 1px #d4d4d4 inset}@media(max-width:910px){#homepage .header-search input[type=text]{margin:50px 0 0}}#homepage .header-search input[type=submit]{border-color:#c5c5c5 #7d7d7d #7b7b7b #a1a1a1;border-width:1px;border-style:solid;height:34px;line-height:34px;padding:0;width:144px;font-size:108.5%;font-family:\"Arial\",sans-serif;background-color:#f6f6f6;background-image:-moz-linear-gradient(top,#fff,#ececec);background-image:-webkit-linear-gradient(top,#fff,#ececec);background-image:-o-linear-gradient(top,#fff,#ececec);background-image:linear-gradient(to bottom,#fff,#ececec);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffececec',GradientType=0)}#homepage .header-search input[type=submit]:hover{cursor:pointer;background-color:#f6f6f6;background-image:-moz-linear-gradient(top,#ececec,#fff);background-image:-webkit-linear-gradient(top,#ececec,#fff);background-image:-o-linear-gradient(top,#ececec,#fff);background-image:linear-gradient(to bottom,#ececec,#fff);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffececec',endColorstr='#ffffffff',GradientType=0)}#homepage .header-search input[type=submit]:active{background:#e5e5e5}#homepage .header-search input[type=submit]::-moz-focus-inner{border:0;padding:0}#homepage .header-search .suggest{top:34px;left:357px}@media(max-width:910px){#homepage .header-search .suggest{top:84px;left:0}}#homepage .offer-box{border:1px #e5e5e5 solid;position:relative;z-index:1;margin:35px 0;-webkit-box-shadow:0 0 2px 2px #f6f6f6;-moz-box-shadow:0 0 2px 2px #f6f6f6;box-shadow:0 0 2px 2px #f6f6f6}#homepage .offer-box:before{content:\"\";display:block;position:absolute;width:124px;height:99px;left:-56px;border:0;margin:0}#homepage .offer-box>.box-content{display:table;width:100%}#homepage .offer-box>.box-content>*{display:table-cell;vertical-align:middle}#homepage .offer-box>.box-content>img{position:relative;z-index:-1}#homepage .offer-box .info-box{padding:20px 40px 20px}#homepage .offer-box .info-box h2{font-size:185.5%;color:#c00}#homepage .offer-box .info-box p{font-size:139.5%;color:#666;margin:5px 0 20px 0}#homepage .day-offer:before{background:transparent url(/img/day-offer.png) no-repeat 0 0;top:-4px}#homepage .week-offer:before{background:transparent url(/img/week-offer.png) no-repeat 0 0;top:-5px}#homepage .week-offer .info-box{width:100%}#homepage .week-offer .info-box h2{color:#165596}#homepage .week-offer .products{min-width:545px;height:254px}#homepage .week-offer .products ul{display:table;width:100%}#homepage .week-offer .products ul li{display:table-cell}#homepage .week-offer .products ul li a{width:140px;display:inline-block}#homepage .week-offer .products ul li a img{max-width:140px;max-height:100px}#homepage .week-offer .products ul li a .name{font-size:123.5%;margin:2px 0 6px 0;max-height:38px;line-height:19px;overflow:hidden}#homepage .week-offer .products ul li a .price{font-size:115.5%;color:#000}#homepage .gift-advisor{margin:-15px 0 35px}#homepage .gift-advisor:before{background:transparent url(/img/zbozi-darky-visacka.png) no-repeat 0 0;top:-3px}#homepage .gift-advisor .box-content{padding:0 35px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#homepage .gift-advisor .info-box{height:215px;padding:0}#homepage .gift-advisor .info-box h2{margin-top:40px;font-size:170%}#homepage .gift-advisor .info-box p{font-size:123.5%}#homepage .gift-advisor .menu ul{display:table;width:100%}#homepage .gift-advisor .menu ul li{display:table-cell;width:25%}#homepage .gift-advisor .menu ul li a{width:132px;height:167px;margin-left:10px;display:block;position:relative;background:url(/img/zbozi-darky-hp.jpg) 0 0 no-repeat}#homepage .gift-advisor .menu ul li a b{width:100%;min-width:0;height:25px;padding:0;line-height:25px;display:block;font-size:100%;position:absolute;bottom:0}#homepage .gift-advisor .menu ul li.col-2 a{background-position:-125px 0}#homepage .gift-advisor .menu ul li.col-3 a{background-position:-258px 0}#homepage .gift-advisor .menu ul li.col-4 a{background-position:-391px 0}#homepage .desired-goods-header{color:#666;text-align:center;font-size:170%;font-weight:normal;padding-bottom:7px;margin:53px 0 0 0}#homepage .products-grid{margin:0 0 36px 0}#homepage .products-grid .product{float:left;border:1px #e5e5e5 solid;width:33.3%;height:311px;position:relative;margin-top:-1px;margin-left:-1px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#homepage .products-grid .product:hover{background:url(/img/product-shade.png) no-repeat -1px -1px}#homepage .products-grid .product .image{padding:25px 34px 21px;width:250px;height:180px;overflow:hidden;text-align:center;line-height:180px}#homepage .products-grid .product .image img{max-width:250px;max-height:180px;vertical-align:middle}#homepage .products-grid .product .name{font-size:123.5%;width:274px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:block;margin:0 22px}#homepage .products-grid .product .price{font-size:115.5%;color:#000;margin:4px 22px;display:block}#homepage .products-grid .product .product-link{display:block;width:100%;height:100%}#homepage .products-grid .product .category-link{position:absolute;bottom:22px;left:0;display:block;font-size:93%;color:#66c;margin:0 22px}#homepage .products-grid .product .category-link:hover{color:#c00}#homepage .category-list{list-style:none;padding:0;margin:-20px 0 35px}#homepage .category-list>li{padding:0 22px;float:left;width:33.33%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#homepage .category-list>li.cleaner{float:none;width:100%;padding:0}#homepage .category-list li li{display:inline-block;font-size:108.5%}#homepage .category-list li li:before{content:\"| \";color:#dedede}#homepage .category-list li li:first-child:before{content:\"\"}#homepage .category-list h3{margin:20px 0 2px;font-size:123.5%}#homepage .category-list>ul>li:first-child h3{margin:0}#homepage .category-list .all-categories{position:relative;top:1.2em}#homepage .favorite-brands{text-align:right;margin:35px 0 25px;padding-right:10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;display:table;width:100%}#homepage .favorite-brands>span{display:table-cell;vertical-align:middle}#homepage .favorite-brands>span img{width:120px;height:120px}#homepage .favorite-brands .label{width:60px}#homepage .favorite-brands .label a{color:#999}#homepage.touchdevice .offer-box:before{left:-40px}#homepage .weekofferlandingpage .head{background:url(/img/shading-separator2.png) top center no-repeat;padding:15px;text-align:center}#homepage .weekofferlandingpage .head h2{font-size:185.5%;color:#165596}#homepage .weekofferlandingpage .head p{font-size:139.5%;color:#666}#homepage .weekofferlandingpage .favorite-brands{background:url(/img/shading-separator2.png) top center no-repeat;padding-top:25px}#homepage .weekofferlandingpage #newsletter-subscription-form{min-height:136px;line-height:136px;padding:45px 0;border-top:1px solid #e5e5e5;text-align:center;background:url(/img/pes-s-bublinou.png) center 45px no-repeat}#homepage .weekofferlandingpage #newsletter-subscription-form>div{max-width:380px;display:inline-block;padding-left:150px;line-height:normal;vertical-align:middle}#homepage .weekofferlandingpage #newsletter-subscription-form>div:before,#homepage .weekofferlandingpage #newsletter-subscription-form>div:after{display:table;content:\" \";line-height:0}#homepage .weekofferlandingpage #newsletter-subscription-form>div:after{clear:both}#homepage .weekofferlandingpage #newsletter-subscription-form>div p{display:block;margin:0 auto 5px;color:#666;font-size:139.5%;text-align:left}#homepage .weekofferlandingpage #newsletter-subscription-form>div p.error{color:#c53a3a}#homepage .weekofferlandingpage #newsletter-subscription-form>div p.ok{color:#3b9319}#homepage .weekofferlandingpage #newsletter-subscription-form>div input{border-width:1px;border-style:solid;border-color:#848484 #c1c1c1 #e0e0e0;box-shadow:1px 2px 1px #d4d4d4 inset;font-size:131.5%;padding:4px 5px;width:250px;float:left}#homepage .weekofferlandingpage #newsletter-subscription-form>div button{float:right;margin-left:5px}#homepage .weekofferlandingpage #foot{border-top:0}.cancelFilters{display:inline-block;padding-left:15px;margin:.3em 0 1.5em;text-decoration:none;background:url(/img/cancel-filters.png) left center no-repeat}#sorting{text-align:right;margin-bottom:10px}#sorting>*{display:inline-block;margin-left:20px}#sorting a{color:#33c;text-decoration:none}#sorting a:hover{color:#c00}#price-filter h4{font-weight:normal}#price-filter li{line-height:1.5em;white-space:nowrap}#price-filter li.disabled{color:#999;font-weight:normal;padding-left:15px;text-decoration:none;background:url(/img/form_inputs.png) 0 -211px no-repeat}#price-filter li a{padding-left:15px;color:#333;text-decoration:none;background:url(/img/form_inputs.png) 0 -85px no-repeat}#price-filter li.active a{font-weight:bold;text-decoration:none;background:url(/img/form_inputs.png) 0 -127px no-repeat}#price-filter .opener{text-decoration:none;display:inline-block;margin:3px 0 0 17px}#price-filter form{margin-top:.5em}#leftColumn #items-filter{padding-top:1.2em;border-top:1px solid #ececec}#leftColumn #items-filter h4{font-weight:normal}#leftColumn #items-filter select{width:90%;margin:.25em 0}#leftColumn #items-filter .row{margin-bottom:1em}#parameters{border-top:1px solid #ececec;padding:1.2em 0}#parameters .paramWrapper{line-height:1.5em;margin:.3em 0}#parameters ul{padding-bottom:1em;margin-left:15px}#parameters li>*{vertical-align:top}#parameters li a,#parameters li .disabled{max-width:130px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;padding-left:17px;color:#333;text-decoration:none;display:inline-block;background:url(/img/form_inputs.png) 0 3px no-repeat}#parameters li.active a{background-position:0 -40px}#parameters li.active .disabled{background-position:0 -40px}#parameters li.crossed{text-decoration:line-through}#parameters .opener,#parameters span.inactive{padding-left:15px;color:#33c;display:inline-block;margin-bottom:2px;font-weight:normal;background:url(/img/params_opener.png) left 5px no-repeat;cursor:pointer}#parameters span.opener-disabled{padding-left:15px;color:#999;display:inline-block;margin-bottom:2px;font-weight:normal;font-size:106%;background:url(/img/params_opener.png) left -77px no-repeat}#parameters .opener:first-letter ,#parameters .opener-disabled:first-letter {text-transform:uppercase}#parameters .opened span.opener,#parameters #param-color span.inactive{color:#333;display:inline-block;font-weight:bold;background-position:1px -36px}#parameters .opener:hover{color:#c00}#parameters li.bool a{background-position:0 -85px}#parameters li.bool.active a{background-position:0 -127px}#parameters li span.disabled{color:#999;background-position:0 -168px}#parameters li.bool .disabled{background-position:0 -213px}#parameters #param-color{margin:.3em 0;line-height:1.5em}#parameters #param-color ul{width:135px;margin:0 0 2px 15px}#parameters #param-color li{float:left;width:16px;height:16px;background-color:#FFF;padding:3px}#parameters #param-color li.active{background-color:#000;border-radius:2px;border-color:#FFF}#parameters #param-color a.color{width:16px;height:16px;float:left;background-image:none;padding:0;border-radius:2px}#parameters #param-color li.active a{width:14px;height:14px;border-radius:0;border:1px solid #fff}#parameters #param-color li.cleaner{float:none;width:auto;height:auto;padding:0}#parameters li.red a.color{background-color:#bf3c30}#parameters li.orange a.color{background-color:#e19650}#parameters li.yellow a.color{background-color:#e5cf4f}#parameters li.green a.color{background-color:#3bb23b}#parameters li.cyan a.color{background-color:#3daaae}#parameters li.blue a.color{background-color:#4368d7}#parameters li.purple a.color{background-color:#81569e}#parameters li.pink a.color{background-color:#efb3ca}#parameters li.white a.color{background-color:#fff;border:1px solid #e6e6e6}#parameters li.white.active a.color{border:1px solid #666}#parameters li.gray a.color{background-color:#a4a4a4}#parameters li.black a.color{background-color:#1c1c1c}#parameters li.active.black{background-color:#999}#parameters li.brown a.color{background-color:#836542}#parameters #param-color li.cleaner{float:none;width:auto;height:0}#parameters #param-color .cancelSelection{font-size:93%;position:relative;right:20px;top:-18px;float:right;text-decoration:none}.results .item{width:100%;margin-top:-1px;display:table;position:relative;height:125px}.results .item .itemwrap{width:100%;height:125px;display:table;position:relative}.results .item>div,.results .item .itemwrap>div{display:table-cell;vertical-align:middle}.results .item .onTop{position:relative;z-index:2}.results .item .image{position:absolute;left:20px;top:15px}.results .item .image img{width:120px;height:90px;max-width:120px;max-height:90px}.results .item .text{padding-left:170px}.results .item .text .params{line-height:16px;max-height:16px;overflow:hidden;color:#333}.results .item .text .params li{float:left}.results .item .text .params li:before{content:\",\\00a0\"}.results .item .text .params li:first-child:before{content:\"\"}.results .item .info{padding-right:10px;text-align:right}.results .item .info.price{width:130px;min-width:130px}.results .item .info.price p{padding-right:25px;background:url(/img/to_shop_arrow.png) right center no-repeat;font-size:115.5%}.results .item .info.shop{width:180px}.results .item .info.shop a{display:inline-block;text-decoration:none;color:#6565cc}.results .item .info.shop a .link{font-size:85%}.results .item .info.shop a:hover .link{text-decoration:underline}.results .item .info.shop a .stars{line-height:15px}.results .item .info.shop a .count{display:block}.results .item.hasRating .info.shop a{color:#ccc}.results .item h3 a{text-decoration:none;color:#00c;font-size:108.5%;font-weight:normal}.results .item .itemlink{position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;border:1px dotted #ccc;border-bottom:1px dotted #fff;text-decoration:none}.results .item .itemlink.ie8fix{background:url(/img/transparent.png)}.results .item .itemlink .rank{position:absolute;top:-1px;left:-1px;width:35px;height:35px;color:#fff;padding:3px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-weight:bold;text-shadow:0 0 1px #333;background:url(/img/bg-result-rank.png) left top no-repeat;z-index:1}.results .item .itemlink .rank.grey{display:none;background-position:left -40px}.results .item .itemlink .rank.twodigit{padding:3px 1px}.results .item.last .itemlink{border-bottom-color:#ccc}.results .item div.cardOpener{width:35px;text-align:center;cursor:pointer;vertical-align:top}.results .item div.cardOpener span{width:12px;height:12px;display:inline-block;margin-top:50px;background:url(/img/card-opener.png) top left no-repeat}.results .item div.cardOpener.opened span{background-position:0 -24px}.results .item.hasRating div.cardOpener span{margin-top:42px}.results .item a.cardOpener{color:#6565cc;text-decoration:none}.results .item a.cardOpener:hover{text-decoration:underline}.results .item:hover .itemlink{border:1px solid #ccc!important;box-shadow:0 0 4px 0 #d1d1d1 inset}.results .item:hover .itemlink .rank.grey{display:block}.results .item:hover h3 a{color:#c00}.results .item:hover div.cardOpener{background-color:#d6d6d6}.results .item:hover div.cardOpener span{background-position:0 -12px}.results .item:hover div.cardOpener.opened span{background-position:0 -36px}.results.mix .item.last .itemlink{border-bottom-color:#fff}.results .debug{padding:5px;font-size:85%;color:#333;background-color:#f3bd5b}#reviews{border:1px dotted #ccc;border-top:0;border-bottom:0}#reviews>*{padding-left:40px}#reviews h2{padding-top:25px}#reviews ul{padding-bottom:15px;border-bottom:1px dotted #ccc}#reviews ul .review{padding:15px 0 10px}#reviews ul .review .info{color:#999}#reviews ul .review .info .stars{top:3px}#reviews ul .review .text{margin:5px 0;line-height:1.5em}#reviews #thanks-message{background-color:#effbdc;color:#3b9319;padding:10px 40px;font-weight:bold}#add-review-form-wrap{padding:0 40px}#add-review-form-wrap #add-review-form-opener{font-size:108.5%;padding-left:20px;background:url(/img/ico-minus-circle.png) top left no-repeat}#add-review-form-wrap #add-review-form-opener .on-open{display:inline}#add-review-form-wrap #add-review-form-opener .on-closed{display:none}#add-review-form-wrap form{line-height:normal;margin:40px 0}#add-review-form-wrap form h2{margin-bottom:20px}#add-review-form-wrap form .rankers{margin-bottom:20px}#add-review-form-wrap form .row{width:410px;margin:1em 0}#add-review-form-wrap form .row input[type=text],#add-review-form-wrap form .row textarea{width:100%;padding:5px;border:1px solid #ccc;overflow:auto;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#add-review-form-wrap form .row textarea{min-width:100%;min-height:100px}#add-review-form-wrap form .row.send{text-align:right}#add-review-form-wrap form .row.send .submit{width:146px;height:28px;border:1px solid #ccc;background:#ececec url(/img/search-submit-bg.png) 0 0 repeat-x;color:#333;font-family:Arial,sans-serif;font-size:100%}#add-review-form-wrap form .row .ranker{height:16px;line-height:16px;display:inline-block;vertical-align:middle}#add-review-form-wrap form .row .ranker label{font-size:108.5%;vertical-align:top;padding-right:10px}#add-review-form-wrap form .row .ranker .star{width:9px;height:16px;display:inline-block;cursor:pointer;background:url(/img/rating-star-out.png) 0 0 no-repeat}#add-review-form-wrap form .row .ranker .star.half{background-position:-9px 0}#add-review-form-wrap form .row .ranker .star.rank-active,#add-review-form-wrap form .row .ranker .star.selected{background:url(/img/rating-star-in.png) 0 0 no-repeat}#add-review-form-wrap form .row .ranker .star.half.rank-active,#add-review-form-wrap form .row .ranker .star.half.selected{background-position:-9px 0}#add-review-form-wrap form .row .ranker .review-description{color:#c98b00;line-height:18px;padding-left:5px;vertical-align:top}#add-review-form-wrap form .row .placeholder{color:#666}#add-review-form-wrap form.has-reviews{margin-top:0}#add-review-form-wrap form .char-counter{display:block;font-size:85%;color:#666;text-align:right}#add-review-form-wrap form .char-counter.char-counter-alert{color:#c00}#add-review-form-wrap form .login-message{padding:20px;background-color:#fffff3;font-size:108.5%;border:2px solid #ffa92e}#add-review-form-wrap form .login-message h6{margin-bottom:5px;font-size:115.5%}#add-review-form-wrap form .form-validation-error{padding:5px 10px;border-radius:5px;margin-bottom:20px;line-height:20px;background-color:#ffd6d6;color:#c53a3a;font-weight:bold}#add-review-form-wrap.closed #add-review-form-opener{background-image:url(/img/ico-plus-circle.png)}#add-review-form-wrap.closed #add-review-form-opener .on-open{display:none}#add-review-form-wrap.closed #add-review-form-opener .on-closed{display:inline}#add-review-form-wrap.closed form{display:none}#product-detail .gift-advisor-promo-text{position:absolute;top:45px;height:16px;padding-left:20px;display:inline-block;background:url(/img/darek.png) top left no-repeat}#product-detail #container{max-width:925px;margin:30px 0 0 18px;padding-top:0}#product-detail #product-detail-head{margin-bottom:30px}#product-detail #product-detail-head:before,#product-detail #product-detail-head:after{display:table;content:\" \";line-height:0}#product-detail #product-detail-head:after{clear:both}#product-detail #product-detail-head .image-wrap{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:373px;height:257px;padding:27px 20px 0;float:left;text-align:center;vertical-align:middle;position:relative;background:url(/img/product_photo_bg.png) top left no-repeat}#product-detail #product-detail-head .image-wrap .image{display:inline-block;min-width:320px;min-height:200px;line-height:200px}#product-detail #product-detail-head .image-wrap .image img{max-width:325px;max-height:200px;vertical-align:middle}#product-detail #product-detail-head .image-wrap .image .show-gallery-wrap{position:absolute;left:50%;bottom:-2px;line-height:normal}#product-detail #product-detail-head .image-wrap .image .show-gallery-wrap span{font-size:93%;color:#33c;border:1px solid #ccc;background-color:#fff;padding:5px 10px;position:relative;left:-50%}#product-detail #product-detail-head .image-wrap .image:hover .show-gallery-wrap span{text-decoration:underline}#product-detail #product-detail-head .text-wrap{margin:7px 0 0 390px;position:relative}#product-detail #product-detail-head h1{font-size:230%}#product-detail #product-detail-head .price-wrap{margin:.5em 0 1em}#product-detail #product-detail-head .price-wrap .price{font-size:131.5%}#product-detail #product-detail-head .price-wrap .prcmp-link{float:right;line-height:20px}#product-detail #product-detail-head #variant-filter{margin:.5em 0;font-size:103.5%}#product-detail #product-detail-head #variant-filter .variant{display:inline-block;padding-right:5px}#product-detail #product-detail-head #variant-filter .variant:before,#product-detail #product-detail-head #variant-filter .variant:after{display:table;content:\" \";line-height:0}#product-detail #product-detail-head #variant-filter .variant:after{clear:both}#product-detail #product-detail-head #variant-filter .variant label{float:left;margin-right:5px;line-height:22px}#product-detail #product-detail-head #variant-filter .variant .superSelect{float:left}#product-detail #product-detail-head #variant-filter .variant .superSelFocus span{color:#33c}#product-detail #product-detail-head .description{line-height:20px;font-size:103.5%;overflow:hidden}#product-detail #product-detail-head .description .opener{margin-left:10px;text-decoration:none}#product-detail #product-detail-head .manufacturer-products-link{display:inline-block;margin-top:10px;vertical-align:middle}#product-detail #product-detail-head .manufacturer-products-link>*{display:inline-block}#product-detail #product-detail-head .manufacturer-products-link .logo{width:54px;height:54px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border:1px solid #ccc;padding:2px;text-align:center;margin-right:10px}#product-detail #product-detail-head .manufacturer-products-link .logo img{max-width:48px;max-height:48px;vertical-align:middle}#product-detail #product-detail-head .manufacturer-products-link .link{text-decoration:none;vertical-align:middle;line-height:18px}#product-detail #product-detail-head .manufacturer-products-link .link .lower{text-transform:lowercase}#product-detail #product-detail-content{margin-bottom:3em}#product-detail #product-detail-content #items-filter{border-bottom:0}#product-detail #product-detail-content #items-filter .order{width:170px;padding-left:210px;text-align:right}#product-detail #product-detail-content #items-filter .availability{width:165px;text-align:right}#product-detail #product-detail-content #items-filter .shire{padding-left:20px}#product-detail #product-detail-content .results .item{height:75px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#product-detail #product-detail-content .results .item .itemwrap{height:75px}#product-detail #product-detail-content .results .item .itemwrap>*{overflow:hidden;padding:15px 10px}#product-detail #product-detail-content .results .item .shop{min-width:180px;width:180px}#product-detail #product-detail-content .results .item .shop h3 a{display:block;width:180px;overflow:hidden;text-overflow:ellipsis;font-size:100%;color:#333}#product-detail #product-detail-content .results .item .shop .rating{display:inline-block;font-size:85%}#product-detail #product-detail-content .results .item .shop .rating a{display:inline-block;color:#ccc;text-decoration:none}#product-detail #product-detail-content .results .item .shop .rating a:hover{text-decoration:underline}#product-detail #product-detail-content .results .item .shop .rating.add a{color:#6565cc}#product-detail #product-detail-content .results .item .shop .rating .count{display:block}#product-detail #product-detail-content .results .item .price{min-width:130px;width:130px;text-align:right}#product-detail #product-detail-content .results .item .price p{vertical-align:middle}#product-detail #product-detail-content .results .item .price p.extraMessage{color:#aaa}#product-detail #product-detail-content .results .item .price b{font-size:123.5%}#product-detail #product-detail-content .results .item .availability{min-width:145px;width:145px;text-align:right}#product-detail #product-detail-content .results .item .depots{min-width:200px;width:200px;padding-left:15px}#product-detail #product-detail-content .results .item .shopLink a{padding-right:25px;text-decoration:none;background:url(/img/to_shop_arrow.png) right center no-repeat}#product-detail #product-detail-content .results .item div.cardOpener span{margin-top:25px}#product-detail #product-detail-content .results .item.hasRating div.cardOpener span{margin-top:20px}#product-detail #product-detail-content .results .item:hover{background:#f3f3f3}#product-detail #product-detail-content .results .item:hover .shopLink a,#product-detail #product-detail-content .results .item:hover .shop h3 a{color:#c00}#product-detail #product-detail-content .params{width:100%;border:1px dotted #ccc;border-top:1px solid #e4e4e4}#product-detail #product-detail-content .params td{vertical-align:middle;padding:8px 0;line-height:18px}#product-detail #product-detail-content .params td.name{font-weight:bold;width:33%;padding:0 10px 0 47px;color:#333}#product-detail #product-detail-content .params .odd td{background-color:#f3f3f3}#product-detail #product-detail-content .hint{margin-top:8px;padding-left:15px}#product-detail #reviews ul .review{padding-right:365px}#product-detail #reviews ul .review .text{overflow:hidden}#product-detail #reviews ul .review .text i{color:#999;font-weight:bold;white-space:nowrap}#product-detail #reviews ul .review .text a{white-space:nowrap;padding-left:.5em}#product-detail #reviews ul .review .text .long-review-text{display:none}#product-detail #reviews ul .review .text.opened .hellip{display:none}#product-detail #reviews ul .review .text.opened .long-review-text{display:inline}#product-detail #reviews ul .review .voting{color:#999}#product-detail .gallery-background{opacity:.7;filter:alpha(opacity=70);background-color:#000;position:absolute;top:0;left:0;display:none;z-index:10}#product-detail .gallery-background .close{background:url(/img/lb-close-active.png) right top no-repeat;text-decoration:none;display:block;float:left;position:absolute;right:25px;top:25px;height:36px;color:#FFF;font-weight:bold;padding-right:50px;font-size:123.5%}#product-detail .gallery-background .close span{position:relative;top:9px}#product-detail .gallery-background .close:hover{background:url(/img/lb-close-hover.png) right top no-repeat;color:#FFF!important}#product-detail .gallery-images-wrap{position:absolute;top:80px;left:30px;z-index:11}#product-detail .gallery-images-wrap .wrap{position:absolute;z-index:11;display:block;background:#fff;text-align:center;overflow:hidden}#product-detail .gallery-images-wrap .wrap img{vertical-align:middle}#shop-detail #container{max-width:925px;margin:30px 0 0 18px;padding-top:0}#shop-detail #shop-detail-head{margin-bottom:30px}#shop-detail #shop-detail-head:before,#shop-detail #shop-detail-head:after{display:table;content:\" \";line-height:0}#shop-detail #shop-detail-head:after{clear:both}#shop-detail #shop-detail-head .logo-wrap{float:left}#shop-detail #shop-detail-head .logo-wrap img{border:1px solid #d9d9d9}#shop-detail #shop-detail-head .text-wrap{width:450px;margin-left:165px}#shop-detail #shop-detail-head .text-wrap h1{font-size:230%;color:#c33}#shop-detail #shop-detail-head .text-wrap .shop-rating{height:24px;line-height:24px;margin:.2em 0 1em}#shop-detail #shop-detail-head .text-wrap .shop-rating .stars{width:123px;height:24px;display:inline-block;background:url(/img/rating-stars-24px-out.png) top left no-repeat}#shop-detail #shop-detail-head .text-wrap .shop-rating .stars span{height:24px;display:inline-block;background:url(/img/rating-stars-24px-in.png) top left no-repeat}#shop-detail #shop-detail-head .text-wrap .shop-rating .rating-desc{display:inline-block;vertical-align:top;color:#c98b00;font-size:139.5%}#shop-detail #shop-detail-head .text-wrap .info{font-size:103.5%;line-height:20px}#shop-detail #shop-detail-head .text-wrap table{margin:.5em 0}#shop-detail #shop-detail-head .text-wrap table td{vertical-align:top}#shop-detail #shop-detail-content{margin-bottom:3em}#shop-detail #shop-detail-content #reviews ul .review{padding-right:250px}#shop-detail #shop-detail-content #reviews ul .review .info b{color:#000}#shop-detail #shop-detail-content #reviews ul .review .shop-answer{margin:10px 0 0 25px;color:#444}#shop-detail #shop-detail-content #reviews ul .review .shop-answer h6{font-size:100%}#shop-detail #shop-detail-content #reviews ul .review .shop-answer p{font-style:italic}#shop-detail #shop-detail-content #reviews ul#rating-detail{padding-top:15px;line-height:30px;vertical-align:middle;display:table}#shop-detail #shop-detail-content #reviews ul#rating-detail li{line-height:30px;display:table-row;font-size:108.5%}#shop-detail #shop-detail-content #reviews ul#rating-detail li>*{display:table-cell;text-align:right;white-space:nowrap}#shop-detail #shop-detail-content #reviews ul#rating-detail li label{padding-right:15px}#shop-detail #shop-detail-content #reviews ul#rating-detail li .stars{margin-right:15px}#shop-detail #shop-detail-content #reviews ul#rating-detail li .spacer{width:100%}#shop-detail #shop-detail-content #add-review-form .ranker label{width:275px;text-align:right;display:inline-block}#shop-detail #shop-detail-content #add-review-form .ranker.optional .toggler input{margin:0 3px 0 0}#shop-detail #shop-detail-content #add-review-form .ranker.optional .toggler span{vertical-align:top}#shop-detail #shop-detail-content #add-review-form .ranker.optional.disabled label{color:#aaa}#shop-detail #shop-detail-content #add-review-form .agreement{color:#666}#shop-detail #shop-detail-content #add-review-form .agreement input{float:left}#shop-detail #shop-detail-content.depots{border:1px dotted #ccc;border-top:1px solid #e4e4e4;padding:1em}#shop-detail #shop-detail-content.depots #map-area:before,#shop-detail #shop-detail-content.depots #map-area:after{display:table;content:\" \";line-height:0}#shop-detail #shop-detail-content.depots #map-area:after{clear:both}#shop-detail #shop-detail-content.depots #map-area #map{width:580px;height:400px}#shop-detail #shop-detail-content.depots #map-area #branches-box{width:305px;height:400px;overflow:auto;margin-right:10px;float:left}#shop-detail #shop-detail-content.depots #map-area #branches-box a{line-height:20px;display:block;color:#00c;text-decoration:none;padding:10px 15px}#shop-detail #shop-detail-content.depots #map-area #branches-box a:hover,#shop-detail #shop-detail-content.depots #map-area #branches-box a.hover{background-color:#d6d6d6}.prcmp-link{color:#aaa;cursor:pointer;text-decoration:none;font-weight:normal}.prcmp-link.icon{display:inline-block;min-height:20px;background:url(/img/action_icons.png) right top no-repeat;cursor:pointer;padding-right:25px;line-height:20px}.prcmp-link:hover{color:#c00}.prcmp-link.icon:hover,.prcmp-link.icon.active{background-position:right -20px}.prcmp-link.icon.remove{background-position:right -80px}#product-comparison h1{font-size:162%;margin:0 0 1em 180px}#comparison{margin-bottom:100px}#comparison table{width:100%}#comparison td{padding:0;vertical-align:top;border-bottom:1px dotted #ccc}#comparison .row td{padding:8px 10px;line-height:18px}#comparison .odd td{background-color:#f2f2f2}#comparison .remove td{line-height:3em;padding:0 5px;border-bottom:0}#comparison .remove a{color:#00c}#comparison .remove a:hover{color:#c00}#comparison .params{width:180px;float:left}#comparison .params td{border-right:1px dotted #ccc}#comparison .products{max-width:2135px;overflow:auto;*overflow-y:hidden;padding-bottom:3px;margin-right:100px}#container.productComparison{max-width:2135px}#comparison .products table{width:auto}#comparison .products td{min-width:254px;width:254px;*width:244px}#comparison .products .prodinfo{text-align:left;vertical-align:top}#comparison .products .prodinfo>*{margin:0 1em 0 .5em}#comparison .products .prodinfo .img{width:211px;height:146px;line-height:146px;overflow:hidden;background:#fff url(/img/product_photo_bg_small.png) top left no-repeat;text-align:center}#comparison .products .prodinfo img{vertical-align:middle;max-width:200px;max-height:113px}#comparison .products .prodinfo h3{font-weight:bold;margin-top:.5em;margin-bottom:1em}#comparison .products .prodinfo a{text-decoration:none;color:#c33}#comparison .products .prodinfo h3 a:hover{text-decoration:underline}#comparison .products .prodinfo p{margin-bottom:15px}#comparison .unknown{color:#999}#comparison .hint{padding-top:8px}#comparison .red{color:#c00}#nocomparison{margin-left:180px}#comparison-bar{width:100%;max-width:1135px;position:fixed;bottom:0;left:0;z-index:3}#product-detail #comparison-bar{max-width:990px}#comparison-bar .wrap{margin:0 20px;padding:10px 30px;background:#e2e2e2;border-top-left-radius:10px;border-top-right-radius:10px;border:1px solid #ccc;border-bottom:0;line-height:2em;*zoom:1}#comparison-bar .left{float:left}#comparison-bar .right{float:right;line-height:38px}#comparison-bar .buttons{margin-left:15px}#comparison-bar .cancel{cursor:pointer;padding-left:20px;background:url(/img/cancel.png) left center no-repeat}#comparison-bar .cancel:hover{text-decoration:underline}.hp #comparison-bar{left:50%}.hp #comparison-bar .wrap{position:relative;left:-50%}@media screen and (color) and (max-width:1350px){#product-comparison #seznam-logo{display:none}}.top-items .item{display:inline-block;height:165px;line-height:165px;width:33.3%;text-align:center}.top-items .item.four{width:25%}.top-items li.sep{width:100%;height:0;border-top:1px dotted #ccc;display:block}.top-items .item a{display:block;vertical-align:middle;line-height:normal;padding:0 10px}.top-items .img-wrap{display:block;line-height:100px}.top-items img{max-width:125px;max-height:100px;vertical-align:middle}.top-items .top img{max-width:150px;max-height:150px}.alphabet-menu{width:689px;padding:5px 2px;margin-bottom:30px;display:table;border-bottom:1px dotted #ccc;text-align:center}.alphabet-menu li{display:table-cell;font-size:123.5%;*display:inline}.alphabet-menu>*{display:block;padding:0 3px;text-decoration:none}.alphabet-menu span{color:#ccc}.alphabet-menu li.active a{color:#000}.multicolumn-listing .item{float:left;width:33.3%;line-height:22px;overflow:hidden}.multicolumn-listing.four .item{width:25%}.multicolumn-listing a{display:block;margin-right:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#container.brand-detail{max-width:1293px}#brand-detail{width:693px;margin:0 0 60px 45px;padding-right:555px}#brand-detail h1{font-size:245%;padding:20px 0 10px 0;border-bottom:1px dotted #ccc;margin-bottom:30px}#brand-detail h3.title{font-size:123.5%;color:#333}#brand-detail>*{background-color:#fff}#brand-detail a{text-decoration:none}#brand-detail .top-items .item{height:195px;line-height:195px}#brand-detail .top-items a{display:inline-block}#brand-detail .multicolumn-listing{margin:30px 0 35px}#brand-detail .info{border-top:1px dotted #ccc;padding-top:45px}#brand-detail .info .img-wrap{float:left;width:150px;height:150px;line-height:150px;text-align:center}#brand-detail .info img{max-width:150px;max-height:150px;vertical-align:middle}#brand-detail .info .text{margin-left:168px;line-height:20px}#brand-detail .top-items.products .item a{margin-bottom:30px}#brand-detail .top-items.products h3.title{margin:30px 0 0;font-size:123.5%}#brand-detail .top-items.products h3.title span{font-size:85%;color:#666;font-weight:normal}#brand-detail .top-items.products>ul{border-bottom:1px dotted #ccc}#brand-detail .top-items.products>ul.last{border-bottom:0}#brand-detail .top-items.products .name{width:180px;margin:10px 0;display:block;overflow:hidden}#brand-detail .top-items.products .price{color:#000;display:block}#brand-detail .top-products{padding-top:35px;background-color:#fff;border-top:1px dotted #ccc}#brand-detail .top-products h3.title{margin-bottom:30px}#brand-detail .top-products ul{display:inline-block;width:330px;margin-right:15px;vertical-align:top}#brand-detail .top-products li{margin-bottom:35px}#brand-detail .top-products li a{display:block}#brand-detail .top-products img{display:inline-block;vertical-align:top;max-width:100px;max-height:75px}#brand-detail .top-products div{display:inline-block;margin-left:10px;vertical-align:top;width:220px;white-space:nowrap;line-height:1.5em}#brand-detail .top-products div>*{display:block;text-overflow:ellipsis;overflow:hidden}#brand-detail .top-products .name b{color:#000}#brand-detail .top-products .category{color:#666}#brand-detail .top-products .price{color:#000}#brands-list{width:693px;margin-bottom:20px}#brands-list a{text-decoration:none}#brands-list .top-items .img-wrap{line-height:165px}#brands-list .multicolumn-listing{margin:0 10px}@media screen and (color) and (max-width:1480px){#manufacturer #seznam-logo,#manufacturers #seznam-logo{display:none}}",
+                    "size": 15156
+                },
+                "headers": [{
+                    "name": "Server",
+                    "value": "nginx/1.2.8"
+                }, {
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Content-Type",
+                    "value": "text/css"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Tue, 11 Feb 2014 14:36:53 GMT"
+                }, {
+                    "name": "Transfer-Encoding",
+                    "value": "chunked"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Expires",
+                    "value": "Tue, 25 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Cache-Control",
+                    "value": "max-age=604800"
+                }, {
+                    "name": "Content-Encoding",
+                    "value": "gzip"
+                }],
+                "headersSize": 289,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 15156
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.77.9",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.247+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [],
+                "url": "http://h.imedia.cz/js/dot-small.js",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "h.imedia.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "*/*"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Referer",
+                    "value": "http://www.zbozi.cz/"
+                }],
+                "headersSize": 273,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 1,
+                "send": 0,
+                "ssl": 0,
+                "connect": 2,
+                "dns": 1,
+                "wait": 1,
+                "blocked": 0
+            },
+            "time": 5,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "application/x-javascript",
+                    "text": "{if(!window.DOT){(function(){var DOT={\"_plugins\":[],\"_ts\":0,\"_dataElms\":[],\"_delayed\":{\"action\":\"\",\"timeout\":null,\"count\":0},\"_configured\":0,\"_cfg\":{\"url\":location.protocol+\"//h.imedia.cz/hit/?\",\"delay\":800,\"query\":\"\",\"service\":\"\",\"lsid\":\"\",\"id\":\"\",\"rus\":\"\",\"version\":\"2.2\",\"hash\":\"\",\"impress\":true,\"mousedown\":true,\"load\":true},\"hit\":function(action,data){var d=data||{};d.a=action;this._addCommon(d);this._serialize(d);this._send(d);},\"cfg\":function(cfg){for(var p in cfg){this._cfg[p]=cfg[p];}if(this._cfg.impress){this.impress();}if(this._configured){return;}this._configured=1;if(this._cfg.mousedown){this._add(document,\"mousedown\",function(e){DOT._mousedown(e);});}if(this._cfg.load){this._add(window,\"load\",function(e){DOT.load(e);});}},\"impress\":function(){var data={\"q\":this._cfg.query,\"d\":{\"tid\":window.name,\"referer\":document.referrer,\"path\":this._getDataDot(document.body)}};this._addGeometry(data);this.hit(\"impress\",data);},\"load\":function(){this._dataElms=[];var all=document.getElementsByTagName(\"*\");for(var i=0;i<all.length;i++){if(all[i].getAttribute(\"data-elm\")){this._dataElms.push(all[i]);}}var ts=new Date().getTime();var data={\"d\":{\"time\":ts-this._ts}};this._addGeometry(data);this.hit(\"load\",data);},\"_init\":function(){this._ts=new Date().getTime();this._cfg.id=\"\"+new Date().getTime()+Math.random();if(!window.name){window.name=this._cfg.id;}this._cfg.hash=this._computeHash();this._plugins=this._getPlugins();},\"_delay\":function(action,e){this._delayed.action=action;if(this._delayed.timeout){clearTimeout(this._delayed.timeout);this._delayed.timeout=null;}this._delayed.count++;this._delayed.timeout=setTimeout(function(){DOT._sendDelayed();},this._cfg.delay);},\"_add\":function(elm,event,cb,capture){if(elm.addEventListener){var c=(arguments.length>3?capture:true);elm.addEventListener(event,cb,c);}else{elm.attachEvent(\"on\"+event,cb);}},\"_serialize\":function(data){for(var p in data){var val=data[p];if(typeof (val)==\"object\"){data[p]=this._serializeValue(val);}}},\"_serializeValue\":function(value){if(value===null){return \"null\";}if(value instanceof Array){var arr=[];for(var i=0;i<value.length;i++){arr.push(this._serializeValue(value[i]));}return \"[\"+arr.join(\",\")+\"]\";}else{if(typeof (value)==\"object\"){var arr=[];for(var p in value){if(p in {}){continue;}arr.push(\"\\\"\"+this._escapeString(p)+\"\\\":\"+this._serializeValue(value[p]));}return \"{\"+arr.join(\",\")+\"}\";}else{if(typeof (value)==\"string\"){return \"\\\"\"+this._escapeString(value)+\"\\\"\";}else{return value;}}}},\"_addCommon\":function(data){data.s=this._cfg.service;data.lsid=this._cfg.lsid;data.id=this._cfg.id;data.v=this._cfg.version;data.r=Math.random();data.h=this._cfg.hash;data.rus=this._cfg.rus;data.u=document.location.href;},\"_addGeometry\":function(data){if(!document.body){return;}if(!data.d){data.d={};}var d=data.d;var sx=document.documentElement.scrollLeft||document.body.scrollLeft||0;var sy=document.documentElement.scrollTop||document.body.scrollTop||0;d.scroll=sx+\",\"+sy;var w=document.documentElement.clientWidth||document.body.clientWidth||0;var h=document.documentElement.clientHeight||document.body.clientHeight||0;d.port=w+\",\"+h;d.page=document.body.offsetWidth+\",\"+document.body.offsetHeight;d.screen=screen.width+\",\"+screen.height+\",\"+screen.colorDepth;var visible=this._getDataElm(sx,sy,w,h);if(visible.length){d.elm=visible.join(\",\");}},\"_send\":function(data){var arr=[];for(var p in data){var val=data[p];arr.push(encodeURIComponent(p)+\"=\"+encodeURIComponent(val));}var url=this._cfg.url+arr.join(\"&\");var img=document.createElement(\"img\");img.src=url;},\"_getPlugins\":function(){var data=[];if(navigator.plugins&&navigator.plugins.length){for(var i=0;i<navigator.plugins.length;i++){var plug=navigator.plugins[i];var name=(plug.name.match(/[0-9]/)?plug.name:plug.description);data.push(name);}}else{if(window.ActiveXObject){var DEF={\"AcroPDF.PDF\":function(){return this.GetVersions();},\"PDF.PdfCtrl\":function(){return this.GetVersions();},\"ShockwaveFlash.ShockwaveFlash\":function(){return this.GetVariable(\"$version\");},\"QuickTime.QuickTime\":function(){return this.QuickTimeVersion;},\"rmocx.RealPlayer G2 Control\":function(){return this.GetVersionInfo();},\"rmocx.RealPlayer G2 Control.1\":function(){return this.GetVersionInfo();},\"RealPlayer.RealPlayer(tm) ActiveX Control (32-bit)\":function(){return this.GetVersionInfo();},\"RealVideo.Rep.CalVideo(tm) ActiveX Control (32-bit)\":function(){return this.GetVersionInfo();},\"RealPlayer\":function(){return this.GetVersionInfo();},\"WMPlayer.OCX\":function(){return this.versionInfo;},\"AgControl.AgControl\":function(){return (this.IsVersionSupported(\"3.0\")&&\"3\")||(this.IsVersionSupported(\"2.0\")&&\"2\")||(this.IsVersionSupported(\"1.0\")&&\"1\");}};var o,name;for(var p in DEF){try{o=new ActiveXObject(p);name=p;}catch(e){continue;}try{name+=\" \"+DEF[p].call(o);}catch(e){}data.push(name);}}}return data;},\"_computeHash\":function(){var data=[];for(var p in screen){data.push(screen[p]);}for(var i=0;i<this._plugins.length;i++){data.push(plugins[i]);}var str=data.join(\"\").toLowerCase();var hash=[0,0,0,0];var index=0;var max=65535;for(var i=0;i<str.length;i++){hash[index]=(hash[index]+str.charCodeAt(i))%max;index=(index+1)%hash.length;}return hash.join(\"\");},\"_getDataDot\":function(elm){var arr=[];var node=elm;while(node&&node!=document&&node.getAttribute){var value=node.getAttribute(\"data-dot\");if(value){arr.unshift(value);}node=node.parentNode;}return arr.join(\"/\");},\"_getDataElm\":function(x,y,w,h){var results=[];for(var i=0;i<this._dataElms.length;i++){var elm=this._dataElms[i];var left=elm.offsetWidth/2;var top=elm.offsetHeight/2;while(elm){left+=elm.offsetLeft;top+=elm.offsetTop;elm=elm.offsetParent;}if(left>=x&&left<=x+w&&top>=y&&top<=y+h){results.push(this._dataElms[i].getAttribute(\"data-elm\"));this._dataElms.splice(i,1);i--;}}return results;},\"_getDataFieldValue\":function(elm){var node=elm;while(node&&node!=document){var value=node.getAttribute(\"data-fieldvalue\");if(value!==null){return (value==\"1\"?true:false);}node=node.parentNode;}return true;},\"_escapeString\":function(str){var re=/[\"\\\\'\\n\\r\\t]/g;var replace={\"\\n\":\"\\\\n\",\"\\t\":\"\\\\t\",\"\\r\":\"\\\\r\",\"\\\"\":\"\\\\\\\"\",\"'\":\"\\\\'\",\"\\\\\":\"\\\\\\\\\"};return str.replace(re,function(ch){return replace[ch];});},\"_mousedown\":function(e){var target=e.target||e.srcElement;var data={\"d\":{\"pos\":e.clientX+\",\"+e.clientY,\"path\":this._getDataDot(target)}};var name=target.nodeName.toLowerCase();if(name==\"input\"||name==\"textarea\"||name==\"select\"){if(target.name){data.d.fieldname=target.name;}if(target.type!=\"password\"&&this._getDataFieldValue(target)){data.d.fieldvalue=target.value;}}while(target&&target!=document){name=target.nodeName.toLowerCase();if(name==\"a\"){data.d.href=target.href;data.d.text=(target.textContent||target.innerText||\"\").replace(/\\s{2,}/g,\" \").substring(0,100);break;}target=target.parentNode;}this.hit(\"mousedown\",data);},\"_sendDelayed\":function(){var data={\"d\":{\"count\":this._delayed.count+\"\"}};this._addGeometry(data);this.hit(this._delayed.action,data);this._delayed.count=0;}};DOT._init();window.DOT=DOT;})();}}\n",
+                    "size": 7037
+                },
+                "headers": [{
+                    "name": "Server",
+                    "value": "nginx/1.2.4"
+                }, {
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Content-Type",
+                    "value": "application/x-javascript"
+                }, {
+                    "name": "Content-Length",
+                    "value": "7037"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Wed, 11 Sep 2013 07:10:13 GMT"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Expires",
+                    "value": "Wed, 19 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Cache-Control",
+                    "value": "max-age=86400"
+                }, {
+                    "name": "P3P",
+                    "value": "CP=\"NON DSP COR TAI NOR UNI\", policyref=\"/w3c/p3p.xml\""
+                }, {
+                    "name": "Accept-Ranges",
+                    "value": "bytes"
+                }],
+                "headersSize": 357,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 7037
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.76.29",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.247+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [{
+                    "comment": "",
+                    "expires": null,
+                    "name": "ZBOZI_USER_ID",
+                    "value": "f4b243a6-6968-4e78-94b5-2823f7c5a54a:9209cd30e6f9dd938baf66d5cbd1e38b"
+                }, {
+                    "comment": "",
+                    "expires": null,
+                    "name": "zboziqt",
+                    "value": "2axE57Wvo6BUvWwfJSrx"
+                }, {
+                    "comment": "",
+                    "expires": null,
+                    "name": "ZBOZI_SHOPRATING",
+                    "value": "PKbHMnPyE-metJNXNlt562KuCWXMZAHUaQOPhhMKAUk="
+                }],
+                "url": "http://www.zbozi.cz/favicon.ico",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "www.zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Cookie",
+                    "value": "ZBOZI_USER_ID=f4b243a6-6968-4e78-94b5-2823f7c5a54a:9209cd30e6f9dd938baf66d5cbd1e38b; zboziqt=2axE57Wvo6BUvWwfJSrx; ZBOZI_SHOPRATING=PKbHMnPyE-metJNXNlt562KuCWXMZAHUaQOPhhMKAUk="
+                }],
+                "headersSize": 485,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 1,
+                "send": 0,
+                "ssl": 0,
+                "connect": 1,
+                "dns": 0,
+                "wait": 1,
+                "blocked": 0
+            },
+            "time": 3,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "image/x-icon",
+                    "size": 1150
+                },
+                "headers": [{
+                    "name": "Server",
+                    "value": "nginx/1.2.8"
+                }, {
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Content-Type",
+                    "value": "image/x-icon"
+                }, {
+                    "name": "Content-Length",
+                    "value": "1150"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Tue, 11 Feb 2014 14:36:44 GMT"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Expires",
+                    "value": "Tue, 25 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Cache-Control",
+                    "value": "max-age=604800"
+                }, {
+                    "name": "Accept-Ranges",
+                    "value": "bytes"
+                }],
+                "headersSize": 285,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 1150
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.77.243",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.248+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [],
+                "url": "http://c.imedia.cz/js/retargeting.js",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "c.imedia.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "*/*"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Referer",
+                    "value": "http://www.zbozi.cz/"
+                }],
+                "headersSize": 275,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 0,
+                "send": 0,
+                "ssl": 0,
+                "connect": 2,
+                "dns": 2,
+                "wait": 1,
+                "blocked": 0
+            },
+            "time": 5,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "application/x-javascript",
+                    "text": "if (window.seznam_retargeting_id) {document.createElement(\"img\").src=\"//c.imedia.cz/retargeting?id=\"+seznam_retargeting_id+\"&url=\"+encodeURIComponent(location.href);}\n",
+                    "size": 167
+                },
+                "headers": [{
+                    "name": "Server",
+                    "value": "nginx"
+                }, {
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Content-Type",
+                    "value": "application/x-javascript"
+                }, {
+                    "name": "Content-Length",
+                    "value": "167"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Mon, 03 Feb 2014 15:34:46 GMT"
+                }, {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                }, {
+                    "name": "Expires",
+                    "value": "Wed, 19 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Cache-Control",
+                    "value": "max-age=86400"
+                }, {
+                    "name": "P3P",
+                    "value": "CP=\"NON DSP COR TAI NOR UNI\", policyref=\"/w3c/p3p.xml\""
+                }, {
+                    "name": "Accept-Ranges",
+                    "value": "bytes"
+                }],
+                "headersSize": 355,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 167
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.76.29",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.251+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [{
+                    "comment": "",
+                    "expires": null,
+                    "name": "ZBOZI_USER_ID",
+                    "value": "f4b243a6-6968-4e78-94b5-2823f7c5a54a:9209cd30e6f9dd938baf66d5cbd1e38b"
+                }, {
+                    "comment": "",
+                    "expires": null,
+                    "name": "zboziqt",
+                    "value": "2axE57Wvo6BUvWwfJSrx"
+                }, {
+                    "comment": "",
+                    "expires": null,
+                    "name": "ZBOZI_SHOPRATING",
+                    "value": "PKbHMnPyE-metJNXNlt562KuCWXMZAHUaQOPhhMKAUk="
+                }],
+                "url": "http://www.zbozi.cz/img/zbozi-logo.png",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "www.zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "image/png,image/*;q=0.8,*/*;q=0.5"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Referer",
+                    "value": "http://www.zbozi.cz/"
+                }, {
+                    "name": "Cookie",
+                    "value": "ZBOZI_USER_ID=f4b243a6-6968-4e78-94b5-2823f7c5a54a:9209cd30e6f9dd938baf66d5cbd1e38b; zboziqt=2axE57Wvo6BUvWwfJSrx; ZBOZI_SHOPRATING=PKbHMnPyE-metJNXNlt562KuCWXMZAHUaQOPhhMKAUk="
+                }],
+                "headersSize": 493,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 1,
+                "send": 0,
+                "ssl": 0,
+                "connect": 1,
+                "dns": 0,
+                "wait": 3,
+                "blocked": 0
+            },
+            "time": 5,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "image/png",
+                    "size": 4861
+                },
+                "headers": [{
+                    "name": "Server",
+                    "value": "nginx/1.2.8"
+                }, {
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Content-Type",
+                    "value": "image/png"
+                }, {
+                    "name": "Content-Length",
+                    "value": "4861"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Tue, 11 Feb 2014 14:36:44 GMT"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Expires",
+                    "value": "Tue, 25 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Cache-Control",
+                    "value": "max-age=604800"
+                }, {
+                    "name": "Accept-Ranges",
+                    "value": "bytes"
+                }],
+                "headersSize": 282,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 4861
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.77.21",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.281+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [],
+                "url": "http://images.zbozi.cz/zbozi-images/52f38f5713bef4032c2b0100.jpg",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "images.zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "image/png,image/*;q=0.8,*/*;q=0.5"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Referer",
+                    "value": "http://www.zbozi.cz/"
+                }],
+                "headersSize": 333,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 7,
+                "send": 0,
+                "ssl": 0,
+                "connect": 2,
+                "dns": 2,
+                "wait": 1,
+                "blocked": 0
+            },
+            "time": 12,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "image/jpeg",
+                    "size": 76588
+                },
+                "headers": [{
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Server",
+                    "value": "Apache/2.2.9 (Debian)"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Thu, 06 Feb 2014 13:34:15 GMT"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Transfer-Encoding",
+                    "value": "chunked"
+                }, {
+                    "name": "Content-Type",
+                    "value": "image/jpeg"
+                }],
+                "headersSize": 206,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 76588
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.77.21",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.283+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [],
+                "url": "http://images.zbozi.cz/zbozi-images/5256c918370355df5c2c0000.jpg",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "images.zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "image/png,image/*;q=0.8,*/*;q=0.5"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Referer",
+                    "value": "http://www.zbozi.cz/"
+                }],
+                "headersSize": 333,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 1,
+                "send": 0,
+                "ssl": 0,
+                "connect": 1,
+                "dns": 11,
+                "wait": 1,
+                "blocked": 0
+            },
+            "time": 14,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "image/jpeg",
+                    "size": 11356
+                },
+                "headers": [{
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Server",
+                    "value": "Apache/2.2.9 (Debian)"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Thu, 10 Oct 2013 15:34:48 GMT"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Transfer-Encoding",
+                    "value": "chunked"
+                }, {
+                    "name": "Content-Type",
+                    "value": "image/jpeg"
+                }],
+                "headersSize": 206,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 11356
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.77.21",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.290+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [],
+                "url": "http://images.zbozi.cz/zbozi-images/52544bd15b7c46eb82210000.jpg",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "images.zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "image/png,image/*;q=0.8,*/*;q=0.5"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Referer",
+                    "value": "http://www.zbozi.cz/"
+                }],
+                "headersSize": 333,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 2,
+                "send": 0,
+                "ssl": 0,
+                "connect": 1,
+                "dns": 2,
+                "wait": 1,
+                "blocked": 0
+            },
+            "time": 6,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "image/jpeg",
+                    "size": 8578
+                },
+                "headers": [{
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Server",
+                    "value": "Apache/2.2.9 (Debian)"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Tue, 08 Oct 2013 18:15:45 GMT"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Transfer-Encoding",
+                    "value": "chunked"
+                }, {
+                    "name": "Content-Type",
+                    "value": "image/jpeg"
+                }],
+                "headersSize": 206,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 8578
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.77.21",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.294+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [],
+                "url": "http://images.zbozi.cz/zbozi-images/5256864b1d3ea963c6100000.jpg",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "images.zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "image/png,image/*;q=0.8,*/*;q=0.5"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Referer",
+                    "value": "http://www.zbozi.cz/"
+                }],
+                "headersSize": 333,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 0,
+                "send": 0,
+                "ssl": 0,
+                "connect": 2,
+                "dns": 0,
+                "wait": 2,
+                "blocked": 1
+            },
+            "time": 4,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "image/jpeg",
+                    "size": 4294
+                },
+                "headers": [{
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Server",
+                    "value": "Apache/2.2.9 (Debian)"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Thu, 10 Oct 2013 10:49:47 GMT"
+                }, {
+                    "name": "Content-Length",
+                    "value": "4294"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Content-Type",
+                    "value": "image/jpeg"
+                }],
+                "headersSize": 200,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 4294
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.77.21",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.294+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [],
+                "url": "http://images.zbozi.cz/zbozi-images/52d7c5c127ffc6a65b590000.jpg",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "images.zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "image/png,image/*;q=0.8,*/*;q=0.5"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Referer",
+                    "value": "http://www.zbozi.cz/"
+                }],
+                "headersSize": 333,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 4,
+                "send": 0,
+                "ssl": 0,
+                "connect": 2,
+                "dns": 0,
+                "wait": 1,
+                "blocked": 0
+            },
+            "time": 7,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "image/jpeg",
+                    "size": 22875
+                },
+                "headers": [{
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Server",
+                    "value": "Apache/2.2.9 (Debian)"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Thu, 16 Jan 2014 11:42:57 GMT"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Transfer-Encoding",
+                    "value": "chunked"
+                }, {
+                    "name": "Content-Type",
+                    "value": "image/jpeg"
+                }],
+                "headersSize": 206,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 22875
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.77.21",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.294+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [],
+                "url": "http://images.zbozi.cz/zbozi-images/5256d7e3902a4ab4e33a0000.jpg",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "images.zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "image/png,image/*;q=0.8,*/*;q=0.5"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Referer",
+                    "value": "http://www.zbozi.cz/"
+                }],
+                "headersSize": 333,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 2,
+                "send": 0,
+                "ssl": 0,
+                "connect": 2,
+                "dns": 0,
+                "wait": 3,
+                "blocked": 0
+            },
+            "time": 7,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "image/jpeg",
+                    "size": 15075
+                },
+                "headers": [{
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Server",
+                    "value": "Apache/2.2.9 (Debian)"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Thu, 10 Oct 2013 16:37:55 GMT"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Transfer-Encoding",
+                    "value": "chunked"
+                }, {
+                    "name": "Content-Type",
+                    "value": "image/jpeg"
+                }],
+                "headersSize": 206,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 15075
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.77.21",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.313+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [],
+                "url": "http://images.zbozi.cz/zbozi-images/52572b0bb1aba570cb290000.jpg",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "images.zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "image/png,image/*;q=0.8,*/*;q=0.5"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Referer",
+                    "value": "http://www.zbozi.cz/"
+                }],
+                "headersSize": 333,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 1,
+                "send": 0,
+                "ssl": 0,
+                "connect": 1,
+                "dns": 0,
+                "wait": 1,
+                "blocked": 0
+            },
+            "time": 3,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "image/jpeg",
+                    "size": 10699
+                },
+                "headers": [{
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Server",
+                    "value": "Apache/2.2.9 (Debian)"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Thu, 10 Oct 2013 22:32:43 GMT"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Transfer-Encoding",
+                    "value": "chunked"
+                }, {
+                    "name": "Content-Type",
+                    "value": "image/jpeg"
+                }],
+                "headersSize": 206,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 10699
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.77.21",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.313+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [],
+                "url": "http://images.zbozi.cz/zbozi-images/5256a97432beef05161c0000.jpg",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "images.zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "image/png,image/*;q=0.8,*/*;q=0.5"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Referer",
+                    "value": "http://www.zbozi.cz/"
+                }],
+                "headersSize": 333,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 1,
+                "send": 0,
+                "ssl": 0,
+                "connect": 1,
+                "dns": 1,
+                "wait": 1,
+                "blocked": 0
+            },
+            "time": 4,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "image/jpeg",
+                    "size": 7190
+                },
+                "headers": [{
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Server",
+                    "value": "Apache/2.2.9 (Debian)"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Thu, 10 Oct 2013 13:19:48 GMT"
+                }, {
+                    "name": "Content-Length",
+                    "value": "7190"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Content-Type",
+                    "value": "image/jpeg"
+                }],
+                "headersSize": 200,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 7190
+            }
+        }, {
+            "comment": "",
+            "serverIPAddress": "77.75.77.21",
+            "cache": {},
+            "startedDateTime": "2014-02-18T15:43:47.331+0000",
+            "pageref": "test",
+            "request": {
+                "comment": "",
+                "cookies": [],
+                "url": "http://images.zbozi.cz/zbozi-images/527dff3ff8acb7155d250000.jpg",
+                "queryString": [],
+                "headers": [{
+                    "name": "Host",
+                    "value": "images.zbozi.cz"
+                }, {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0"
+                }, {
+                    "name": "Accept",
+                    "value": "image/png,image/*;q=0.8,*/*;q=0.5"
+                }, {
+                    "name": "Accept-Language",
+                    "value": "cs,en-us;q=0.7,en;q=0.3"
+                }, {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate"
+                }, {
+                    "name": "Referer",
+                    "value": "http://www.zbozi.cz/"
+                }],
+                "headersSize": 333,
+                "httpVersion": "HTTP",
+                "method": "GET",
+                "bodySize": 0
+            },
+            "timings": {
+                "comment": "",
+                "receive": 1,
+                "send": 0,
+                "ssl": 0,
+                "connect": 1,
+                "dns": 0,
+                "wait": 1,
+                "blocked": 1
+            },
+            "time": 3,
+            "response": {
+                "comment": "",
+                "status": 200,
+                "cookies": [],
+                "statusText": "OK",
+                "content": {
+                    "comment": "",
+                    "mimeType": "image/jpeg",
+                    "size": 9565
+                },
+                "headers": [{
+                    "name": "Date",
+                    "value": "Tue, 18 Feb 2014 15:43:47 GMT"
+                }, {
+                    "name": "Server",
+                    "value": "Apache/2.2.9 (Debian)"
+                }, {
+                    "name": "Last-Modified",
+                    "value": "Sat, 09 Nov 2013 09:24:15 GMT"
+                }, {
+                    "name": "Connection",
+                    "value": "close"
+                }, {
+                    "name": "Transfer-Encoding",
+                    "value": "chunked"
+                }, {
+                    "name": "Content-Type",
+                    "value": "image/jpeg"
+                }],
+                "headersSize": 206,
+                "redirectURL": "",
+                "httpVersion": "HTTP",
+                "bodySize": 9565
+            }
+        }],
+        "pages": [{
+            "comment": "",
+            "title": "",
+            "startedDateTime": "2014-02-18T15:43:46.764+0000",
+            "id": "test",
+            "pageTimings": {
+                "comment": ""
+            }
+        }],
+        "browser": {
+            "comment": "",
+            "version": "25.0",
+            "name": "Firefox"
+        }
+    }
+}

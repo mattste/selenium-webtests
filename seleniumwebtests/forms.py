@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 
+"""
+Provides funcionality for easy form filling.
+The code has been taken from "python-webdriverwrapper" module
+written by Michal Horejsek (https://github.com/horejsek/python-webdriverwrapper)
+"""
+
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 

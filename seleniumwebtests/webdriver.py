@@ -13,7 +13,7 @@ class WebDriver(webdriver.Remote):
 
     def get(self, url):
         """
-        Overrides default webdriver.Remote.get method.
+        Method for navigation browser to the desired URL
         If the URL passed as argument does not begins with "http"
         it is considered as relative and will be prefixed with
         testcase.BASE_URL string
@@ -25,12 +25,31 @@ class WebDriver(webdriver.Remote):
         super(WebDriver, self).get(url)
 
     def wait(self, timeout):
+        """
+        :param timeout: Number of seconds to wait
+        """
         time.sleep(timeout)
 
     def fill_form(self, elm, data={}):
+        """
+        Fill form with given data
+
+        :param elm: Form element
+        :param data: Dictionary of data for the form. \
+                Keys in the dictionary represent name \
+                attributes of the form elements
+        """
         form = Form(elm)
         form.fill_out(data)
 
     def fill_form_and_submit(self, elm, data={}):
+        """
+        Fill form with given data, then submit
+
+        :param elm: Form element
+        :param data: Dictionary of data for the form. \
+                Keys in the dictionary represent name \
+                attributes of the form elements
+        """
         form = Form(elm)
         form.fill_out_and_submit(data)

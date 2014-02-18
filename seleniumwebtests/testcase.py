@@ -29,6 +29,9 @@ class TestCase(unittest.TestCase):
         return self.browser_capabilities["browserName"] + "," + self.browser_capabilities["version"] + "," + self.browser_capabilities["platform"]
 
     def setUp(self):
+        """
+        Code to be executed before each test
+        """
         self.driver = WebDriver(
             "http://{0}:{1}/wd/hub".format(runner.config.IP, runner.config.SELENIUM_SERVER_PORT),
             self.browser_capabilities,
@@ -39,17 +42,24 @@ class TestCase(unittest.TestCase):
         runner.active_driver = self.driver
 
     def tearDown(self):
+        """
+        Code to be executed after each test
+        """
+
         js_error = False
         console_data = self.driver.execute_script("return console.getData()")
 
-        for item in console_data:
-            if item["type"] == "error":
-                js_error = True
-                break
+        if console_data:
+            for item in console_data:
+                if item["type"] == "error":
+                    js_error = True
+                    break
+
 
         self.driver.quit()
         runner.active_driver = None
 
+        # fail test if there is any JS error the console
         if js_error:
             self.fail("There is some JS error on the page!")
 

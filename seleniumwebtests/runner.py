@@ -18,25 +18,27 @@ class Runner(object):
 
         self._config = config
 
-        # include current directory into sys.path
+        # load test settings
         sys.path.append(os.getcwd())
         self._test_settings = __import__("settings")
 
         self._start_proxy_server()
         self._start_selenium_hub()
 
-        self._proxy = None
-        self._desired_browser = None
-        self._active_driver = None
+        self._proxy = None # proxy client
+        self._desired_browser = None # variable for temporary storing desired browser capabilities
+        self._active_driver = None # currently running webdriver
 
     def run(self):
+        """
+        Creates test suite and runs the tests
+        """
         import reporter
         import testloader
 
         self._proxy = Proxy("{0}:{1}".format(self.config.IP, self.config.PROXY_SERVER_PORT))
         self._test_runner = unittest.TextTestRunner(verbosity=2, resultclass=reporter.Reporter)
         self._test_loader = testloader.TestLoader()
-        print
         self._test_runner.run(self._test_loader.get_test_suite())
         self.end()
 

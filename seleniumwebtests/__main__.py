@@ -6,7 +6,7 @@ import signal
 from runner import runner
 
 def signal_handler(signal, frame):
-    print "Killing..."
+    print "\nKilling..."
     runner.end()
     sys.exit(0)
 
