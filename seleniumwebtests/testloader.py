@@ -61,7 +61,7 @@ class TestLoader(object):
         """
         Retuns list of browsers to run the test case on
         If test case does not provide such an information
-        the settigs.BROWSERS is returned
+        the runner.test_settings.BROWSERS is returned
         """
         if hasattr(test_case, "BROWSERS"):
             return test_case.BROWSERS

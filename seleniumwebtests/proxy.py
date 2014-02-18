@@ -25,20 +25,20 @@ class Proxy(browsermobproxy.Client):
 
     def find_in_har(self, url, criterions={}):
         """
-        This will get the captured HAR and try to find a result matching given options.
+        This will get the captured HAR and try to find a result matching given criterions.
         Returns True if a match has been found. False otherwise.
 
         :param url: URL or substring of URL of the request we are searching for
         :param criterions: A dictionary of criterions the result has to match. \
-                Keys in the dictionary represent key names in the HAR its value we want \
-                to test. Using dots in the key name it is possible to access data stores \
+                Keys in the dictionary represent key names in the HAR theirs value we want \
+                to test. Using dots in the key name it is possible to access data stored \
                 depper in the HAR. Example: \
                 criterions={ \
                     "response.status": 200, \
                     "response.headers": { \
                         "name": "Connection", "value": "closed"} \
                     } \
-        See examples/har.json to see the structure of HAR result.
+        See examples/har.json to see structure of HAR result.
         """
         har = self.har
         for entry in har["log"]["entries"]:
@@ -65,7 +65,7 @@ class Proxy(browsermobproxy.Client):
                         if not found:
                             return False
 
-                    # if is integer or string, simply check if its match the desired value
+                    # if it is integer or string, simply check if it is match the desired value
                     if isinstance(parent, (int, str)):
                         if parent != criterions[key]:
                             return False

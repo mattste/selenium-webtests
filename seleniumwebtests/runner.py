@@ -26,7 +26,7 @@ class Runner(object):
         self._start_selenium_hub()
 
         self._proxy = None # proxy client
-        self._desired_browser = None # variable for temporary storing desired browser capabilities
+        self._desired_browser = None # variable for storing desired browser capabilities
         self._active_driver = None # currently running webdriver
 
     def run(self):
