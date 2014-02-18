@@ -45,7 +45,7 @@ class Runner(object):
     def _start_selenium_hub(self):
         if not self._is_listening(self.config.IP, self.config.SELENIUM_SERVER_PORT):
             print "Selenium HUB seems not running. Trying to start on {0}:{1}...".format(self.config.IP, self.config.SELENIUM_SERVER_PORT)
-            command = [sys.executable, "java", "-jar", "{0}".format(self.config.SELENIUM_FILE), "-role", "hub", "-port", "{0}".format(self.config.SELENIUM_SERVER_PORT)]
+            command = ["java", "-jar", "{0}".format(self.config.SELENIUM_FILE), "-role", "hub", "-port", "{0}".format(self.config.SELENIUM_SERVER_PORT)]
             subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
             # wait for nodes to register
             time.sleep(10)
@@ -53,7 +53,7 @@ class Runner(object):
     def _start_proxy_server(self):
         if not self._is_listening(self.config.IP, self.config.PROXY_SERVER_PORT):
             print "Proxy server seems not running. Trying to start on {0}:{1}...".format(self.config.IP, self.config.PROXY_SERVER_PORT)
-            command = [sys.executable, self.config.PROXY_START_SCRIPT, "-port={0}".format(self.config.PROXY_SERVER_PORT)]
+            command = [self.config.PROXY_START_SCRIPT, "-port={0}".format(self.config.PROXY_SERVER_PORT)]
             subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
     def _is_listening(self, url, port):
