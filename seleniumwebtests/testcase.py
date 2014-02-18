@@ -38,5 +38,16 @@ class TestCase(unittest.TestCase):
         self.driver.implicitly_wait(10)
 
     def tearDown(self):
+        js_error = False
+        console_data = self.driver.execute_script("return console.getData()")
+        
+        for item in console_data:
+            if item["type"] == "error":
+                js_error = True
+                break
+
         self.driver.quit()
+        
+        if js_error:
+            self.fail("There is some JS error on the page!")
 

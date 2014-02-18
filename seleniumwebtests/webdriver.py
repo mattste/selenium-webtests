@@ -4,6 +4,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from runner import runner
+from forms import Form
 
 class WebDriver(webdriver.Remote):
     """
@@ -25,3 +26,11 @@ class WebDriver(webdriver.Remote):
 
     def wait(self, timeout):
         time.sleep(timeout)
+
+    def fill_form(self, elm, data={}):
+        form = Form(elm)
+        form.fill_out(data)
+
+    def fill_form_and_submit(self, elm, data={}):
+        form = Form(elm)
+        form.fill_out_and_submit(data)
