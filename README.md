@@ -1,2 +1,2 @@
-py-selenium-skeleton
+selenium-webtests
 ====================
