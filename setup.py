@@ -8,13 +8,6 @@ python setup.py install
 
 from setuptools import setup
 
-"""
-TODO: windows run script
-script = "bin/runwebtests"
-if platform.system() == "Windows":
-    script = "bin/runwebtests.cmd"
-"""
-
 setup(
     name = 'seleniumwebtests',
     packages = ['seleniumwebtests'],
@@ -28,5 +21,5 @@ setup(
         'selenium>=2.38.4',
         'browsermob-proxy>=0.6.0',
     ],
-    scripts=["bin/runwebtests"],
+    scripts=["bin/runwebtests.cmd","bin/runwebtests"],
 )
