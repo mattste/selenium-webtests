@@ -16,13 +16,17 @@ Příprava prostředí a instalace (Selenium HUB)
 
 5. Dále je potřeba otevřít soubor config.py v balíku a upravit v něm cesty ke staženému Selenium Serveru, spuštěcímu souboru proxy a IP stroje.
 
+  .. note::
+
     Na uvedené IP adrese musí být stroj, na kterém SW instalujeme, dostupný pro všechny vzdálené stroje, na kterých běží testovací prohlížeče. Je možné vyplnit "localhost" pro spouštění testů na lokálních prohlížečích.
 
 6. Pak stačí vlézt do hlavního adresáře staženého balíku a tento nainstalovat.::
 
     sudo python setup.py install
 
-   Pokud by si instalátor stěžoval, že mu chybí setuptools, bude potřeba `balík setuptool nainstalovat <https://pypi.python.org/pypi/setuptools#windows>`_.
+  .. note::
+
+    Pokud by si instalátor stěžoval, že mu chybí setuptools, bude potřeba `balík setuptool nainstalovat <https://pypi.python.org/pypi/setuptools#windows>`_.
 
 Po úspěsné instalaci by měl být SW připraven. Zbývá zaregistrovat stroje s testovacími prohlížeči.
 
@@ -105,4 +109,6 @@ Následující postup je potřeba provést na všech strojích, na kterých bě�
 
    Pokud ano, je vše potřebné nainstalováno a správně nakonfigurováno a můžeme začít psát testy.
 
-Na adrese Selenium HUBu (v našem případě 192.168.56.1:4444) je k dispozici konzole ukazující, které prohlížeče jsou k HUBu zaregistrovány a můžeme je tak použít k testování. Stačí vlézt na adresu http://192.168.56.1:444/grid/console
+.. note::
+
+  Na adrese Selenium HUBu (v našem případě 192.168.56.1:4444) je k dispozici konzole ukazující, které prohlížeče jsou k HUBu zaregistrovány a můžeme je tak použít k testování. Stačí vlézt na adresu http://192.168.56.1:444/grid/console
