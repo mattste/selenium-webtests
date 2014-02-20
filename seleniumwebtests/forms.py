@@ -39,10 +39,10 @@ class FormElement(object):
 
     def _convert_value_to_string(self, value):
         if isinstance(value, bool):
-            value = int(value)
+            value = str(int(value))
         elif value is None:
-            value = ''
-        return str(value)
+            value = str('')
+        return value
 
     def fill_out(self, value):
         tag_name, elm_type = self.analyze_element()

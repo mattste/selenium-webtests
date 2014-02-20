@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-BASE_URL = "http://zbozi.cz"
+BASE_URL = "http://seznam.cz"
 
 BROWSERS = [
     {
