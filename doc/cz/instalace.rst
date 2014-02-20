@@ -14,7 +14,7 @@ Příprava prostředí a instalace (Selenium HUB)
 
     git clone https://github.com/jirikuchta/selenium-webtests.git
 
-5. Dále je potřeba zeditovat soubor config.py, kde je potřeba uvést cesty ke staženému Selenium Serveru, spuštěcímu souboru proxy a IP stroje.
+5. Dále je potřeba otevřít soubor config.py v balíku a upravit v něm cesty ke staženému Selenium Serveru, spuštěcímu souboru proxy a IP stroje.
 
     Na uvedené IP adrese musí být stroj, na kterém SW instalujeme, dostupný pro všechny vzdálené stroje, na kterých běží testovací prohlížeče. Je možné vyplnit "localhost" pro spouštění testů na lokálních prohlížečích.
 
@@ -24,7 +24,7 @@ Příprava prostředí a instalace (Selenium HUB)
 
    Pokud by si instalátor stěžoval, že mu chybí setuptools, bude potřeba `balík setuptool nainstalovat <https://pypi.python.org/pypi/setuptools#windows>`_.
 
-Po úspěsné instalaci by měl být SW připraven. Nyní je potřeba zaregistrovat stroje s testovacími prohlížeči.
+Po úspěsné instalaci by měl být SW připraven. Zbývá zaregistrovat stroje s testovacími prohlížeči.
 
 Registrace testovacích prohlížečů (Selenium Nodes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,19 +51,19 @@ Následující postup je potřeba provést na všech strojích, na kterých bě�
 
   - **maxSession** Maximální počet souběžně běžících testů.
 
-  - **port** Port, na kterém bude poslouchat Selenium Server
+  - **port** Port, na kterém bude poslouchat Selenium Server.
 
   - **host** IP tohoto stroje. Stroj na této adrese musí být viditelný pro stroj, na kterém jsme nainstalovali SW.
 
-  - **register** Boolean hodnota rozhodující o tom, jestli se má stroj automaticky pokoušet připojit na Selenium HUB
+  - **register** Boolean hodnota rozhodující o tom, jestli se má stroj automaticky pokoušet připojit na Selenium HUB, pokud se mu to napoprvé nepodaří.
 
-  - **registerCycle** Interval pokusů o připojení v Selenium HUBu v ms
+  - **registerCycle** Interval pokusů o připojení v Selenium HUBu v ms.
 
   - **hubPort** Port, na kterém poslouchá Selenium HUB (hodnota klíče SELENIUM_SERVER_PORT z config.py)
 
   - **hubHost** IP adresa Selenium HUBu (hodnota klíče IP z config.py)
 
-   Pro spouštění testů v Chrome je potřeba stáhnout chromedriver z http://chromedriver.storage.googleapis.com/index.html a nakopírovat ho do C:\Windows\System32,       resp. do /bin
+   Pro spouštění testů v Chrome je potřeba stáhnout chromedriver z http://chromedriver.storage.googleapis.com/index.html a nakopírovat ho do C:\Windows\System32,       resp. do /bin.
 
    Podobné je to v případě IE. Driver je dostupný http://code.google.com/p/selenium/downloads/list jako IEDriverServer_<verze>.zip. Driver stáhneme a  nakopírujeme      do stejné složky jako v případě Chrome.
 
@@ -75,7 +75,7 @@ Následující postup je potřeba provést na všech strojích, na kterých bě�
 
         java -jar cesta-ke-stazenemu-selenium-stanalene-serveru.jar -role node -nodeConfig cesta-k-nodeconfig.json
 
-   Otevře se konzole v ní by se měla peridicky zobrazovat následující chybová hláška
+   Otevře se konzole v ní by se měla peridicky zobrazovat následující chybová hláška:
 
    ::
 
@@ -89,7 +89,7 @@ Následující postup je potřeba provést na všech strojích, na kterých bě�
 
         runwebtests
 
-   V konzoli by se mělo objevit zhruba toto
+   V konzoli by se mělo objevit zhruba toto:
 
    ::
 
