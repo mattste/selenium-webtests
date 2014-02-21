@@ -67,6 +67,8 @@ Následující postup je potřeba provést na všech strojích, na kterých bě�
 
   - **hubHost** IP adresa Selenium HUBu (hodnota klíče IP z config.py)
 
+  - **timeout** Maximální doba v ms, po kterou prohlížeč čeká na další příkazy. Pokud do této doby žádný neobdží, tak se uzavře. Je to pojistka pro případ, kdy test z nějakého důvodu nedoběhne do konce a neuzavře za sebou prohlížeč. Tím by se rychle vyčerpal počet dostupných instancí prohlížeče. Pokud je timeout nastavený, musíme s ním počítat i v testech, ve kterých nastavujeme :ref:`waits`. Není možné nastavit delší čekání než je timeout prohlížeče.
+
    Pro spouštění testů v Chrome je potřeba stáhnout chromedriver z http://chromedriver.storage.googleapis.com/index.html a nakopírovat ho do C:\Windows\System32,       resp. do /bin.
 
    Podobné je to v případě IE. Driver je dostupný http://code.google.com/p/selenium/downloads/list jako IEDriverServer_<verze>.zip. Driver stáhneme a  nakopírujeme      do stejné složky jako v případě Chrome.
@@ -112,3 +114,11 @@ Následující postup je potřeba provést na všech strojích, na kterých bě�
 .. note::
 
   Na adrese Selenium HUBu (v našem případě 192.168.56.1:4444) je k dispozici konzole ukazující, které prohlížeče jsou k HUBu zaregistrovány a můžeme je tak použít k testování. Stačí vlézt na adresu http://192.168.56.1:444/grid/console
+
+.. toctree::
+   :numbered:
+
+   index
+   instalace
+   psani_testu
+   api

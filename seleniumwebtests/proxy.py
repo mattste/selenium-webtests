@@ -63,11 +63,12 @@ class Proxy(browsermobproxy.Client):
                                 found = True
 
                         if not found:
-                            return False
+                            break
 
                     # if it is integer or string, simply check if it is match the desired value
                     if isinstance(parent, (int, str)):
                         if parent != criterions[key]:
-                            return False
-                return True
+                            break
+                else:
+                    return True
         return False
