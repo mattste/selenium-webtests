@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Selenium Webtests &mdash; selenium-webtests 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="selenium-webtests 0.1.0 documentation" href="#" />
+    <link rel="next" title="1. Instalace" href="instalace.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="instalace.html" title="1. Instalace"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">selenium-webtests 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="selenium-webtests">
+<h1>Selenium Webtests<a class="headerlink" href="#selenium-webtests" title="Permalink to this headline">¶</a></h1>
+<p>Selenium Webtests (dále jen SW) je nadstavba nad Selenium Python API. Jejím cílem je zjednodušit psaní a spouštění seleniových testů. Využívá Remote WebDriver pro spouštění testů na vzdálených strojích. Díky tomu je možné weby testovat v různých verzích prohlížečů na různých operačních systémech. Díky proxování požadavků je možné psát testy ověřující odeslání a výsledek síťového požadavku.</p>
+<p>Tato dokumentace vychází z dokumentace k Selenium Python API dostupné na adrese <a class="reference external" href="http://selenium-python.readthedocs.org/">http://selenium-python.readthedocs.org/</a> Rozšiřuje ji o popis funcionalit specifických pro SW a o popis metod, o které bylo API obohaceno.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="instalace.html">1. Instalace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="instalace.html#priprava-prostredi-a-instalace-selenium-hub">1.1. Příprava prostředí a instalace (Selenium HUB)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instalace.html#registrace-testovacich-prohlizecu-selenium-nodes">1.2. Registrace testovacích prohlížečů (Selenium Nodes)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="psani_testu.html">2. Psaní testů</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="psani_testu.html#vysvetleni-struktury-testu-na-prikladu">2.1. Vysvětlení struktury testu na příkladu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psani_testu.html#navigace-prohlizece">2.2. Navigace prohlížeče</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psani_testu.html#vyhledavani-elementu">2.3. Vyhledávání elementů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psani_testu.html#vyplnovani-formulare">2.4. Vyplňování formuláře</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psani_testu.html#prace-s-proxy">2.5. Práce s proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psani_testu.html#cekani">2.6. Čekání</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psani_testu.html#zadavani-znaku-z-klavesnice">2.7. Zadávání znaků z klávesnice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psani_testu.html#nastaveni-pozadovanych-prohlizecu-pro-jednotlive-testy">2.8. Nastavení požadovaných prohlížečů pro jednotlivé testy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psani_testu.html#stringy-s-ceskymi-znaky">2.9. Stringy s českými znaky</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">3. API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#webdriver-driver">3.1. WebDriver (driver)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-selenium.webdriver.common.action_chains">3.2. Akce (driver)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#webelement-webelement">3.3. WebElement (webelement)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#proxy-proxy">3.4. Proxy (proxy)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-selenium.webdriver.common.keys">3.5. Keys (Keys)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-selenium.webdriver.common.alert">3.6. Alerts (Alert)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#metody-pro-testovani-vysledku-testu">3.7. Metody pro testování výsledku testu</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Selenium Webtests</a><ul>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="instalace.html"
+                        title="next chapter">1. Instalace</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="instalace.html" title="1. Instalace"
+             >next</a> |</li>
+        <li><a href="#">selenium-webtests 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Jiri Kuchta.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+    </div>
+  </body>
+</html>

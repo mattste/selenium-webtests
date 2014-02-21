@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2. Psaní testů &mdash; selenium-webtests 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="selenium-webtests 0.1.0 documentation" href="index.html" />
+    <link rel="next" title="3. API" href="api.html" />
+    <link rel="prev" title="1. Instalace" href="instalace.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="3. API"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="instalace.html" title="1. Instalace"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">selenium-webtests 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="psani-testu">
+<h1>2. Psaní testů<a class="headerlink" href="#psani-testu" title="Permalink to this headline">¶</a></h1>
+<p>Pokud máme SW modul nainstalovaný a zaregistrované všechny stroje s testovacími prohlížeči, můžeme začít psát samotné testy.</p>
+<p>Příklad, jak takový test vypadá, je v examples/example_test staženého balíku SW. Na něm si můžeme vysvětlit základní strukturu testů.</p>
+<div class="section" id="vysvetleni-struktury-testu-na-prikladu">
+<h2>2.1. Vysvětlení struktury testu na příkladu<a class="headerlink" href="#vysvetleni-struktury-testu-na-prikladu" title="Permalink to this headline">¶</a></h2>
+<p>V example_test jsou dva soubory:</p>
+<ol class="arabic">
+<li><p class="first">V <strong>settings.py</strong> je toto:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">BASE_URL</span> <span class="o">=</span> <span class="s">&quot;http://seznam.cz&quot;</span>
+</pre></div>
+</div>
+<p>Doména webu. Pokud v testech při navigaci prohlížeče uvedeme relativní URL (např. &#8220;/kategorie/notebooky&#8221;), hodnota této proměnné se použije jako prefix. Pokud bychom pak chtěli testy spustit v jiném prostředí (provoz, produktový test...), stačí změnit tuto proměnnou.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">BROWSERS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s">&quot;browserName&quot;</span><span class="p">:</span> <span class="s">&quot;firefox&quot;</span><span class="p">,</span>
+        <span class="s">&quot;version&quot;</span><span class="p">:</span> <span class="s">&quot;ANY&quot;</span><span class="p">,</span>
+        <span class="s">&quot;platform&quot;</span><span class="p">:</span> <span class="s">&quot;ANY&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Pole prohlížečů, na kterých chceme testy spouštět. Každý zde uvedený prohlížeč musí být zaregistrovaný do Selenium HUBu. Jako hodnotu klíčů &#8220;version&#8221; a &#8220;platform&#8221; můžeme uvést &#8220;ANY&#8221;, pokud nám nezáleží na tom, v jaké verzi prohlížeče nebo na jakém OS se testy spustí.</p>
+</li>
+<li><p class="first">Soubor <strong>homepage.py</strong> představuje jednoduchý test vyhledávání z HP Seznamu. V adresáři může být libovolný počet takových souborů.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># -*- coding: utf-8 -*-</span>
+</pre></div>
+</div>
+<p>Nastavení kódování souboru</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">seleniumwebtests.testcase</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>Naimportování funkcionality společné pro všechny testy.</p>
+<div class="highlight-python"><div class="highlight"><pre>class homepage(TestCase):
+</pre></div>
+</div>
+<p>Třída testů. Musí dědit z seleniumwebtests.TestCase.
+Jeden soubor může obsahovat libovolný počet takových tříd. Díky tomu se testy dají členit do logických celků.</p>
+<div class="highlight-python"><div class="highlight"><pre>def test_vyhledavani(self):
+</pre></div>
+</div>
+<p>Konkrétní test. Název metody musí začínat prefixem <strong>test*</strong>. Třída jich může obsahovat libovolný počet. Průběh testu je většinou následující:</p>
+<ul class="simple">
+<li>navigace prohlížeče na požadovanou URL</li>
+<li>provedení akce</li>
+<li>testování výsledku akce</li>
+</ul>
+<p>V prvních dvou krocích se využívají metody <a class="reference internal" href="api.html#webdriverapi"><em>WebDriver (driver)</em></a>, <a class="reference internal" href="api.html#webelementapi"><em>WebElement (webelement)</em></a> nebo <a class="reference internal" href="api.html#proxyapi"><em>Proxy (proxy)</em></a>. Ve třetím kroku <em class="xref std std-ref">assertmethods</em>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="navigace-prohlizece">
+<h2>2.2. Navigace prohlížeče<a class="headerlink" href="#navigace-prohlizece" title="Permalink to this headline">¶</a></h2>
+<p>Pro nasměrování prohlížeče na určitou URL slouží metoda get:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;/kategorie/notebooky&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Pokud je URL zadána takto bez protokolu a domény, použije se proměnná BASE_URL ze souboru settings.py
+Adresy je možné zadávat i absolutně:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;http://zbozi.cz/kategorie/notebooky&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Po přechodu na jinou stránku WebDriver čeká na JS událost &#8220;onload&#8221; než pokračuje dále v kódu testu. Díky tomu se dá spolehnout na to, že je DOM strom načtem a můžeme se stránkou dále pracovat. Jiná situace je při různých JS requestech, při kterých nedochází k reloadu stránky. Tam musíme WebDriveru explicitně říct, aby chvilku počkal. Více o tom v sekci <a class="reference internal" href="#waits"><em>Čekání</em></a>.</p>
+</div>
+<div class="section" id="vyhledavani-elementu">
+<h2>2.3. Vyhledávání elementů<a class="headerlink" href="#vyhledavani-elementu" title="Permalink to this headline">¶</a></h2>
+<p>Pro vyhledávání elementů na stránkce slouží řada metod. Dají se rozdělit do dvou kategorií:</p>
+<p>Ty, které vrací vždy první nalezený výsledek:</p>
+<ul class="simple">
+<li>find_element_by_id</li>
+<li>find_element_by_name</li>
+<li>find_element_by_xpath</li>
+<li>find_element_by_link_text</li>
+<li>find_element_by_partial_link_text</li>
+<li>find_element_by_tag_name</li>
+<li>find_element_by_class_name</li>
+<li>find_element_by_css_selector</li>
+</ul>
+<p>a metody, které vrací pole nalezených elementů:</p>
+<ul class="simple">
+<li>find_elements_by_name</li>
+<li>find_elements_by_xpath</li>
+<li>find_elements_by_link_text</li>
+<li>find_elements_by_partial_link_text</li>
+<li>find_elements_by_tag_name</li>
+<li>find_elements_by_class_name</li>
+<li>find_elements_by_css_selector</li>
+</ul>
+<p>Příklad:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">elm</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s">&quot;#page .content&quot;</span><span class="p">)</span>
+<span class="n">elmArray</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_elements_by_tag_name</span><span class="p">(</span><span class="s">&quot;form&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="vyplnovani-formulare">
+<h2>2.4. Vyplňování formuláře<a class="headerlink" href="#vyplnovani-formulare" title="Permalink to this headline">¶</a></h2>
+<p>Pro jednodušší vyplňová formuláře rozšiřuje SW standardní API o šikovnou metodu <strong>fill_form</strong>. Té se jako první argument předává element formuláře a jako druhý objekt, ve kterém klíče představují hodnoty name atributů jednotlivých formulářových prvků a jejich hodnoty jsou pak hodnoty, které chceme těmto prvům nastavit. SW sám rozpozná, o jaký element se jedná a podle toho ho vyplní.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">fill_form</span><span class="p">(</span><span class="n">form</span><span class="p">,</span> <span class="p">{</span><span class="s">&quot;firstname&quot;</span><span class="p">:</span> <span class="s">u&quot;Jára&quot;</span><span class="p">,</span> <span class="s">&quot;lastname&quot;</span><span class="p">:</span> <span class="s">u&quot;Cimrman&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Pokud chceme po vyplnění formulář rovnou i odeslat, můžeme použít metodu <strong>fill_form_and_submit</strong> se stejnými argumenty.</p>
+<p>Pro vyplnění jednoho elementu, který ani nemusí být ve formuláři, slouží metoda <strong>fill_element</strong>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">fill_element</span><span class="p">(</span><span class="n">elm</span><span class="p">,</span> <span class="s">&quot;Jára Cimrman&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="prace-s-proxy">
+<h2>2.5. Práce s proxy<a class="headerlink" href="#prace-s-proxy" title="Permalink to this headline">¶</a></h2>
+<p>Selenium samotné neposkytuje způsob jak testovat síťové požadavky. Proto SW využívá vlastní proxy a v případě potřeby dokáže síťový provoz na stránce ukládat a  výsledek na požádání vrátit jako JSON, který je strukturovám podle HAR specifikace. V tomto JSONu pak můžeme vyhledávat.</p>
+<p>Nejprve je potřeba v testu zapnout logování:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">new_har</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Potom provedeme akci, při by mělo dojít o odeslání požadavku, který nás zajímá a následeně si proxy řekneme o zachycené výsledky:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">har</span>
+</pre></div>
+</div>
+<p>Případně můžeme ve výsledcích rovnou vyhledávat. Takto si například můžeme ověřit, že si homepage Seznamu říká o výdej reklamy na pozici &#8220;seznam.hp.tip.vikend&#8221;:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">new_har</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;http://seznam.cz&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">find_in_har</span><span class="p">(</span>
+        <span class="s">&quot;i.imedia.cz&quot;</span><span class="p">,</span>
+        <span class="p">{</span>
+            <span class="s">&quot;request.queryString&quot;</span><span class="p">:</span>
+            <span class="p">{</span>
+                <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;zoneId&quot;</span><span class="p">,</span>
+                <span class="s">&quot;value&quot;</span><span class="p">:</span> <span class="s">&quot;seznam.hp.tip.vikend&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Metoda <strong>find_in_har</strong> přijimá dva argumenty. První je URL nebo substring, který musí URL obsahovat. Pro každý požadavek, který stringu vyhovuje se pak provádí hledaní podle druhého parametru, ve kterém předáváme kritéria, kterým musí požadavek vyhovat. Kritéria se předávají jako objekt (dict), ve kterém klíče reprezentují položku v HARu. Použitím teček v názvu klíče lze přistupovat k datům zanořeným hlouběji v HARu. Abychom mohli v HARu vyhledávat, musíme znát jeho strukturu. Příklad, jak takový request v HARu vypadá, je v examples/har.json</p>
+</div>
+<div class="section" id="cekani">
+<span id="waits"></span><h2>2.6. Čekání<a class="headerlink" href="#cekani" title="Permalink to this headline">¶</a></h2>
+<p>Při psaní testů je potřeba myslet na to, že ne vždy je než bude moci v kódu testu pokračovat dál, je potřeba chvilku počkat. Například na načtení nové stránky, doběhnutí requestu apod.</p>
+<p>Sám Selenium WebDriver si dokáže poradit s případy, kdy ho pomocí metody <strong>get</strong> přesměrujeme na jinou stránku. S vykonáváním testu počká do doby, než bude stránka celá načtená.</p>
+<p>Nedokáže si ale poradit s AJAX requesty a nejrůznějšími akcemi, které na stránce něco mění a zaberou delší čas. Pokud po takové akce chceme vyhledat nějaký element na stránce pomocí některé <strong>find_*</strong> metody, tak nic řešit nemusíme. Modul SW přidává k těmto metodám implicitní čekání, pokud napoprvé nevrátí žádný výsledek. Periodicky se pak po dobu 10s kontroluje, jestli se požadovaný element neobjeví. Pokud ne, teprve pak vyhodí chybu a test selže.</p>
+<p>Pro všechny ostatní případy, kdy potřebujeme nějakou dobu počkat, je tu metoda <strong>wait</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>self.driver.wait(5) // čekej 5s
+</pre></div>
+</div>
+</div>
+<div class="section" id="zadavani-znaku-z-klavesnice">
+<h2>2.7. Zadávání znaků z klávesnice<a class="headerlink" href="#zadavani-znaku-z-klavesnice" title="Permalink to this headline">¶</a></h2>
+<p>Pro odesílání stisku kláves z klávesnice slouží metoda <strong>send_keys</strong>. Pomocí ní se dá např. do inputu vložit text:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s">u&quot;kotě v botě&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Znaky se odešlou do elementu, na kterém je focus.</p>
+<p>Existuje také metoda <strong>send_keys_to_element</strong>, které cílový element můžeme zadat:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">send_keys_to_element</span><span class="p">(</span><span class="n">elm</span><span class="p">,</span> <span class="s">u&quot;kotě v botě&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Kromě textu se dají odesílat i speciální klávesy. Jejich seznam je v <a class="reference internal" href="api.html#keysapi"><em>Keys (Keys)</em></a>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">Keys</span><span class="o">.</span><span class="n">ENTER</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nastaveni-pozadovanych-prohlizecu-pro-jednotlive-testy">
+<h2>2.8. Nastavení požadovaných prohlížečů pro jednotlivé testy<a class="headerlink" href="#nastaveni-pozadovanych-prohlizecu-pro-jednotlive-testy" title="Permalink to this headline">¶</a></h2>
+<p>Seznam prohlížečů, na kterých chceme spustit testy, je možné přenastavit pro každou třídu testů (testcase):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">homepage</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="n">BROWSERS</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s">&quot;browserName&quot;</span><span class="p">:</span> <span class="s">&quot;internet explorer&quot;</span><span class="p">,</span>
+            <span class="s">&quot;version&quot;</span><span class="p">:</span> <span class="s">&quot;8.0&quot;</span><span class="p">,</span>
+            <span class="s">&quot;platform&quot;</span><span class="p">:</span> <span class="s">&quot;ANY&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">test_vyhledavani</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+<p>To je užitečné například v případě, že chceme napsat testy specifické pro jeden prohlížeč.</p>
+</div>
+<div class="section" id="stringy-s-ceskymi-znaky">
+<h2>2.9. Stringy s českými znaky<a class="headerlink" href="#stringy-s-ceskymi-znaky" title="Permalink to this headline">¶</a></h2>
+<p>Při práci s českými znaky v testech je potřeba string, který je obsahuje, označit jako unicode. To se dělá přidáním znaku &#8220;<strong>u</strong>&#8221; před string.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">fill_form_and_submit</span><span class="p">(</span><span class="n">search_form</span><span class="p">,</span> <span class="p">{</span><span class="s">&quot;q&quot;</span><span class="p">:</span> <span class="s">u&quot;kotě v botě&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2. Psaní testů</a><ul>
+<li><a class="reference internal" href="#vysvetleni-struktury-testu-na-prikladu">2.1. Vysvětlení struktury testu na příkladu</a></li>
+<li><a class="reference internal" href="#navigace-prohlizece">2.2. Navigace prohlížeče</a></li>
+<li><a class="reference internal" href="#vyhledavani-elementu">2.3. Vyhledávání elementů</a></li>
+<li><a class="reference internal" href="#vyplnovani-formulare">2.4. Vyplňování formuláře</a></li>
+<li><a class="reference internal" href="#prace-s-proxy">2.5. Práce s proxy</a></li>
+<li><a class="reference internal" href="#cekani">2.6. Čekání</a></li>
+<li><a class="reference internal" href="#zadavani-znaku-z-klavesnice">2.7. Zadávání znaků z klávesnice</a></li>
+<li><a class="reference internal" href="#nastaveni-pozadovanych-prohlizecu-pro-jednotlive-testy">2.8. Nastavení požadovaných prohlížečů pro jednotlivé testy</a></li>
+<li><a class="reference internal" href="#stringy-s-ceskymi-znaky">2.9. Stringy s českými znaky</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="instalace.html"
+                        title="previous chapter">1. Instalace</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="api.html"
+                        title="next chapter">3. API</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/psani_testu.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="3. API"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="instalace.html" title="1. Instalace"
+             >previous</a> |</li>
+        <li><a href="index.html">selenium-webtests 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Jiri Kuchta.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+    </div>
+  </body>
+</html>
