@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # selenium-webtests documentation build configuration file, created by
-# sphinx-quickstart on Thu Feb 20 21:40:27 2014.
+# sphinx-quickstart on Sun Feb 23 22:48:23 2014.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -48,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'selenium-webtests'
-copyright = u'2014, Jiri Kuchta'
+copyright = u'2014, Jiří Kuchta'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -102,7 +102,6 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#html_theme = 'default'
 html_theme = "sphinx_rtd_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -202,7 +201,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'selenium-webtests.tex', u'selenium-webtests Documentation',
-   u'Jiri Kuchta', 'manual'),
+   u'Jiří Kuchta', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -232,7 +231,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'selenium-webtests', u'selenium-webtests Documentation',
-     [u'Jiri Kuchta'], 1)
+     [u'Jiří Kuchta'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -246,7 +245,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'selenium-webtests', u'selenium-webtests Documentation',
-   u'Jiri Kuchta', 'selenium-webtests', 'One line description of project.',
+   u'Jiří Kuchta', 'selenium-webtests', 'One line description of project.',
    'Miscellaneous'),
 ]
 
