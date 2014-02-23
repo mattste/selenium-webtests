@@ -12,14 +12,18 @@ Instance Selenium Remote Webdriveru. Poskytuje metody pro ovládání prohlíže
 
 .. automodule:: webdriver
    :members:
-   :inherited-members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
 
 Akce (driver)
 ~~~~~~~~~~~~~
 
 .. automodule:: selenium.webdriver.common.action_chains
    :members:
-   :inherited-members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
 
 .. _webelementapi:
 
@@ -30,7 +34,9 @@ Instance WebElement. Reprezentuje DOM element získaný z vyhledávacích metod 
 
 .. automodule:: selenium.webdriver.remote.webelement
    :members:
-   :inherited-members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
 
 .. _proxyapi:
 
@@ -41,7 +47,9 @@ Metody pro práci s proxy.
 
 .. automodule:: proxy
    :members:
-   :inherited-members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
 
 .. _keysapi:
 
@@ -50,16 +58,20 @@ Keys (Keys)
 
 .. automodule:: selenium.webdriver.common.keys
    :members:
-   :inherited-members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
 
 Alerts (Alert)
 ~~~~~~~~~~~~~~~
 
 .. automodule:: selenium.webdriver.common.alert
    :members:
-   :inherited-members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
 
-.. _assertmethodsapi:
+.. _assertmethods:
 
 Metody pro testování výsledku testu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

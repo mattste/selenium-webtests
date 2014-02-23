@@ -14,11 +14,11 @@ Příprava prostředí a instalace (Selenium HUB)
 
     git clone https://github.com/jirikuchta/selenium-webtests.git
 
-5. Dále je potřeba otevřít soubor config.py v balíku a upravit v něm cesty ke staženému Selenium Serveru, spuštěcímu souboru proxy a IP stroje.
+5. Dále je potřeba otevřít soubor config.py v balíku a upravit v něm cesty ke staženému Selenium Serveru, spuštěcímu souboru proxy a adresu stroje.
 
   .. note::
 
-    Na uvedené IP adrese musí být stroj, na kterém SW instalujeme, dostupný pro všechny vzdálené stroje, na kterých běží testovací prohlížeče. Je možné vyplnit "localhost" pro spouštění testů na lokálních prohlížečích.
+    Na uvedené adrese musí být stroj, na kterém SW instalujeme, dostupný pro všechny vzdálené stroje, na kterých běží testovací prohlížeče. Je možné vyplnit "localhost" pro spouštění testů na lokálních prohlížečích.
 
 6. Pak stačí vlézt do hlavního adresáře staženého balíku a tento nainstalovat.::
 

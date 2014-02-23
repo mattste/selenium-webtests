@@ -175,18 +175,17 @@ Metoda **find_in_har** přijimá dva argumenty. První je URL nebo substring, kt
 
 Čekání
 ~~~~~~
-
-Při psaní testů je potřeba myslet na to, že ne vždy je než bude moci v kódu testu pokračovat dál, je potřeba chvilku počkat. Například na načtení nové stránky, doběhnutí requestu apod.
-
-Sám Selenium WebDriver si dokáže poradit s případy, kdy ho pomocí metody **get** přesměrujeme na jinou stránku. S vykonáváním testu počká do doby, než bude stránka celá načtená.
-
-Nedokáže si ale poradit s AJAX requesty a nejrůznějšími akcemi, které na stránce něco mění a zaberou delší čas. Pokud po takové akce chceme vyhledat nějaký element na stránce pomocí některé **find_*** metody, tak nic řešit nemusíme. Modul SW přidává k těmto metodám implicitní čekání, pokud napoprvé nevrátí žádný výsledek. Periodicky se pak po dobu 10s kontroluje, jestli se požadovaný element neobjeví. Pokud ne, teprve pak vyhodí chybu a test selže.
-
-Pro všechny ostatní případy, kdy potřebujeme nějakou dobu počkat, je tu metoda **wait**:
+ 
+Některé akce, které na stánce provedeme, mohou vyžadovat určitý čas něž se jejich výsledek na stánce nějak projeví. Typickým příkladem je třeba AJAX request. V takových případech budeme muset Selenium WebDriver říct, aby chvilku počkal, než bude moci v kódu testu pokračovat dál:
 
 ::
 
   self.driver.wait(5) // čekej 5s
+
+U některých akci, u kterých bychom normálně museli nastavovat čekání, to potřeba není:
+
+- sám Selenium WebDriver si dokáže poradit s případy, kdy ho pomocí metody **get** přesměrujeme na jinou stránku. S vykonáváním testu počká do doby, než bude stránka celá načtená.
+- pokud po takové akci chceme vyhledat nějaký element na stránce pomocí některé **find_*** metody, tak nic řešit nemusíme. Modul SW přidává k těmto metodám implicitní čekání, pokud napoprvé nevrátí žádný výsledek. Periodicky se pak po dobu 10s kontroluje, jestli se požadovaný element neobjeví. Pokud ne, teprve pak vyhodí chybu a test selže.
 
 Zadávání znaků z klávesnice
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -214,7 +213,7 @@ Kromě textu se dají odesílat i speciální klávesy. Jejich seznam je v :ref:
 Nastavení požadovaných prohlížečů pro jednotlivé testy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Seznam prohlížečů, na kterých chceme spustit testy, je možné přenastavit pro každou třídu testů (testcase):
+Normálně se každý test spustí na všech prohlížečích definovaných v souboru **settings.py**. Existuje ale možnost, jak pro konkrétní test nastavit vlastní prohlížeče. Stačí třídě testů nastavit class proměnnou **BROWSERS**:
 
 ::
 
@@ -241,6 +240,22 @@ Při práci s českými znaky v testech je potřeba string, který je obsahuje, 
 ::
 
     self.driver.fill_form_and_submit(search_form, {"q": u"kotě v botě"})
+
+Automatická kontrola JS chyb
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SW dokáže automaticky kontrolovat, jestli při provádění testů nedošlo na stránce k nějaké JS chybě. Stačí do kódu stránky přidat následující skript:
+
+::
+
+   <script type="text/javascript">
+        window.jsErrors = [];
+        window.onerror = function(errorMessage) {
+            window.jsErrors.push(errorMessage);
+        }
+    </script>
+
+Pokud pole **window.jsErrors** obsahuje na konci testu nějakou chybu, test selže bez ohledu na to, jaký byl výsledek testu samotného.
 
 
 

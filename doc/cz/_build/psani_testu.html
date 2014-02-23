@@ -1,57 +1,130 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>2. Psaní testů &mdash; selenium-webtests 0.1.0 documentation</title>
-    
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Psaní testů &mdash; selenium-webtests 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
+        URL_ROOT:'./',
+        VERSION:'0.1.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="selenium-webtests 0.1.0 documentation" href="index.html" />
-    <link rel="next" title="3. API" href="api.html" />
-    <link rel="prev" title="1. Instalace" href="instalace.html" /> 
-  </head>
-  <body>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="api.html" title="3. API"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="instalace.html" title="1. Instalace"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">selenium-webtests 0.1.0 documentation</a> &raquo;</li> 
-      </ul>
-    </div>  
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
-            
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="selenium-webtests 0.1.0 documentation" href="index.html"/>
+        <link rel="next" title="3. API" href="api.html"/>
+        <link rel="prev" title="1. Instalace" href="instalace.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> selenium-webtests</a>
+        <form class="wy-form" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="instalace.html">1. Instalace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="instalace.html#priprava-prostredi-a-instalace-selenium-hub">1.1. Příprava prostředí a instalace (Selenium HUB)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instalace.html#registrace-testovacich-prohlizecu-selenium-nodes">1.2. Registrace testovacích prohlížečů (Selenium Nodes)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">2. Psaní testů</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vysvetleni-struktury-testu-na-prikladu">2.1. Vysvětlení struktury testu na příkladu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#navigace-prohlizece">2.2. Navigace prohlížeče</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vyhledavani-elementu">2.3. Vyhledávání elementů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vyplnovani-formulare">2.4. Vyplňování formuláře</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prace-s-proxy">2.5. Práce s proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cekani">2.6. Čekání</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zadavani-znaku-z-klavesnice">2.7. Zadávání znaků z klávesnice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nastaveni-pozadovanych-prohlizecu-pro-jednotlive-testy">2.8. Nastavení požadovaných prohlížečů pro jednotlivé testy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stringy-s-ceskymi-znaky">2.9. Stringy s českými znaky</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#automaticka-kontrola-js-chyb">2.10. Automatická kontrola JS chyb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">3. API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#webdriver-driver">3.1. WebDriver (driver)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-selenium.webdriver.common.action_chains">3.2. Akce (driver)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#webelement-webelement">3.3. WebElement (webelement)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#proxy-proxy">3.4. Proxy (proxy)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-selenium.webdriver.common.keys">3.5. Keys (Keys)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-selenium.webdriver.common.alert">3.6. Alerts (Alert)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#metody-pro-testovani-vysledku-testu">3.7. Metody pro testování výsledku testu</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">selenium-webtests</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="index.html">Docs</a> &raquo;</li>
+  <li><a href="">2. Psaní testů</a></li>
+  
+</ul>
+<hr/>
+
+          
   <div class="section" id="psani-testu">
 <h1>2. Psaní testů<a class="headerlink" href="#psani-testu" title="Permalink to this headline">¶</a></h1>
 <p>Pokud máme SW modul nainstalovaný a zaregistrované všechny stroje s testovacími prohlížeči, můžeme začít psát samotné testy.</p>
@@ -99,7 +172,7 @@ Jeden soubor může obsahovat libovolný počet takových tříd. Díky tomu se 
 <li>provedení akce</li>
 <li>testování výsledku akce</li>
 </ul>
-<p>V prvních dvou krocích se využívají metody <a class="reference internal" href="api.html#webdriverapi"><em>WebDriver (driver)</em></a>, <a class="reference internal" href="api.html#webelementapi"><em>WebElement (webelement)</em></a> nebo <a class="reference internal" href="api.html#proxyapi"><em>Proxy (proxy)</em></a>. Ve třetím kroku <em class="xref std std-ref">assertmethods</em>.</p>
+<p>V prvních dvou krocích se využívají metody <a class="reference internal" href="api.html#webdriverapi"><em>WebDriver (driver)</em></a>, <a class="reference internal" href="api.html#webelementapi"><em>WebElement (webelement)</em></a> nebo <a class="reference internal" href="api.html#proxyapi"><em>Proxy (proxy)</em></a>. Ve třetím kroku <a class="reference internal" href="api.html#assertmethods"><em>Metody pro testování výsledku testu</em></a>.</p>
 </li>
 </ol>
 </div>
@@ -190,13 +263,15 @@ Adresy je možné zadávat i absolutně:</p>
 </div>
 <div class="section" id="cekani">
 <span id="waits"></span><h2>2.6. Čekání<a class="headerlink" href="#cekani" title="Permalink to this headline">¶</a></h2>
-<p>Při psaní testů je potřeba myslet na to, že ne vždy je než bude moci v kódu testu pokračovat dál, je potřeba chvilku počkat. Například na načtení nové stránky, doběhnutí requestu apod.</p>
-<p>Sám Selenium WebDriver si dokáže poradit s případy, kdy ho pomocí metody <strong>get</strong> přesměrujeme na jinou stránku. S vykonáváním testu počká do doby, než bude stránka celá načtená.</p>
-<p>Nedokáže si ale poradit s AJAX requesty a nejrůznějšími akcemi, které na stránce něco mění a zaberou delší čas. Pokud po takové akce chceme vyhledat nějaký element na stránce pomocí některé <strong>find_*</strong> metody, tak nic řešit nemusíme. Modul SW přidává k těmto metodám implicitní čekání, pokud napoprvé nevrátí žádný výsledek. Periodicky se pak po dobu 10s kontroluje, jestli se požadovaný element neobjeví. Pokud ne, teprve pak vyhodí chybu a test selže.</p>
-<p>Pro všechny ostatní případy, kdy potřebujeme nějakou dobu počkat, je tu metoda <strong>wait</strong>:</p>
+<p>Některé akce, které na stánce provedeme, mohou vyžadovat určitý čas něž se jejich výsledek na stánce nějak projeví. Typickým příkladem je třeba AJAX request. V takových případech budeme muset Selenium WebDriver říct, aby chvilku počkal, než bude moci v kódu testu pokračovat dál:</p>
 <div class="highlight-python"><div class="highlight"><pre>self.driver.wait(5) // čekej 5s
 </pre></div>
 </div>
+<p>U některých akci, u kterých bychom normálně museli nastavovat čekání, to potřeba není:</p>
+<ul class="simple">
+<li>sám Selenium WebDriver si dokáže poradit s případy, kdy ho pomocí metody <strong>get</strong> přesměrujeme na jinou stránku. S vykonáváním testu počká do doby, než bude stránka celá načtená.</li>
+<li>pokud po takové akci chceme vyhledat nějaký element na stránce pomocí některé <strong>find_*</strong> metody, tak nic řešit nemusíme. Modul SW přidává k těmto metodám implicitní čekání, pokud napoprvé nevrátí žádný výsledek. Periodicky se pak po dobu 10s kontroluje, jestli se požadovaný element neobjeví. Pokud ne, teprve pak vyhodí chybu a test selže.</li>
+</ul>
 </div>
 <div class="section" id="zadavani-znaku-z-klavesnice">
 <h2>2.7. Zadávání znaků z klávesnice<a class="headerlink" href="#zadavani-znaku-z-klavesnice" title="Permalink to this headline">¶</a></h2>
@@ -216,7 +291,7 @@ Adresy je možné zadávat i absolutně:</p>
 </div>
 <div class="section" id="nastaveni-pozadovanych-prohlizecu-pro-jednotlive-testy">
 <h2>2.8. Nastavení požadovaných prohlížečů pro jednotlivé testy<a class="headerlink" href="#nastaveni-pozadovanych-prohlizecu-pro-jednotlive-testy" title="Permalink to this headline">¶</a></h2>
-<p>Seznam prohlížečů, na kterých chceme spustit testy, je možné přenastavit pro každou třídu testů (testcase):</p>
+<p>Normálně se každý test spustí na všech prohlížečích definovaných v souboru <strong>settings.py</strong>. Existuje ale možnost, jak pro konkrétní test nastavit vlastní prohlížeče. Stačí třídě testů nastavit class proměnnou <strong>BROWSERS</strong>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">homepage</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
 
     <span class="n">BROWSERS</span> <span class="o">=</span> <span class="p">[</span>
@@ -240,79 +315,49 @@ Adresy je možné zadávat i absolutně:</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="automaticka-kontrola-js-chyb">
+<h2>2.10. Automatická kontrola JS chyb<a class="headerlink" href="#automaticka-kontrola-js-chyb" title="Permalink to this headline">¶</a></h2>
+<p>SW dokáže automaticky kontrolovat, jestli při provádění testů nedošlo na stránce k nějaké JS chybě. Stačí do kódu stránky přidat následující skript:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;script type=&quot;text/javascript&quot;&gt;
+     window.jsErrors = [];
+     window.onerror = function(errorMessage) {
+         window.jsErrors.push(errorMessage);
+     }
+ &lt;/script&gt;
+</pre></div>
+</div>
+<p>Pokud pole <strong>window.jsErrors</strong> obsahuje na konci testu nějakou chybu, test selže bez ohledu na to, jaký byl výsledek testu samotného.</p>
+</div>
 </div>
 
 
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">2. Psaní testů</a><ul>
-<li><a class="reference internal" href="#vysvetleni-struktury-testu-na-prikladu">2.1. Vysvětlení struktury testu na příkladu</a></li>
-<li><a class="reference internal" href="#navigace-prohlizece">2.2. Navigace prohlížeče</a></li>
-<li><a class="reference internal" href="#vyhledavani-elementu">2.3. Vyhledávání elementů</a></li>
-<li><a class="reference internal" href="#vyplnovani-formulare">2.4. Vyplňování formuláře</a></li>
-<li><a class="reference internal" href="#prace-s-proxy">2.5. Práce s proxy</a></li>
-<li><a class="reference internal" href="#cekani">2.6. Čekání</a></li>
-<li><a class="reference internal" href="#zadavani-znaku-z-klavesnice">2.7. Zadávání znaků z klávesnice</a></li>
-<li><a class="reference internal" href="#nastaveni-pozadovanych-prohlizecu-pro-jednotlive-testy">2.8. Nastavení požadovaných prohlížečů pro jednotlivé testy</a></li>
-<li><a class="reference internal" href="#stringy-s-ceskymi-znaky">2.9. Stringy s českými znaky</a></li>
-</ul>
-</li>
-</ul>
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="api.html" class="btn btn-neutral float-right" title="3. API"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="instalace.html" class="btn btn-neutral" title="1. Instalace"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="instalace.html"
-                        title="previous chapter">1. Instalace</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="api.html"
-                        title="next chapter">3. API</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/psani_testu.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Jiri Kuchta.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="api.html" title="3. API"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="instalace.html" title="1. Instalace"
-             >previous</a> |</li>
-        <li><a href="index.html">selenium-webtests 0.1.0 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
-    <div class="footer">
-        &copy; Copyright 2014, Jiri Kuchta.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
-    </div>
-  </body>
+
+    </section>
+
+  </div>
+  
+
+</body>
 </html>
