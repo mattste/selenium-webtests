@@ -44,13 +44,21 @@ class FormElement(object):
             value = str('')
         return value
 
+    def set_elm(self, elm):
+        self.elm = elm
+
     def fill_out(self, value):
         tag_name, elm_type = self.analyze_element()
         method_name = ('fill_%s_%s' % (tag_name, elm_type)).replace('-', '')
         getattr(self, method_name, self.fill_common)(value)
 
     def analyze_element(self):
-        elms = self.form_elm.find_elements_by_name(self.elm_name)
+        elms = []
+        if self.elm:
+            elms.append(self.elm)
+        else:
+            elms = self.form_elm.find_elements_by_name(self.elm_name)
+
         for elm in elms:
             elm_type = elm.get_attribute('type')
             if elm_type == 'hidden':

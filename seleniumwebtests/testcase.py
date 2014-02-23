@@ -45,21 +45,12 @@ class TestCase(unittest.TestCase):
         """
         Code to be executed after each test
         """
-
-        js_error = False
-        console_data = self.driver.execute_script("return console.getData()")
-
-        if console_data:
-            for item in console_data:
-                if item["type"] == "error":
-                    js_error = True
-                    break
-
+        js_errors = self.driver.execute_script('return window.jsErrors')
 
         self.driver.quit()
         runner.active_driver = None
-
-        # fail test if there is any JS error the console
+        
+        # fail test if there is any JS error
         if js_error:
             self.fail("There is some JS error on the page!")
 

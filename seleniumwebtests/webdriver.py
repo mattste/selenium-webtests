@@ -4,7 +4,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from runner import runner
-from forms import Form
+from forms import Form, FormElement
 
 class WebDriver(webdriver.Remote):
     """
@@ -53,3 +53,14 @@ class WebDriver(webdriver.Remote):
         """
         form = Form(elm)
         form.fill_out_and_submit(data)
+
+    def fill_element(self, elm, value):
+        """
+        Fill element with given value
+
+        :param elm: element
+        :param value: value
+        """
+        formElm = FormElement(elm.parent, None)
+        formElm.set_elm(elm)
+        formElm.fill_out(value)
