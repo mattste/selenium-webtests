@@ -27,6 +27,7 @@ class FormElement(object):
     def __init__(self, form_elm, elm_name):
         self.form_elm = form_elm
         self.elm_name = elm_name
+        self.elm = None
 
     def convert_value(self, value):
         if not isinstance(value, (list, tuple)):
