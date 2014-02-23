@@ -33,7 +33,7 @@ class TestCase(unittest.TestCase):
         Code to be executed before each test
         """
         self.driver = WebDriver(
-            "http://{0}:{1}/wd/hub".format(runner.config.IP, runner.config.SELENIUM_SERVER_PORT),
+            "http://{0}:{1}/wd/hub".format(runner.config.ADDRESS, runner.config.SELENIUM_SERVER_PORT),
             self.browser_capabilities,
             proxy=self.proxy.selenium_proxy()
         )
