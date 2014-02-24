@@ -2,7 +2,13 @@
 
 import unittest
 
+from runner import runner
+
 class Reporter(unittest.runner.TextTestResult):
+
+    def __init__(self, *args, **kwargs):
+        runner.reporter_instance = self
+        super(Reporter, self).__init__(*args, **kwargs)
 
     def startTest(self, test):
         """

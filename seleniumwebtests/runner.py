@@ -28,6 +28,7 @@ class Runner(object):
         self._proxy = None # proxy client
         self._desired_browser = None # variable for storing desired browser capabilities
         self._active_driver = None # currently running webdriver
+        self._reporter_instance = None # instance of reporter class. We need this to be able to stop test execution on CTRL+C
 
     def run(self):
         """
@@ -43,6 +44,7 @@ class Runner(object):
         self.end()
 
     def end(self):
+        self.reporter_instance.stop()
         self._proxy.close()
         if self.active_driver:
             self.active_driver.quit()
