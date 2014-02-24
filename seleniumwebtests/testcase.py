@@ -20,6 +20,11 @@ class TestCase(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         self.proxy = runner.proxy
         self.browser_capabilities = runner.desired_browser
+
+        #disable false certificate warning dialog in opera
+        if self.browser_capabilities.get("browserName") == "opera":
+            self.browser_capabilities["opera.profile"] = ""
+
         super(TestCase, self).__init__(*args, **kwargs)
 
     def stringify_browser_capabilities(self):
