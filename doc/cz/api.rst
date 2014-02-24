@@ -12,6 +12,7 @@ Instance Selenium Remote Webdriveru. Poskytuje metody pro ovládání prohlíže
 
 .. automodule:: webdriver
    :members:
+   :inherited-members:
    :undoc-members:
    :member-order: groupwise
    :show-inheritance:
@@ -21,6 +22,7 @@ Akce (ActionChains)
 
 .. automodule:: selenium.webdriver.common.action_chains
    :members:
+   :inherited-members:
    :undoc-members:
    :member-order: groupwise
    :show-inheritance:
@@ -34,6 +36,7 @@ Instance WebElement. Reprezentuje DOM element získaný z vyhledávacích metod 
 
 .. automodule:: selenium.webdriver.remote.webelement
    :members:
+   :inherited-members:
    :undoc-members:
    :member-order: groupwise
    :show-inheritance:
@@ -47,6 +50,7 @@ Metody pro práci s proxy.
 
 .. automodule:: proxy
    :members:
+   :inherited-members:
    :undoc-members:
    :member-order: groupwise
    :show-inheritance:
