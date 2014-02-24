@@ -16,7 +16,7 @@ Instance Selenium Remote Webdriveru. Poskytuje metody pro ovládání prohlíže
    :member-order: groupwise
    :show-inheritance:
 
-Akce (driver)
+Akce (ActionChains)
 ~~~~~~~~~~~~~
 
 .. automodule:: selenium.webdriver.common.action_chains

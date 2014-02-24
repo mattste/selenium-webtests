@@ -5,12 +5,12 @@ import unittest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 
 from webdriver import WebDriver
 from runner import runner
 
-__all__ = ["json", "Keys", "WebDriverWait", "TestCase"]
+__all__ = ["json", "Keys", "WebDriverWait", "TestCase", "ActionChains"]
 
 class TestCase(unittest.TestCase):
     """
@@ -41,16 +41,28 @@ class TestCase(unittest.TestCase):
         self.driver.implicitly_wait(10)
         runner.active_driver = self.driver
 
+    def run(self, result=None):
+        try:
+                super(TestCase, self).run(result)
+        except:
+                self.tearDown()
+
+
     def tearDown(self):
         """
         Code to be executed after each test
         """
-        js_errors = self.driver.execute_script('return window.jsErrors')
+
+        try:
+            js_errors = self.driver.execute_script('return window.jsErrors')
+        except:
+            js_errors = None
+
 
         self.driver.quit()
         runner.active_driver = None
         
         # fail test if there is any JS error
-        if js_error:
+        if js_errors:
             self.fail("There is some JS error on the page!")
 
