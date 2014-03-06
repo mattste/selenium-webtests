@@ -17,7 +17,11 @@ TODO
 ~~~~
 
 - přidat možnost předání parametrů spouštěcímu příkazu **runwebtests** (nastavení BASE_URL)
-- opravit, upravit a vylepšit metodu **find_in_har**
+- vylepšit prohledávání HARu
+- upravit čekání (není implicitly_wait zbytečné a pomalé?)
+- možnost nastavit login pro .dev, .test, provoz
+- nebylo by lepší a rychlejší vytvářet instanci browser per celý test popř. per testcase?
+- page objects?
 
 .. toctree::
    :numbered:
