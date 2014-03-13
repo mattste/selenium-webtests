@@ -21,7 +21,7 @@ class WebDriver(webdriver.Remote):
         :param url: Destination URL
         """
         if not url.startswith("http"):
-            url = runner.test_settings.BASE_URL + url
+            url = runner.config.BASE_URL + url
         super(WebDriver, self).get(url)
 
     def wait(self, timeout):

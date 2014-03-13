@@ -10,8 +10,9 @@ def signal_handler(signal, frame):
     runner.end()
     sys.exit(0)
 
-def main():
+def main(options={}):
     signal.signal(signal.SIGINT, signal_handler)
+    runner.setOptions(options)
     runner.run()
 
 if __name__ == "__main__":

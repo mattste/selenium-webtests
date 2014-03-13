@@ -1,9 +1,24 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-def main():
-    from seleniumwebtests.__main__ import main as seleniumwebtests_main
-    seleniumwebtests_main()
+from seleniumwebtests.__main__ import main
 
 if __name__ == "__main__":
-    main()
+    import os
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--xmlresult", action="store_true", dest="XML_RESULT",
+        help="generate XML result file")
+    parser.add_argument("--xmlfilepath", default=os.getcwd(), dest="XML_FILE_PATH",
+         help="path where to store the xml result file")
+    parser.add_argument("--baseurl", dest="BASE_URL",
+         help="base URL of the webpage we want to test")
+
+    main(vars(parser.parse_args()))
+
+
+
+
+
+

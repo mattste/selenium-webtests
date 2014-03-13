@@ -20,7 +20,7 @@ class Runner(object):
 
         # load test settings
         sys.path.append(os.getcwd())
-        self._test_settings = __import__("settings")
+        self.setOptions(vars(__import__("settings")))
 
         self._start_proxy_server()
         self._start_selenium_hub()
@@ -48,6 +48,11 @@ class Runner(object):
         self._proxy.close()
         if self.active_driver:
             self.active_driver.quit()
+
+    def setOptions(self, options):
+        for key in options:
+            if options[key]:
+                setattr(self._config, key.upper(), options[key])
 
     def _start_selenium_hub(self):
         if not self._is_listening(self.config.ADDRESS, self.config.SELENIUM_SERVER_PORT):
@@ -80,10 +85,6 @@ class Runner(object):
     @property
     def config(self):
         return self._config
-
-    @property
-    def test_settings(self):
-        return self._test_settings
 
     @property
     def desired_browser(self):
