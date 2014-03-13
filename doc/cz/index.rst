@@ -16,12 +16,14 @@ Použité technologie
 TODO
 ~~~~
 
-- přidat možnost předání parametrů spouštěcímu příkazu **runwebtests** (nastavení BASE_URL)
-- vylepšit prohledávání HARu
-- upravit čekání (není implicitly_wait zbytečné a pomalé?)
-- možnost nastavit login pro .dev, .test, provoz
-- nebylo by lepší a rychlejší vytvářet instanci browser per celý test popř. per testcase?
-- page objects?
+- možnost parametrizovat příkaz **runwebtests**
+- vylepšit práci s proxy
+- možnost předat **wait** metodě funkci, která se bude periodicky spouštět a vracet true/false
+- nebude pak implicitly_wait zbytečné?
+- jak vyřešit různé loginy pro .dev, .test, provoz?
+- nebylo by lepší a rychlejší vytvářet instanci browseru per celý test popř. per testcase?
+- IE8 a error click mimo view
+- vyřešit zamrznuté instance browserů, které se nezavřou
 
 .. toctree::
    :numbered:
