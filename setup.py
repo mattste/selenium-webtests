@@ -20,6 +20,7 @@ setup(
     install_requires=[
         'selenium>=2.38.4',
         'browsermob-proxy>=0.6.0',
+        'unittest-xml-reporting>=1.7.0'
     ],
     scripts=["bin/runwebtests.cmd","bin/runwebtests"],
 )

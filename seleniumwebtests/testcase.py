@@ -7,8 +7,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 
+from seleniumwebtests import swt
 from webdriver import WebDriver
-from runner import runner
 
 __all__ = ["json", "Keys", "WebDriverWait", "TestCase", "ActionChains"]
 
@@ -18,8 +18,8 @@ class TestCase(unittest.TestCase):
     """
 
     def __init__(self, *args, **kwargs):
-        self.proxy = runner.proxy
-        self.browser_capabilities = runner.desired_browser
+        self.proxy = swt.proxy
+        self.browser_capabilities = swt.desired_browser
 
         #disable false certificate warning dialog in opera
         if self.browser_capabilities.get("browserName") == "opera":
@@ -38,13 +38,13 @@ class TestCase(unittest.TestCase):
         Code to be executed before each test
         """
         self.driver = WebDriver(
-            "http://{0}:{1}/wd/hub".format(runner.config.ADDRESS, runner.config.SELENIUM_SERVER_PORT),
+            "http://{0}:{1}/wd/hub".format(swt.config.ADDRESS, swt.config.SELENIUM_SERVER_PORT),
             self.browser_capabilities,
             proxy=self.proxy.selenium_proxy()
         )
 
         self.driver.implicitly_wait(10)
-        runner.active_driver = self.driver
+        swt.active_driver = self.driver
 
     def run(self, result=None):
         try:
@@ -65,8 +65,8 @@ class TestCase(unittest.TestCase):
 
 
         self.driver.quit()
-        runner.active_driver = None
-        
+        swt.active_driver = None
+
         # fail test if there is any JS error
         if js_errors:
             self.fail("There is some JS error on the page!")

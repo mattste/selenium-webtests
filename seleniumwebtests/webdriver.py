@@ -3,7 +3,8 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
-from runner import runner
+
+from seleniumwebtests import swt
 from forms import Form, FormElement
 
 class WebDriver(webdriver.Remote):
@@ -21,7 +22,7 @@ class WebDriver(webdriver.Remote):
         :param url: Destination URL
         """
         if not url.startswith("http"):
-            url = runner.config.BASE_URL + url
+            url = swt.config.BASE_URL + url
         super(WebDriver, self).get(url)
 
     def wait(self, timeout):

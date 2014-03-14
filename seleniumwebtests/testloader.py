@@ -4,7 +4,8 @@ import os
 import re
 import inspect
 import unittest
-from runner import runner
+
+from seleniumwebtests import swt
 
 # regexp to ignore .pyc and .pyo files
 VALID_FILE_NAME = re.compile(r'[_a-z]\w*\.py$', re.IGNORECASE)
@@ -24,7 +25,7 @@ class TestLoader(object):
         for tc in test_cases:
             browsers = self._get_browsers(tc)
             for b in browsers:
-                runner.desired_browser = b
+                swt.desired_browser = b
                 tests = self._loader.loadTestsFromTestCase(tc)
                 test_suite.addTests(tests)
 
@@ -45,7 +46,8 @@ class TestLoader(object):
                 for name, obj in inspect.getmembers(module):
                     if inspect.isclass(obj):
                         if self._is_testcase_class(obj):
-                            test_cases.append(obj)
+                            if not swt.config.TEST_CASES or name in swt.config.TEST_CASES:
+                                test_cases.append(obj)
         return test_cases
 
     def _is_testcase_class(self, obj):
@@ -61,8 +63,8 @@ class TestLoader(object):
         """
         Retuns list of browsers to run the test case on
         If test case does not provide such an information
-        the runner.config.BROWSERS is returned
+        the swt.config.BROWSERS is returned
         """
         if hasattr(test_case, "BROWSERS"):
             return test_case.BROWSERS
-        return runner.config.BROWSERS
+        return swt.config.BROWSERS
