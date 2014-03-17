@@ -25,11 +25,14 @@ class WebDriver(webdriver.Remote):
             url = swt.config.BASE_URL + url
         super(WebDriver, self).get(url)
 
-    def wait(self, timeout):
+    def wait(self, timeout=10):
         """
-        :param timeout: Number of seconds to wait
+        Returns instance of WebDriverWait
+
+        Example:
+        self.wait().until(lambda driver: len(driver.find_element_by_id('elm')) > 10)
         """
-        time.sleep(timeout)
+        return WebDriverWait(self, timeout)
 
     def fill_form(self, elm, data={}):
         """
@@ -62,6 +65,6 @@ class WebDriver(webdriver.Remote):
         :param elm: element
         :param value: value
         """
-        formElm = FormElement(elm.parent, None)
+        formElm = FormElement(elm.parent, elm.get_attribute("name"))
         formElm.set_elm(elm)
         formElm.fill_out(value)
