@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import re
 import browsermobproxy
 
 class Proxy(browsermobproxy.Client):
