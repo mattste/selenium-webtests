@@ -12,7 +12,7 @@ import browsermobproxy
 import config
 from proxy import Proxy
 
-class Runner(object):
+class SeleniumWebtests(object):
 
     def __init__(self):
 
@@ -20,7 +20,7 @@ class Runner(object):
 
         # load test settings
         sys.path.append(os.getcwd())
-        self._test_settings = __import__("settings")
+        self.setOptions(vars(__import__("settings")))
 
         self._start_proxy_server()
         self._start_selenium_hub()
@@ -28,17 +28,17 @@ class Runner(object):
         self._proxy = None # proxy client
         self._desired_browser = None # variable for storing desired browser capabilities
         self._active_driver = None # currently running webdriver
-        self._reporter_instance = None # instance of reporter class. We need this to be able to stop test execution on CTRL+C
+        self._reporter_instance = None # instance of testrunner class. We need this to be able to stop test execution on CTRL+C
 
     def run(self):
         """
         Creates test suite and runs the tests
         """
-        import reporter
+        import testrunner
         import testloader
 
         self._proxy = Proxy("{0}:{1}".format(self.config.ADDRESS, self.config.PROXY_SERVER_PORT))
-        self._test_runner = unittest.TextTestRunner(verbosity=2, resultclass=reporter.Reporter)
+        self._test_runner = testrunner.getTestRunner()
         self._test_loader = testloader.TestLoader()
         self._test_runner.run(self._test_loader.get_test_suite())
         self.end()
@@ -48,6 +48,11 @@ class Runner(object):
         self._proxy.close()
         if self.active_driver:
             self.active_driver.quit()
+
+    def setOptions(self, options):
+        for key in options:
+            if options[key] != None:
+                setattr(config, key, options[key])
 
     def _start_selenium_hub(self):
         if not self._is_listening(self.config.ADDRESS, self.config.SELENIUM_SERVER_PORT):
@@ -82,10 +87,6 @@ class Runner(object):
         return self._config
 
     @property
-    def test_settings(self):
-        return self._test_settings
-
-    @property
     def desired_browser(self):
         return self._desired_browser
 
@@ -101,4 +102,12 @@ class Runner(object):
     def active_driver(self, driver):
         self._active_driver = driver
 
-runner = Runner()
+    @property
+    def reporter_instance(self):
+        return self._reporter_instance
+
+    @reporter_instance.setter
+    def reporter_instance(self, instance):
+        self._reporter_instance = instance
+
+swt = SeleniumWebtests()
