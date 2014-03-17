@@ -1,16 +1,18 @@
 # -*- coding: utf-8 -*-
 
 import json
+import re
 import unittest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.alert import Alert
 
 from seleniumwebtests import swt
 from webdriver import WebDriver
 
-__all__ = ["json", "Keys", "WebDriverWait", "TestCase", "ActionChains"]
+__all__ = ["json", "re", "Keys", "WebDriverWait", "TestCase", "ActionChains", "Alert"]
 
 class TestCase(unittest.TestCase):
     """
@@ -48,9 +50,9 @@ class TestCase(unittest.TestCase):
 
     def run(self, result=None):
         try:
-                super(TestCase, self).run(result)
+            super(TestCase, self).run(result)
         except:
-                self.tearDown()
+            self.tearDown()
 
 
     def tearDown(self):
