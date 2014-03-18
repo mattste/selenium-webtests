@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import re
 import browsermobproxy
 
 class Proxy(browsermobproxy.Client):
@@ -28,7 +27,7 @@ class Proxy(browsermobproxy.Client):
         """
         Returns True if a request with given url and matching given criterions has been captured.
 
-        :param url: Regular expression pattern the requst URL has to match
+        :param url: URL substring the request URL has to contain
         :param criterions: List of criterions dicionaries the request has to match. Each dictionary has two items:
             "key" - dot separated path to the value in the HAR JSON we want to test. , i.e. "response.status", "request.headers" etc.
                 See the examples/har.json to see how one single request is stored in the HAR format.
@@ -40,7 +39,7 @@ class Proxy(browsermobproxy.Client):
         """
         Returns list of matching requests.
 
-        :param url: Regular expression pattern the requst URL has to match
+        :param url: URL substring the request URL has to contain
         :param criterions: List of criterions dicionaries the request has to match. Each dictionary has two items:
             "key" - dot separated path to the value in the HAR JSON we want to test. , i.e. "response.status", "request.headers" etc.
                 See the examples/har.json to see how one single request is stored in the HAR format.
@@ -66,14 +65,13 @@ class Proxy(browsermobproxy.Client):
 
     def _filter_entries_by_url(self, url):
         """
-        Filters all captured requests by passed URL
+        Filters all captured requests by passed URL substring
 
-        :param url: Regular expression pattern the requst URL has to match
+        :param url: URL substring the request URL has to contain
         """
-        pattern = re.compile(url)
         matches = []
         for entry in self.har["log"]["entries"]:
-            if pattern.search(entry["request"]["url"]):
+            if url in entry["request"]["url"]:
                 matches.append(entry)
         return matches
 
