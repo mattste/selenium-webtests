@@ -25,14 +25,36 @@ class WebDriver(webdriver.Remote):
             url = swt.config.BASE_URL + url
         super(WebDriver, self).get(url)
 
-    def wait(self, timeout=10):
+    def wait(self, timeout=10, untilFunc=None):
         """
-        Returns instance of WebDriverWait
+        Method to tell webdriver to wait for certain amount of time
 
-        Example:
-        self.wait().until(lambda driver: len(driver.find_element_by_id('elm')) > 10)
+        :param timeout: max time in sec to wait
+        :param untilFunc: if passed, method periodically check if the function returns True.
+            If this condition is fulfilled webdriver continues test execution
         """
-        return WebDriverWait(self, timeout)
+        limit = timeout
+        inc = 0.5
+        c = 0
+        passed = False
+
+        if untilFunc:
+            while (c < limit):
+                try:
+                    if not untilFunc():
+                        raise
+                    passed = True
+                    break
+                except:
+                    time.sleep(inc)
+                    c = c + inc
+        else:
+            passed = True
+            time.sleep(timeout)
+
+        if not passed:
+            raise Exception("The untilFunc function passed to wait method was not fulfilled in the timeout.")
+
 
     def fill_form(self, elm, data={}):
         """

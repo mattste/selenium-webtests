@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import json
-import re
 import unittest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -12,7 +11,7 @@ from selenium.webdriver.common.alert import Alert
 from seleniumwebtests import swt
 from webdriver import WebDriver
 
-__all__ = ["json", "re", "Keys", "WebDriverWait", "TestCase", "ActionChains", "Alert"]
+__all__ = ["json", "Keys", "WebDriverWait", "TestCase", "ActionChains", "Alert"]
 
 class TestCase(unittest.TestCase):
     """
@@ -22,11 +21,6 @@ class TestCase(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         self.proxy = swt.proxy
         self.browser_capabilities = swt.desired_browser
-
-        #disable false certificate warning dialog in opera
-        if self.browser_capabilities.get("browserName") == "opera":
-            self.browser_capabilities["opera.profile"] = ""
-
         super(TestCase, self).__init__(*args, **kwargs)
 
     def stringify_browser_capabilities(self):
@@ -44,8 +38,6 @@ class TestCase(unittest.TestCase):
             self.browser_capabilities,
             proxy=self.proxy.selenium_proxy()
         )
-
-        self.driver.implicitly_wait(10)
         swt.active_driver = self.driver
 
     def run(self, result=None):

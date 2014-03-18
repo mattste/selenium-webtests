@@ -58,7 +58,6 @@ class Proxy(browsermobproxy.Client):
                         # all criterions match -> passed
                         matches.append(entry)
                     continue
-                break
         else:
             return url_matches
         return matches
