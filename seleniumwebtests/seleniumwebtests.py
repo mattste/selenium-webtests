@@ -38,7 +38,7 @@ class SeleniumWebtests(object):
         import testloader
 
         self._proxy = Proxy("{0}:{1}".format(self.config.ADDRESS, self.config.PROXY_SERVER_PORT))
-        self._test_runner = testrunner.getTestRunner()
+        self._test_runner = testrunner.TestRunner(verbosity=2, output=swt.config.XML_FILE_PATH)
         self._test_loader = testloader.TestLoader()
         self._test_runner.run(self._test_loader.get_test_suite())
         self.end()
