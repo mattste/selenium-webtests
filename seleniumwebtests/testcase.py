@@ -21,6 +21,11 @@ class TestCase(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         self.proxy = swt.proxy
         self.browser_capabilities = swt.desired_browser
+
+        # IE8 hack to prevent "...click on the element was not scrolled into the viewport" error
+        if self.browser_capabilities["version"] == "8.0":
+            self.browser_capabilities["elementScrollBehavior"] = 1
+
         super(TestCase, self).__init__(*args, **kwargs)
 
     def stringify_browser_capabilities(self):
