@@ -129,6 +129,8 @@ Následující postup je potřeba provést na všech strojích, na kterých bě�
 
   Na adrese Selenium HUBu (v našem případě 192.168.56.1:4444) je k dispozici konzole ukazující, které prohlížeče jsou k HUBu zaregistrovány a můžeme je tak použít k testování. Stačí vlézt na adresu http://192.168.56.1:444/grid/console
 
+.. _runningtests:
+
 Spouštění testů
 ~~~~~~~~~~~~~~~
 

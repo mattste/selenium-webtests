@@ -133,6 +133,8 @@ Pro vyplnění jednoho elementu, který ani nemusí být ve formuláři, slouž�
 
     self.driver.fill_element(elm, "Jára Cimrman")
 
+.. _workingwithproxy:
+
 Práce s proxy
 ~~~~~~~~~~~~~
 
@@ -144,7 +146,7 @@ Nejprve je potřeba v testu zapnout logování:
 
     self.proxy.new_har("test")
 
-Potom provedeme akci, při by mělo dojít o odeslání požadavku, který nás zajímá a následeně si proxy řekneme o zachycené výsledky:
+Potom provedeme akci, při níž by mělo dojít o odeslání požadavku, který nás zajímá, a následně si proxy řekneme o zachycené výsledky:
 
 ::
 
