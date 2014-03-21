@@ -1,5 +1,5 @@
-Instalace
----------
+Instalace a spouštění testů
+---------------------------
 
 Příprava prostředí a instalace (Selenium HUB)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,37 +43,51 @@ Následující postup je potřeba provést na všech strojích, na kterých bě�
 
 - **capabilities** Pole objektů obsahujících informace o dostupných prohlížečích na tomto stroji
 
-  - **browserName** Název prohlížeče. Standardní názvy jsou internet explorer, firefox, chrome, opera, safari. Selenium na jejich základě hledá spustitelný soubor.
+  	- **browserName** Název prohlížeče. Standardní názvy jsou internet explorer, firefox, chrome, opera, safari. Selenium na jejich základě hledá spustitelný soubor.
 
-  - **version** Verze prohlížeče.
+	- **version** Verze prohlížeče.
 
-  - **platform** Název platformy. Standardizované názvy jsou WINDOWS, LINUX, MAC
+	- **platform** Název platformy. Standardizované názvy jsou WINDOWS, LINUX, MAC
 
-  - **maxInstances** Maximální počet současně spuštěných instancí prohlížeče. Větší počet je lepší v případě, že testy zároveň spustí více uživatelů. Nemusí pak čekat, než doběhnou testy jiných uživatelů. U IE musí být nastaveno na 1. Je to kvůli proxy. Internet Explorer nastavuje proxy pro celý systém. Pokud by své testy spustilo více lidí na IE, navzájem by si přepisovali nastavení proxy a nemohli by pak spolehlivě testovat síťové požadavky.
+	- **maxInstances** Maximální počet současně spuštěných instancí prohlížeče. Větší počet je lepší v případě, že testy zároveň spustí více uživatelů. Nemusí pak čekat, než doběhnou testy jiných uživatelů. U IE musí být nastaveno na 1. Je to kvůli proxy. Internet Explorer nastavuje proxy pro celý systém. Pokud by své testy spustilo více lidí na IE, navzájem by si přepisovali nastavení proxy a nemohli by pak spolehlivě testovat síťové požadavky.
 
 - **configuration** Konfigurace stroje
 
-  - **maxSession** Maximální počet souběžně běžících testů.
+	- **maxSession** Maximální počet souběžně běžících testů.
 
-  - **port** Port, na kterém bude poslouchat Selenium Server.
+	- **port** Port, na kterém bude poslouchat Selenium Server.
 
-  - **host** IP tohoto stroje. Stroj na této adrese musí být viditelný pro stroj, na kterém jsme nainstalovali SW.
+	- **host** IP tohoto stroje. Stroj na této adrese musí být viditelný pro stroj, na kterém jsme nainstalovali SW.
 
-  - **register** Boolean hodnota rozhodující o tom, jestli se má stroj automaticky pokoušet připojit na Selenium HUB, pokud se mu to napoprvé nepodaří.
+	- **register** Boolean hodnota rozhodující o tom, jestli se má stroj automaticky pokoušet připojit na Selenium HUB, pokud se mu to napoprvé nepodaří.
 
-  - **registerCycle** Interval pokusů o připojení v Selenium HUBu v ms.
+	- **registerCycle** Interval pokusů o připojení v Selenium HUBu v ms.
 
-  - **hubPort** Port, na kterém poslouchá Selenium HUB (hodnota klíče SELENIUM_SERVER_PORT z config.py)
+	- **hubPort** Port, na kterém poslouchá Selenium HUB (hodnota klíče SELENIUM_SERVER_PORT z config.py)
 
-  - **hubHost** IP adresa Selenium HUBu (hodnota klíče IP z config.py)
+	- **hubHost** IP adresa Selenium HUBu (hodnota klíče IP z config.py)
 
-  - **timeout** Maximální doba v ms, po kterou prohlížeč čeká na další příkazy. Pokud do této doby žádný neobdží, tak se uzavře. Je to pojistka pro případ, kdy test z nějakého důvodu nedoběhne do konce a neuzavře za sebou prohlížeč. Tím by se rychle vyčerpal počet dostupných instancí prohlížeče. Pokud je timeout nastavený, musíme s ním počítat i v testech, ve kterých nastavujeme :ref:`waits`. Není možné nastavit delší čekání než je timeout prohlížeče.
+	- **timeout** Maximální doba v ms, po kterou prohlížeč čeká na další příkazy. Pokud do této doby žádný neobdží, tak se uzavře. Je to pojistka pro případ, kdy test z nějakého důvodu nedoběhne do konce a neuzavře za sebou prohlížeč. Tím by se rychle vyčerpal počet dostupných instancí prohlížeče. Pokud je timeout nastavený, musíme s ním počítat i v testech, ve kterých nastavujeme :ref:`waits`. Není možné nastavit delší čekání než je timeout prohlížeče.
 
-   Pro spouštění testů v Chrome je potřeba stáhnout chromedriver z http://chromedriver.storage.googleapis.com/index.html a nakopírovat ho do C:\Windows\System32,       resp. do /bin.
+**Některé prohlížeče vyžadují speciální nastavení:**
 
-   Podobné je to v případě IE. Driver je dostupný http://code.google.com/p/selenium/downloads/list jako IEDriverServer_<verze>.zip. Driver stáhneme a  nakopírujeme      do stejné složky jako v případě Chrome.
+	**Chrome:**
 
-   Opera je podporována pouze do verze 12.x. Na novějších verzích založených na WebKitu není možné testy spouštět.
+		Je potřeba stáhnout chromedriver z http://chromedriver.storage.googleapis.com/index.html a nakopírovat ho do C:\\Windows\\System32, resp. do /bin.
+
+	**IE:**
+
+		Je potřeba stáhnout IEDriver z http://code.google.com/p/selenium/downloads/list jako IEDriverServer_<verze>.zip. a  nakopírovat do C:\\Windows\\System32, resp. do /bin.
+
+		Ve Windows 7 a výše musíme v Možnosti internetu -> Zabezpečení nastavit checkbox "Povolit chráněný režim" pro všechny zóny na stejnou hodnotu (je jedno, jestli True nebo False)
+
+		Je potřeba nainstalovat certifikát BrowserMob proxy - otevřeme soubor "cybervillainsCA.cer" ve složce "ssl-support" staženého ZIPu proxy a certifikát nainstalujeme do úložistě "Důvěryhodné kořenové certifikační autority".
+
+		IE11 není podporováno.
+
+	**Opera:**
+
+   		Opera je podporována pouze do verze 12.x. Na novějších verzích založených na WebKitu není možné testy spouštět.
 
 4. Spustíme node příkazem
 
@@ -114,3 +128,24 @@ Následující postup je potřeba provést na všech strojích, na kterých bě�
 .. note::
 
   Na adrese Selenium HUBu (v našem případě 192.168.56.1:4444) je k dispozici konzole ukazující, které prohlížeče jsou k HUBu zaregistrovány a můžeme je tak použít k testování. Stačí vlézt na adresu http://192.168.56.1:444/grid/console
+
+Spouštění testů
+~~~~~~~~~~~~~~~
+
+Pro spuštění testů stačí vlézt do adresáře, který testy obsahuje a zadat:
+
+::
+
+    runwebtests
+
+Příkaz přijímá pár užitečných parametrů:
+
+  - **xmlresult**: vygeneruje na konci testů XML s výsledky (potřeba pro Jenkins).
+  - **xmlfilepath**: cesta, kam se má XML soubor uložit. Default je aktuální adresář.
+  - **testcases**: názvy testcase tříd, které se mají spustit. Užitečné při vývoji, aby se pokaždé nespouštěly všechny testy.
+  - **baseurl**: adresa webu, který chceme testovat. Přepisuje BASE_URL proměnnenou z konfigurace testů.
+
+::
+
+    runwebtests --xmlresult --xmlfilepath /home/jk/ --testcases Login Suggest Reply --baseurl http://sbazar.dev
+

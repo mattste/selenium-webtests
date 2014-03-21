@@ -16,14 +16,13 @@ Použité technologie
 TODO
 ~~~~
 
-- možnost parametrizovat příkaz **runwebtests**
-- vylepšit práci s proxy
-- možnost předat **wait** metodě funkci, která se bude periodicky spouštět a vracet true/false
-- nebude pak implicitly_wait zbytečné?
-- jak vyřešit různé loginy pro .dev, .test, provoz?
-- nebylo by lepší a rychlejší vytvářet instanci browseru per celý test popř. per testcase?
-- IE8 a error click mimo view
-- vyřešit zamrznuté instance browserů, které se nezavřou
+- nebylo by lepší a rychlejší vytvářet instanci browseru per celý test popř. per testcase? (užitečné hlavně při nutnosti přihlašování před testem)
+- info o browseru do XML reportů
+- každé spuštění testu otevírá nový port. Nešlo by nějak využít porty otevřené při předchozích testech?
+- vytvořit snapshoty nodů ve virtualboxu
+- automatické propisování verze ze setup.py do dokumentace a do **__version__**
+- jak se to s proxy metodou **wait_for_traffic_to_stop**? Funguje, nefunguje?
+
 
 .. toctree::
    :numbered:
@@ -31,6 +30,7 @@ TODO
    instalace
    psani_testu
    api
+   changelog
 
 Indices and tables
 ==================

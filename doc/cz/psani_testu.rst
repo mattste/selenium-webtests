@@ -150,42 +150,47 @@ Potom provedeme akci, při by mělo dojít o odeslání požadavku, který nás 
 
     res = self.proxy.har
 
-Případně můžeme ve výsledcích rovnou vyhledávat. Takto si například můžeme ověřit, že si homepage Seznamu říká o výdej reklamy na pozici "seznam.hp.tip.vikend":
+Vrátí se JSON se zachycenými výsledky. V něm můžeme vyhledávat podle libosti.
+
+Pro snazší prohledávání výsledků jsou k dispozici dvě metody **test_match** a **get_matches**. Oboum se jako parametr předává string, který musí obsahovat URL požadavku, který nás zajímá. Volitelně lze předat i druhý parametr - pole kritérií, kterým musí požadavek vyhovovat. Každé kritérim je slovník s klíčem "key", který představuje cestu v JSONu k položce požadavku, kterou chceme testovat a klíč "value", který představuje očekávanou hodnotu.
+
+Takto si například můžeme ověřit, že si homepage Seznamu říká o výdej reklamy na pozici "seznam.hp.tip.vikend":
 
 ::
 
     self.proxy.new_har("test")
     self.driver.get("http://seznam.cz")
     self.assertTrue(
-        self.proxy.find_in_har(
+        self.proxy.test_match(
             "i.imedia.cz",
-            {
-                "request.queryString":
-                {
-                    "name": "zoneId",
-                    "value": "seznam.hp.tip.vikend"
-                }
-            }
+            [
+              {"key": "request.queryString", "value": {"name": "zoneId", "value": "seznam.hp.tip.vikend"}}
+            ]
         )
     )
 
-Metoda **find_in_har** přijimá dva argumenty. První je URL nebo substring, který musí URL obsahovat. Pro každý požadavek, který stringu vyhovuje se pak provádí hledaní podle druhého parametru, ve kterém předáváme kritéria, kterým musí požadavek vyhovat. Kritéria se předávají jako objekt (dict), ve kterém klíče reprezentují položku v HARu. Použitím teček v názvu klíče lze přistupovat k datům zanořeným hlouběji v HARu. Abychom mohli v HARu vyhledávat, musíme znát jeho strukturu. Příklad, jak takový request v HARu vypadá, je v examples/har.json
+Abychom mohli ve vráceném JSONu vyhledávat, musíme znát jeho strukturu. Příklad, jak takový request v HARu vypadá, je v examples/har.json
 
 .. _waits:
 
 Čekání
 ~~~~~~
- 
+
 Některé akce, které na stánce provedeme, mohou vyžadovat určitý čas něž se jejich výsledek na stánce nějak projeví. Typickým příkladem je třeba AJAX request. V takových případech budeme muset Selenium WebDriver říct, aby chvilku počkal, než bude moci v kódu testu pokračovat dál:
 
 ::
 
   self.driver.wait(5) // čekej 5s
 
-U některých akci, u kterých bychom normálně museli nastavovat čekání, to potřeba není:
+Takto řekneme webdriveru, aby čekal přesně 5 sekund. Pokud ale metodě předáme jako druhý parametr funkci, bude se tato funkce periodicky provádět každou půlsekundu, a pokud vrátí True, čekání skončí. První parametr pak funguje jako maximální možný čas, po který se čeká na splnění funkce:
 
-- sám Selenium WebDriver si dokáže poradit s případy, kdy ho pomocí metody **get** přesměrujeme na jinou stránku. S vykonáváním testu počká do doby, než bude stránka celá načtená.
-- pokud po takové akci chceme vyhledat nějaký element na stránce pomocí některé **find_*** metody, tak nic řešit nemusíme. Modul SW přidává k těmto metodám implicitní čekání, pokud napoprvé nevrátí žádný výsledek. Periodicky se pak po dobu 10s kontroluje, jestli se požadovaný element neobjeví. Pokud ne, teprve pak vyhodí chybu a test selže.
+::
+
+  def untilFunc():
+    return len(self.driver.find_elements_by_id("test")) != 0
+  self.driver.wait(5, lambda: untilFunc()) // čekej maximálně 5s na zobrazení elementu "#test"
+
+Selenium WebDriver si dokáže poradit s případy, kdy ho pomocí metody **get** přesměrujeme na jinou stránku. S vykonáváním testu počká do doby, než bude stránka celá načtená. Tam tedy žádné čekání nastavovat nemusíme.
 
 Zadávání znaků z klávesnice
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -210,10 +215,10 @@ Kromě textu se dají odesílat i speciální klávesy. Jejich seznam je v :ref:
 
     self.driver.send_keys(Keys.ENTER)
 
-Nastavení požadovaných prohlížečů pro jednotlivé testy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Nastavení specifické sady prohlížečů pro testcase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Normálně se každý test spustí na všech prohlížečích definovaných v souboru **settings.py**. Existuje ale možnost, jak pro konkrétní test nastavit vlastní prohlížeče. Stačí třídě testů nastavit class proměnnou **BROWSERS**:
+Normálně se každý test spustí na všech prohlížečích definovaných v souboru **settings.py**. Existuje ale možnost, jak pro konkrétní testcase (třídu testů) nastavit vlastní prohlížeče. Stačí třídě testů nastavit class proměnnou **BROWSERS**:
 
 ::
 

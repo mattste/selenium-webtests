@@ -11,7 +11,7 @@ from setuptools import setup
 setup(
     name = 'seleniumwebtests',
     packages = ['seleniumwebtests'],
-    version = '0.1',
+    version = '0.2.0',
     description = '',
     author = 'Jiri Kuchta',
     author_email = 'jiri.kuchta@live.com',
