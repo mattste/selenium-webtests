@@ -8,4 +8,4 @@ class homepage(TestCase):
         self.driver.get("/")
         search_form = self.driver.find_element_by_id("inet-f")
         self.driver.fill_form_and_submit(search_form, {"q": u"kotě v botě"})
-        self.assertIsNotNone(self.driver.find_element_by_id("hledani-seznam-cz"))
+        self.assertTrue(len(self.driver.find_elements_by_css_selector("#hledani-seznam-cz")) > 0)

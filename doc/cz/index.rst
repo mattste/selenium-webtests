@@ -19,9 +19,8 @@ TODO
 - nebylo by lepší a rychlejší vytvářet instanci browseru per celý test popř. per testcase? (užitečné hlavně při nutnosti přihlašování před testem)
 - info o browseru do XML reportů
 - každé spuštění testu otevírá nový port. Nešlo by nějak využít porty otevřené při předchozích testech?
-- vytvořit snapshoty nodů ve virtualboxu
 - automatické propisování verze ze setup.py do dokumentace a do **__version__**
-- jak se to s proxy metodou **wait_for_traffic_to_stop**? Funguje, nefunguje?
+- ukončit instanci browseru při abortu úlohy v Jenkinsu
 
 
 .. toctree::

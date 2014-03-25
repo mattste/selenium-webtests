@@ -57,7 +57,7 @@ class SeleniumWebtests(object):
     def _start_selenium_hub(self):
         if not self._is_listening(self.config.ADDRESS, self.config.SELENIUM_SERVER_PORT):
             print "Selenium HUB seems not running. Trying to start on {0}:{1}...".format(self.config.ADDRESS, self.config.SELENIUM_SERVER_PORT)
-            command = ["java", "-jar", "{0}".format(self.config.SELENIUM_FILE), "-role", "hub", "-port", "{0}".format(self.config.SELENIUM_SERVER_PORT)]
+            command = ["java", "-jar", "{0}".format(self.config.SELENIUM_FILE), "-role", "hub", "-port", "{0}".format(self.config.SELENIUM_SERVER_PORT), "-timeout", "30", "-browserTimeout", "60"]
             subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
             # wait for nodes to register
             time.sleep(10)
