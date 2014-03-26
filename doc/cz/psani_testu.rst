@@ -194,6 +194,13 @@ Takto řekneme webdriveru, aby čekal přesně 5 sekund. Pokud ale metodě před
 
 Selenium WebDriver si dokáže poradit s případy, kdy ho pomocí metody **get** přesměrujeme na jinou stránku. S vykonáváním testu počká do doby, než bude stránka celá načtená. Tam tedy žádné čekání nastavovat nemusíme.
 
+Proxy obsahuje metodu **wait_for_traffic_to_stop**, která se dá velmi dobře využít pro čekání na doběhnutí requestu. Metoda přijimá dva argumenty. První je doba v milisekundách, po kterou musí být síť "klidná", druhý argument je maximální doba čekání (opět v ms).
+
+::
+
+  self.proxy.wait_for_traffic_to_stop(2000, 10000)
+
+
 Zadávání znaků z klávesnice
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
