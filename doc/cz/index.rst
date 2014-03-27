@@ -21,6 +21,7 @@ TODO
 - každé spuštění testu otevírá nový port. Nešlo by nějak využít porty otevřené při předchozích testech?
 - automatické propisování verze ze setup.py do dokumentace a do **__version__**
 - ukončit instanci browseru při abortu úlohy v Jenkinsu
+- spouštět testy paralelně v různých browserech
 
 
 .. toctree::
