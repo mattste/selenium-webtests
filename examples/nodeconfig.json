@@ -2,22 +2,22 @@
     "capabilities": [{
             "browserName": "internet explorer",
             "version": "8.0",
-            "platform": "Windows",
+            "platform": "WINDOWS",
             "maxInstances": 1
         }, {
             "browserName": "chrome",
             "version": "ANY",
-            "platform": "Windows",
+            "platform": "WINDOWS",
             "maxInstances": 4
         }, {
             "browserName": "firefox",
             "version": "ANY",
-            "platform": "Windows",
+            "platform": "WINDOWS",
             "maxInstances": 4
         }, {
             "browserName": "opera",
             "version": "ANY",
-            "platform": "Windows",
+            "platform": "WINDOWS",
             "maxInstances": 4
         }
 
