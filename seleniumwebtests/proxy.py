@@ -23,7 +23,7 @@ class Proxy(browsermobproxy.Client):
             options = {"captureHeaders": True, "captureContent": True}
         super(Proxy, self).new_har(name, options)
 
-    def test_match(self, url, criterions=[]):
+    def test_match(self, url, criterions=[], har=None):
         """
         Returns True if a request with given url and matching given criterions has been captured.
 
@@ -32,10 +32,11 @@ class Proxy(browsermobproxy.Client):
             "key" - dot separated path to the value in the HAR JSON we want to test. , i.e. "response.status", "request.headers" etc.
                 See the examples/har.json to see how one single request is stored in the HAR format.
             "value" - desired value. Can be string, integer or dict.
+        :param har: HAR JSON to search through. If not provided the proxy is asked to provide the actual one.
         """
-        return len(self.get_matches(url, criterions)) != 0
+        return len(self.get_matches(url, criterions, har)) != 0
 
-    def get_matches(self, url, criterions=[]):
+    def get_matches(self, url, criterions=[], har=None):
         """
         Returns list of matching requests.
 
@@ -44,8 +45,9 @@ class Proxy(browsermobproxy.Client):
             "key" - dot separated path to the value in the HAR JSON we want to test. , i.e. "response.status", "request.headers" etc.
                 See the examples/har.json to see how one single request is stored in the HAR format.
             "value" - desired value. Can be string, integer or dict.
+        :param har: HAR JSON to search through. If not provided the proxy is asked to provide the actual one.
         """
-        url_matches = self._filter_entries_by_url(url)
+        url_matches = self._filter_entries_by_url(url, har)
         if len(criterions):
             matches = []
             criterions_length = len(criterions)-1
@@ -62,14 +64,19 @@ class Proxy(browsermobproxy.Client):
             return url_matches
         return matches
 
-    def _filter_entries_by_url(self, url):
+    def _filter_entries_by_url(self, url, har):
         """
         Filters all captured requests by passed URL substring
 
         :param url: URL substring the request URL has to contain
         """
+        if not har:
+            har = self.har
+            if not har.log.entries:
+                raise Exception("There are no captured requests in the result JSON")
+
         matches = []
-        for entry in self.har["log"]["entries"]:
+        for entry in har["log"]["entries"]:
             if url in entry["request"]["url"]:
                 matches.append(entry)
         return matches
