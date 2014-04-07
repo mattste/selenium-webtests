@@ -40,8 +40,8 @@ class SeleniumWebtests(object):
         self._proxy = Proxy("{0}:{1}".format(self.config.ADDRESS, self.config.PROXY_SERVER_PORT))
         self._test_runner = testrunner.TestRunner(verbosity=2, output=swt.config.XML_FILE_PATH)
         self._test_loader = testloader.TestLoader()
-        self._test_runner.run(self._test_loader.get_test_suite())
-        self.end()
+	self._test_runner.run(self._test_loader.get_test_suite())
+	self.end()
 
     def end(self):
         self.reporter_instance.stop()
@@ -57,7 +57,7 @@ class SeleniumWebtests(object):
     def _start_selenium_hub(self):
         if not self._is_listening(self.config.ADDRESS, self.config.SELENIUM_SERVER_PORT):
             print "Selenium HUB seems not running. Trying to start on {0}:{1}...".format(self.config.ADDRESS, self.config.SELENIUM_SERVER_PORT)
-            command = ["java", "-jar", "{0}".format(self.config.SELENIUM_FILE), "-role", "hub", "-port", "{0}".format(self.config.SELENIUM_SERVER_PORT), "-timeout", "30", "-browserTimeout", "60"]
+            command = ["java", "-jar", "{0}".format(self.config.SELENIUM_FILE), "-role", "hub", "-port", "{0}".format(self.config.SELENIUM_SERVER_PORT), "-timeout", "30", "-browserTimeout", "120"]
             subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
             # wait for nodes to register
             time.sleep(10)

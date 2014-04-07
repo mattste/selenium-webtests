@@ -22,9 +22,8 @@ class TestCase(unittest.TestCase):
         self.proxy = swt.proxy
         self.browser_capabilities = swt.desired_browser
 
-        # IE8 hack to prevent "...click on the element was not scrolled into the viewport" error
-        if self.browser_capabilities["version"] == "8.0":
-            self.browser_capabilities["elementScrollBehavior"] = 1
+        if self.browser_capabilities["browserName"] == "internet explorer":
+            self._finetuneIE()          
 
         super(TestCase, self).__init__(*args, **kwargs)
 
@@ -51,22 +50,46 @@ class TestCase(unittest.TestCase):
         except:
             self.tearDown()
 
-
     def tearDown(self):
         """
         Code to be executed after each test
         """
 
+        js_error = False
+        console_data = []
         try:
-            js_errors = self.driver.execute_script('return window.jsErrors')
+            console_data = self.driver.execute_script("return console.getData()")
         except:
-            js_errors = None
+            pass
 
+        if console_data:
+            for item in console_data:
+                if item["type"] == "error":
+                    js_error = item
+                    break
 
         self.driver.quit()
         swt.active_driver = None
 
-        # fail test if there is any JS error
-        if js_errors:
-            self.fail("There is some JS error on the page!")
+        # fail test if there is any JS error the console
+        if js_error:
+            self.fail("Following JS error has occured on the page: " + json.dumps(js_error))
+
+    def _finetuneIE(self):
+        # start IE in private mode to prevent storing cookies
+        self.browser_capabilities["ie.forceCreateProcessApi"] = 1
+        self.browser_capabilities["ie.browserCommandLineSwitches"] = "-private"
+
+        # seems not reliable. More testing needed.
+        #self.browser_capabilities["ie.usePerProcessProxy"] = True
+
+        # Too slow. Private mode is probably better solution for cache and cookie cleaning
+        #self.browser_capabilities["ie.ensureCleanSession"] = True
+
+        # IE seems more stable with this option
+        self.browser_capabilities["ie.setProxyByServer"] = True
+
+        # IE8 hack to prevent "...click on the element was not scrolled into the viewport" error
+        if self.browser_capabilities["version"] == "8.0":
+            self.browser_capabilities["elementScrollBehavior"] = 1
 
