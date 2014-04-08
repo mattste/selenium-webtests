@@ -53,8 +53,11 @@ class Proxy(browsermobproxy.Client):
             criterions_length = len(criterions)-1
             for entry in url_matches:
                 for i, criterion in enumerate(criterions):
-                    if not self._test_entry_to_criterion_match(entry, criterion):
-                        break
+                    try:
+                        if not self._test_entry_to_criterion_match(entry, criterion):
+                            break
+                    except:
+                        return []
                 else:
                     if i == criterions_length:
                         # all criterions match -> passed
@@ -72,9 +75,7 @@ class Proxy(browsermobproxy.Client):
         """
         if not har:
             har = self.har
-            if not har.log.entries:
-                raise Exception("There are no captured requests in the result JSON")
-
+        
         matches = []
         for entry in har["log"]["entries"]:
             if url in entry["request"]["url"]:

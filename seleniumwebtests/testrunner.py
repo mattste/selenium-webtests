@@ -3,6 +3,7 @@
 import os
 import sys
 import time
+import datetime
 import unittest
 import xmlrunner
 
@@ -26,7 +27,7 @@ class _TestResult(xmlrunner._XMLTestResult):
             self.stream.write(" on ")
             self.stream.write(test.stringify_browser_capabilities())
             self.stream.write(" ... ")
-            self.stream.flush()
+            self.stream.flush()      
 
 class TestRunner(xmlrunner.XMLTestRunner):
 

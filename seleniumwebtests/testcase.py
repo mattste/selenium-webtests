@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 
+import sys
+import os
 import json
 import unittest
-from selenium.webdriver.common.by import By
+import datetime
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
@@ -27,11 +29,11 @@ class TestCase(unittest.TestCase):
 
         super(TestCase, self).__init__(*args, **kwargs)
 
-    def stringify_browser_capabilities(self):
+    def stringify_browser_capabilities(self, delimiter=","):
         """
         Returns browser info as string
         """
-        return self.browser_capabilities["browserName"] + "," + self.browser_capabilities["version"] + "," + self.browser_capabilities["platform"]
+        return self.browser_capabilities["browserName"] + delimiter + self.browser_capabilities["version"] + delimiter + self.browser_capabilities["platform"]
 
     def setUp(self):
         """
@@ -53,6 +55,19 @@ class TestCase(unittest.TestCase):
     def tearDown(self):
         """
         Code to be executed after each test
+        """
+
+        """        
+        if sys.exc_info()[0]:
+            filename = self.id()
+            filename += "-on-" + self.stringify_browser_capabilities("_")
+            filename += "-at-" + datetime.datetime.now().isoformat()
+            filename += ".png"
+            self.driver.get_screenshot_as_file(os.path.normpath(swt.config.SCREENSHOTS_DIR) + os.sep + filename)
+            
+            swt.desired_browser = self.browser_capabilities
+            test = swt.test_loader.load_tests_from_name(self.id())
+            swt.test_suite.addTests(test)
         """
 
         js_error = False

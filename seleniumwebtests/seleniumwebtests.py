@@ -20,7 +20,7 @@ class SeleniumWebtests(object):
 
         # load test settings
         sys.path.append(os.getcwd())
-        self.setOptions(vars(__import__("settings")))
+        self.set_options(vars(__import__("settings")))
 
         self._start_proxy_server()
         self._start_selenium_hub()
@@ -29,6 +29,8 @@ class SeleniumWebtests(object):
         self._desired_browser = None # variable for storing desired browser capabilities
         self._active_driver = None # currently running webdriver
         self._reporter_instance = None # instance of testrunner class. We need this to be able to stop test execution on CTRL+C
+        self._test_loader = None
+        self._test_suite = None
 
     def run(self):
         """
@@ -38,10 +40,11 @@ class SeleniumWebtests(object):
         import testloader
 
         self._proxy = Proxy("{0}:{1}".format(self.config.ADDRESS, self.config.PROXY_SERVER_PORT))
-        self._test_runner = testrunner.TestRunner(verbosity=2, output=swt.config.XML_FILE_PATH)
+        self._test_runner = testrunner.TestRunner(verbosity=2, output=swt.config.XML_FILE_DIR)
         self._test_loader = testloader.TestLoader()
-	self._test_runner.run(self._test_loader.get_test_suite())
-	self.end()
+        self._test_suite = self._test_loader.get_test_suite()
+        self._test_runner.run(self._test_suite)
+        self.end()
 
     def end(self):
         self.reporter_instance.stop()
@@ -49,7 +52,7 @@ class SeleniumWebtests(object):
         if self.active_driver:
             self.active_driver.quit()
 
-    def setOptions(self, options):
+    def set_options(self, options):
         for key in options:
             if options[key] != None:
                 setattr(config, key, options[key])
@@ -57,7 +60,7 @@ class SeleniumWebtests(object):
     def _start_selenium_hub(self):
         if not self._is_listening(self.config.ADDRESS, self.config.SELENIUM_SERVER_PORT):
             print "Selenium HUB seems not running. Trying to start on {0}:{1}...".format(self.config.ADDRESS, self.config.SELENIUM_SERVER_PORT)
-            command = ["java", "-jar", "{0}".format(self.config.SELENIUM_FILE), "-role", "hub", "-port", "{0}".format(self.config.SELENIUM_SERVER_PORT), "-timeout", "30", "-browserTimeout", "120"]
+            command = ["java", "-jar", "{0}".format(self.config.SELENIUM_FILE), "-role", "hub", "-port", "{0}".format(self.config.SELENIUM_SERVER_PORT), "-browserTimeout", "120"]
             subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
             # wait for nodes to register
             time.sleep(10)
@@ -109,5 +112,13 @@ class SeleniumWebtests(object):
     @reporter_instance.setter
     def reporter_instance(self, instance):
         self._reporter_instance = instance
+
+    @property
+    def test_loader(self):
+        return self._test_loader
+
+    @property
+    def test_suite(self):
+        return self._test_suite
 
 swt = SeleniumWebtests()
