@@ -22,12 +22,14 @@ class _TestResult(xmlrunner._XMLTestResult):
         self.start_time = time.time()
         unittest.TestResult.startTest(self, test)
 
+        test.logger = self.stream
+
         if self.showAll:
             self.stream.write(self.getDescription(test))
             self.stream.write(" on ")
-            self.stream.write(test.stringify_browser_capabilities())
+            self.stream.write(test.stringifyBrowserCapabilities())
             self.stream.write(" ... ")
-            self.stream.flush()      
+            self.stream.flush()
 
 class TestRunner(xmlrunner.XMLTestRunner):
 

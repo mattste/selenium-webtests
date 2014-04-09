@@ -21,30 +21,38 @@ class TestCase(unittest.TestCase):
     """
 
     def __init__(self, *args, **kwargs):
+        self.logger = None
         self.proxy = swt.proxy
-        self.browser_capabilities = swt.desired_browser
+        self._browser_capabilities = swt.desired_browser
 
-        if self.browser_capabilities["browserName"] == "internet explorer":
-            self._finetuneIE()          
+        if self._browser_capabilities["browserName"] == "internet explorer":
+            self._finetuneIE()
 
         super(TestCase, self).__init__(*args, **kwargs)
 
-    def stringify_browser_capabilities(self, delimiter=","):
+
+    def stringifyBrowserCapabilities(self, delimiter=","):
         """
         Returns browser info as string
+
+        :param delimiter: Character to be used as properties delimiter
         """
-        return self.browser_capabilities["browserName"] + delimiter + self.browser_capabilities["version"] + delimiter + self.browser_capabilities["platform"]
+
+        return self._browser_capabilities["browserName"] + delimiter + self._browser_capabilities["version"] + delimiter + self._browser_capabilities["platform"]
+
 
     def setUp(self):
         """
         Code to be executed before each test
         """
+
         self.driver = WebDriver(
             "http://{0}:{1}/wd/hub".format(swt.config.ADDRESS, swt.config.SELENIUM_SERVER_PORT),
-            self.browser_capabilities,
+            self._browser_capabilities,
             proxy=self.proxy.selenium_proxy()
         )
         swt.active_driver = self.driver
+
 
     def run(self, result=None):
         try:
@@ -52,22 +60,52 @@ class TestCase(unittest.TestCase):
         except:
             self.tearDown()
 
+
     def tearDown(self):
         """
         Code to be executed after each test
         """
 
-        """        
+        self._checkJSErrors()
+
         if sys.exc_info()[0]:
-            filename = self.id()
-            filename += "-on-" + self.stringify_browser_capabilities("_")
-            filename += "-at-" + datetime.datetime.now().isoformat()
-            filename += ".png"
-            self.driver.get_screenshot_as_file(os.path.normpath(swt.config.SCREENSHOTS_DIR) + os.sep + filename)
-            
-            swt.desired_browser = self.browser_capabilities
-            test = swt.test_loader.load_tests_from_name(self.id())
-            swt.test_suite.addTests(test)
+            if isinstance(sys.exc_info()[0], AssertionError) and swt.config.RETRY_ON_FAILURE:
+                self._retry()
+            elif swt.config.RETRY_ON_ERROR:
+                self._retry()
+            else:
+                self._take_screenshot()
+
+        self.driver.quit()
+        swt.active_driver = None
+
+
+    def _retry(self):
+        """
+        Skip test and run again at the end
+        """
+
+        self.skipTest("will run again")
+        swt.desired_browser = self._browser_capabilities
+        test = swt.test_loader.load_tests_from_name(self.id())
+        swt.test_suite.addTests(test)
+
+
+    def _take_screenshot(self):
+        """
+        Takes screenshot.
+        """
+
+        filename = self.id()
+        filename += "-on-" + self.stringifyBrowserCapabilities("_")
+        filename += "-at-" + datetime.datetime.now().isoformat()
+        filename += ".png"
+        self.driver.get_screenshot_as_file(os.path.normpath(swt.config.SCREENSHOTS_DIR) + os.sep + filename)
+
+
+    def _checkJSErrors(self):
+        """
+        Checks if "console.getData()" JS command returns some error. If so, the test will fail.
         """
 
         js_error = False
@@ -83,28 +121,30 @@ class TestCase(unittest.TestCase):
                     js_error = item
                     break
 
-        self.driver.quit()
-        swt.active_driver = None
-
         # fail test if there is any JS error the console
         if js_error:
-            self.fail("Following JS error has occured on the page: " + json.dumps(js_error))
+            self.fail("Following JS error occured on the page: " + json.dumps(js_error))
+
 
     def _finetuneIE(self):
+        """
+        Some special settings for IE to make the browser more stable.
+        """
+
         # start IE in private mode to prevent storing cookies
-        self.browser_capabilities["ie.forceCreateProcessApi"] = 1
-        self.browser_capabilities["ie.browserCommandLineSwitches"] = "-private"
+        self._browser_capabilities["ie.forceCreateProcessApi"] = 1
+        self._browser_capabilities["ie.browserCommandLineSwitches"] = "-private"
 
         # seems not reliable. More testing needed.
-        #self.browser_capabilities["ie.usePerProcessProxy"] = True
+        #self._browser_capabilities["ie.usePerProcessProxy"] = True
 
         # Too slow. Private mode is probably better solution for cache and cookie cleaning
-        #self.browser_capabilities["ie.ensureCleanSession"] = True
+        #self._browser_capabilities["ie.ensureCleanSession"] = True
 
-        # IE seems more stable with this option
-        self.browser_capabilities["ie.setProxyByServer"] = True
+        # IE seems to be more stable with this option
+        self._browser_capabilities["ie.setProxyByServer"] = True
 
         # IE8 hack to prevent "...click on the element was not scrolled into the viewport" error
-        if self.browser_capabilities["version"] == "8.0":
-            self.browser_capabilities["elementScrollBehavior"] = 1
+        if self._browser_capabilities["version"] == "8.0":
+            self._browser_capabilities["elementScrollBehavior"] = 1
 
