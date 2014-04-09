@@ -18,9 +18,11 @@ if __name__ == "__main__":
         help="Where to store taken screenshots. The directory has to exists.")
     parser.add_argument("--testcases", dest="TEST_CASES", nargs = '*', default=False,
         help="List of test case classes to run.")
-    parser.add_argument("--retryonerror", action="store_true" dest="RETRY_ON_ERROR",
+    parser.add_argument("--retryonerror", action="store_true", dest="RETRY_ON_ERROR",
         help="Retry one more time if error is raised.")
-    parser.add_argument("--retryonfailure", action="store_true" dest="RETRY_ON_FAILURE",
+    parser.add_argument("--retryonfailure", action="store_true", dest="RETRY_ON_FAILURE",
         help="Retry one more time if test fail.")
+    parser.add_argument("--noscreenshots", action="store_true", dest="NO_SCREENSHOTS",
+        help="Don't take screenshots on error or failure.")
 
     main(vars(parser.parse_args()))

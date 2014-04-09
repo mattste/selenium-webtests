@@ -67,40 +67,33 @@ class TestCase(unittest.TestCase):
         """
 
         self._checkJSErrors()
-
-        if sys.exc_info()[0]:
-            if isinstance(sys.exc_info()[0], AssertionError) and swt.config.RETRY_ON_FAILURE:
-                self._retry()
-            elif swt.config.RETRY_ON_ERROR:
-                self._retry()
-            else:
-                self._take_screenshot()
-
         self.driver.quit()
         swt.active_driver = None
 
 
-    def _retry(self):
+    def retry(self):
         """
-        Skip test and run again at the end
+        Will append this test at the end of test suite.
         """
-
-        self.skipTest("will run again")
+        
+        swt.retried_tests.append(self.id())
         swt.desired_browser = self._browser_capabilities
         test = swt.test_loader.load_tests_from_name(self.id())
         swt.test_suite.addTests(test)
+        
 
-
-    def _take_screenshot(self):
+    def take_screenshot(self):
         """
         Takes screenshot.
         """
-
-        filename = self.id()
-        filename += "-on-" + self.stringifyBrowserCapabilities("_")
-        filename += "-at-" + datetime.datetime.now().isoformat()
-        filename += ".png"
-        self.driver.get_screenshot_as_file(os.path.normpath(swt.config.SCREENSHOTS_DIR) + os.sep + filename)
+        try:
+            filename = self.id()
+            filename += "-on-" + self.stringifyBrowserCapabilities("_")
+            filename += "-at-" + datetime.datetime.now().isoformat()
+            filename += ".png"
+            self.driver.get_screenshot_as_file(os.path.normpath(swt.config.SCREENSHOTS_DIR) + os.sep + filename)
+        except:
+            pass
 
 
     def _checkJSErrors(self):
@@ -121,9 +114,9 @@ class TestCase(unittest.TestCase):
                     js_error = item
                     break
 
-        # fail test if there is any JS error the console
+        # fail test if there is any JS error in the console
         if js_error:
-            self.fail("Following JS error occured on the page: " + json.dumps(js_error))
+            self.fail("An JS error has occured on the page: " + json.dumps(js_error))
 
 
     def _finetuneIE(self):

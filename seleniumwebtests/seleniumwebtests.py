@@ -31,6 +31,7 @@ class SeleniumWebtests(object):
         self._reporter_instance = None # instance of testrunner class. We need this to be able to stop test execution on CTRL+C
         self._test_loader = None
         self._test_suite = None
+        self.retried_tests = []
 
     def run(self):
         """
