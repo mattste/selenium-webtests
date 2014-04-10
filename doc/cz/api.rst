@@ -3,24 +3,17 @@ API
 
 Popis metod a vlastností objektů používaných při psaní testů.
 
+.. automethod:: testcase.TestCase.log
+.. automethod:: testcase.TestCase.take_screenshot
+
 .. _webdriverapi:
 
 WebDriver (driver)
 ~~~~~~~~~~~~~~~~~~
 
-Instance Selenium Remote Webdriveru. Poskytuje metody pro ovládání prohlížeče a vyhledávání v DOMu.
+Instance Selenium Remote Webdriveru. Poskytuje metody pro ovládání prohlížeče a vyhledávání v DOMu. Metody se volají přes **self.driver.nazev_metody**.
 
 .. automodule:: webdriver
-   :members:
-   :inherited-members:
-   :undoc-members:
-   :member-order: groupwise
-   :show-inheritance:
-
-Akce (ActionChains)
-~~~~~~~~~~~~~~~~~~~
-
-.. automodule:: selenium.webdriver.common.action_chains
    :members:
    :inherited-members:
    :undoc-members:
@@ -32,7 +25,7 @@ Akce (ActionChains)
 WebElement (webelement)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Instance WebElement. Reprezentuje DOM element získaný z vyhledávacích metod driveru.
+Metody pro práci s DOM elementem. Metody se volají přes **element.nazev_metody**.
 
 .. automodule:: selenium.webdriver.remote.webelement
    :members:
@@ -46,7 +39,7 @@ Instance WebElement. Reprezentuje DOM element získaný z vyhledávacích metod 
 Proxy (proxy)
 ~~~~~~~~~~~~~
 
-Metody pro práci s proxy.
+Metody pro práci s proxy. Volají se přes **self.proxy.nazev_metody**.
 
 .. automodule:: proxy
    :members:
@@ -56,6 +49,16 @@ Metody pro práci s proxy.
    :show-inheritance:
 
 .. _keysapi:
+
+Akce (ActionChains)
+~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: selenium.webdriver.common.action_chains
+   :members:
+   :inherited-members:
+   :undoc-members:
+   :member-order: groupwise
+   :show-inheritance:
 
 Keys (Keys)
 ~~~~~~~~~~~
