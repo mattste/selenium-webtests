@@ -21,7 +21,7 @@ class TestCase(unittest.TestCase):
     """
 
     def __init__(self, *args, **kwargs):
-        self.logger = None
+        self._logger = None
         self.proxy = swt.proxy
         self._browser_capabilities = swt.desired_browser
 
@@ -29,6 +29,27 @@ class TestCase(unittest.TestCase):
             self._finetuneIE()
 
         super(TestCase, self).__init__(*args, **kwargs)
+
+
+    def log(self, message):
+        """
+        Log message to stdout
+
+        :param message: Text to be send to stdout
+        """
+        self._logger.write(message)
+
+
+    def take_screenshot(self):
+        """
+        Takes screenshot.
+        """
+
+        filename = self.id()
+        filename += "-on-" + self.stringifyBrowserCapabilities("_")
+        filename += "-at-" + datetime.datetime.now().isoformat()
+        filename += ".png"
+        self.driver.get_screenshot_as_file(os.path.normpath(swt.config.SCREENSHOTS_DIR) + os.sep + filename)
 
 
     def stringifyBrowserCapabilities(self, delimiter=","):
@@ -39,7 +60,6 @@ class TestCase(unittest.TestCase):
         """
 
         return self._browser_capabilities["browserName"] + delimiter + self._browser_capabilities["version"] + delimiter + self._browser_capabilities["platform"]
-
 
     def setUp(self):
         """
@@ -67,33 +87,19 @@ class TestCase(unittest.TestCase):
         """
 
         self._checkJSErrors()
-        self.driver.quit()
         swt.active_driver = None
+        self.driver.quit()
 
 
     def retry(self):
         """
         Will append this test at the end of test suite.
         """
-        
+
         swt.retried_tests.append(self.id())
         swt.desired_browser = self._browser_capabilities
         test = swt.test_loader.load_tests_from_name(self.id())
         swt.test_suite.addTests(test)
-        
-
-    def take_screenshot(self):
-        """
-        Takes screenshot.
-        """
-        try:
-            filename = self.id()
-            filename += "-on-" + self.stringifyBrowserCapabilities("_")
-            filename += "-at-" + datetime.datetime.now().isoformat()
-            filename += ".png"
-            self.driver.get_screenshot_as_file(os.path.normpath(swt.config.SCREENSHOTS_DIR) + os.sep + filename)
-        except:
-            pass
 
 
     def _checkJSErrors(self):

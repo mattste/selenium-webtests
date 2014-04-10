@@ -24,7 +24,7 @@ class _TestResult(xmlrunner._XMLTestResult):
         self.start_time = time.time()
         unittest.TestResult.startTest(self, test)
 
-        test.logger = self.stream
+        test._logger = self.stream
 
         if self.showAll:
             self.stream.write(self.getDescription(test))
