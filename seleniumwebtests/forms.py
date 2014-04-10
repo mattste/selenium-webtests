@@ -17,6 +17,7 @@ class Form():
     def fill_out_and_submit(self, data):
         self.fill_out(data)
         self.elm.submit()
+        self.elm = None
 
     def fill_out(self, data):
         for elm_name, value in data.items():
@@ -27,7 +28,7 @@ class FormElement(object):
     def __init__(self, form_elm, elm_name):
         self.form_elm = form_elm
         self.elm_name = elm_name
-        self.elm = None
+	self.elm = None
 
     def convert_value(self, value):
         if not isinstance(value, (list, tuple)):

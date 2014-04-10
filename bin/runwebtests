@@ -9,18 +9,20 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--xmlresult", action="store_true", dest="XML_RESULT",
-        help="generate XML result file")
-    parser.add_argument("--xmlfilepath", default=os.getcwd(), dest="XML_FILE_PATH",
-        help="path where to store the xml result file")
+        help="If XML result file should be generated.")
+    parser.add_argument("--xmlfiledir", default=os.getcwd(), dest="XML_FILE_DIR",
+        help="Where to store the xml result file.")
     parser.add_argument("--baseurl", dest="BASE_URL",
-        help="base URL of the webpage we want to test")
+        help="Base URL of the webpage we want to test.")
+    parser.add_argument("--screenshotsdir", default=os.getcwd(), dest="SCREENSHOTS_DIR",
+        help="Where to store taken screenshots. The directory has to exists.")
     parser.add_argument("--testcases", dest="TEST_CASES", nargs = '*', default=False,
-        help="list of test case classes to run")
+        help="List of test case classes to run.")
+    parser.add_argument("--retryonerror", action="store_true", dest="RETRY_ON_ERROR",
+        help="Retry one more time if error is raised.")
+    parser.add_argument("--retryonfailure", action="store_true", dest="RETRY_ON_FAILURE",
+        help="Retry one more time if test fail.")
+    parser.add_argument("--noscreenshots", action="store_true", dest="NO_SCREENSHOTS",
+        help="Don't take screenshots on error or failure.")
 
     main(vars(parser.parse_args()))
-
-
-
-
-
-

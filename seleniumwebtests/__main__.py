@@ -15,7 +15,7 @@ def signal_handler(signal, frame):
 
 def main(options={}):
     signal.signal(signal.SIGINT, signal_handler)
-    swt.setOptions(options)
+    swt.set_options(options)
     swt.run()
 
 if __name__ == "__main__":

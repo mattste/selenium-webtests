@@ -3,6 +3,7 @@
 import os
 import sys
 import time
+import datetime
 import unittest
 import xmlrunner
 
@@ -14,38 +15,70 @@ class _TestResult(xmlrunner._XMLTestResult):
         swt.reporter_instance = self
         super(_TestResult, self).__init__(*args, **kwargs)
 
+
     def startTest(self, test):
         """
         Called before execute each test method.
         """
+        
         self.start_time = time.time()
         unittest.TestResult.startTest(self, test)
+
+        test._logger = self.stream
 
         if self.showAll:
             self.stream.write(self.getDescription(test))
             self.stream.write(" on ")
-            self.stream.write(test.stringify_browser_capabilities())
+            self.stream.write(test.stringifyBrowserCapabilities())
             self.stream.write(" ... ")
             self.stream.flush()
+
+    def addError(self, test, error):
+        if swt.config.RETRY_ON_ERROR and test.id() not in swt.retried_tests:
+            self._skipAndRetry(test, "(Skipped due to ERROR. Will be executed again.) ")
+        else:
+            if not swt.config.NO_SCREENSHOTS:
+                test.take_screenshot()
+            super(_TestResult, self).addError(test, error)
+
+
+    def addFailure(self, test, error):
+        if swt.config.RETRY_ON_FAILURE and test.id() not in swt.retried_tests:
+            self._skipAndRetry(test, "(Skipped due to FAILURE. Will be executed again.) ")
+        else:
+            if not swt.config.NO_SCREENSHOTS:
+                test.take_screenshot()
+            super(_TestResult, self).addFailure(test, error)
+
+
+    def _skipAndRetry(self, test, msg=""):
+        test.retry()
+        self.addSkip(test, "")
+        self.stream.write(msg)
+
 
 class TestRunner(xmlrunner.XMLTestRunner):
 
     def __init__(self, *args, **kwargs):
         super(TestRunner, self).__init__(*args, **kwargs)
 
+
     def _make_result(self):
         """
         Creates a TestResult object which will be used to store
         information about the executed tests.
         """
+
         return _TestResult(
             self.stream, self.descriptions, self.verbosity, self.elapsed_times
         )
+
 
     def run(self, test):
         """
         Runs the given test case or test suite.
         """
+
         try:
             # Prepare the test execution
             self._patch_standard_output()

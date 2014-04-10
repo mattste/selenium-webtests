@@ -7,11 +7,12 @@ python setup.py install
 """
 
 from setuptools import setup
+from seleniumwebtests.__init__ import __version__
 
 setup(
     name = 'seleniumwebtests',
     packages = ['seleniumwebtests'],
-    version = '0.2.0',
+    version = __version__,
     description = '',
     author = 'Jiri Kuchta',
     author_email = 'jiri.kuchta@live.com',

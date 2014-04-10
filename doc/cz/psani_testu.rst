@@ -271,6 +271,46 @@ SW dokáže automaticky kontrolovat, jestli při provádění testů nedošlo na
 
 Pokud pole **window.jsErrors** obsahuje na konci testu nějakou chybu, test selže bez ohledu na to, jaký byl výsledek testu samotného.
 
+.. _screenshots:
+
+Pořizování screenshotů
+~~~~~~~~~~~~~~~~~~~~~~
+
+SW automaticky pořizuje screenshoty při chybě nebo selhání testu (toto chování lze vypnout parametrem **noscreenshots** u spouštěcího příkazu).
+Pro ruční pořízení screenshotu slouží metoda **self.take_screenshot**:
+
+::
+
+    self.take_screenshot()
+
+Takto pořízený obrázek se pak sám uloží do složky, ve které bude viditelný pro Jenkins, který ho automaticky přidá k výsledkům testu. Obrázek se pojmenuje podle následující vzoru nazev_test-on-identifikace_prohlizece-at-cas.png:
+
+např:
+
+::
+
+    addAdvert.Advert.test_add_advert-on-internet explorer_8.0_ANY-at-2014-04-10T08:10:01.295764.png
+
+Screenshoty se dají taky pořizovat přes metody webdriveru:
+
+::
+
+    screenshot = self.driver.get_screenshot_as_base64()
+    screenshot = self.driver.get_screenshot_as_file("nazev_souboru")
+    screenshot = self.driver.get_screenshot_as_png()
+
+.. _log:
+
+Logování do konzole
+~~~~~~~~~~~~~~~~~~~
+
+Pro logování do konzole slouží metoda **self.log**:
+
+::
+
+    self.log("Kliknutí na button")
+
+Zprávy vypsané přes tuto metodu se, na rozdíl od metody **print**, budou zobrazovat správně i ve výpisu konzole v Jenkinsu.
 
 
 

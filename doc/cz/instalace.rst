@@ -143,11 +143,17 @@ Pro spuštění testů stačí vlézt do adresáře, který testy obsahuje a zad
 Příkaz přijímá pár užitečných parametrů:
 
   - **xmlresult**: vygeneruje na konci testů XML s výsledky (potřeba pro Jenkins).
-  - **xmlfilepath**: cesta, kam se má XML soubor uložit. Default je aktuální adresář.
+  - **xmlfiledir**: cesta, kam se má XML soubor uložit. Default je aktuální adresář.
   - **testcases**: názvy testcase tříd, které se mají spustit. Užitečné při vývoji, aby se pokaždé nespouštěly všechny testy.
   - **baseurl**: adresa webu, který chceme testovat. Přepisuje BASE_URL proměnnenou z konfigurace testů.
+  - **noscreenshots**: nepořizovat screrenshoty při chybě nebo selhání testu
+  - **screenshotsdir**: adresář, kam ukládat screenshoty pořízené přes metodu self.take_screenshot
+  - **retryonerror**: přeskočit test a zopakovat pokud dojde k chybě
+  - **retryonfailure**: přeskočit test a zopakovat pokud test selže
+
+Příklad:
 
 ::
 
-    runwebtests --xmlresult --xmlfilepath /home/jk/ --testcases Login Suggest Reply --baseurl http://sbazar.dev
+    runwebtests --xmlresult --xmlfiledir /home/jk/ --testcases Login Suggest Reply --baseurl http://sbazar.dev
 

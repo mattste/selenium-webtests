@@ -31,6 +31,9 @@ class TestLoader(object):
 
         return test_suite
 
+    def load_tests_from_name(self, name):
+        return self._loader.loadTestsFromName(name)
+
     def _get_test_cases(self):
         """
         Inspect all properties in all files in current directory
