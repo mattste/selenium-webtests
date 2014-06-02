@@ -21,6 +21,7 @@ TODO
 - každé spuštění testu otevírá nový port. Nešlo by nějak využít porty otevřené při předchozích testech?
 - ukončit instanci browseru při abortu úlohy v Jenkinsu
 - spouštět testy paralelně v různých browserech
+- BUG: při js chybě se ignoruje volba "retryonerror" 
 
 
 .. toctree::
